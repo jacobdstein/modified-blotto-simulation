@@ -25,10 +25,17 @@ Metrics: head-to-head win rate and mean total score.
   allowed) is a weight vector over pool IDs. A strategy's win rate against a field is
   the weighted mean of its row of W; a copy of yourself counts as a draw, and you
   never play yourself.
-- Deduplication merges exact duplicates only (summing weight). An L1 threshold
-  setting exists and defaults to 0; never apply it to candidate strategies.
+- Deduplication merges exact duplicates only, and only within the same origin (summing
+  weight); identical allocations from different origins stay separate rows so per-source
+  counts and the held-out round survive. An L1 threshold setting exists and defaults to
+  0; never apply it to candidate strategies (origins hand:, llm:, counter:).
 - Meta-game payoff for Nash, replicator dynamics, and elimination is W (win rate).
   S is reported but not optimized unless stated.
+- Rankings weighting (diagnostic only): each source family (hand, llm:claude,
+  llm:chatgpt, llm:gemini, riddler, riddler_adj, random_uniform, counter) gets equal total
+  weight; within a family each subfamily (pool.origin_subfamily, e.g. riddler:r2,
+  riddler_adj:rule1, hand:noisy) gets an equal share; within a subfamily, rows weigh by
+  duplicate count. Held-out origins are excluded. Also report raw pool weighting.
 - Iterated elimination: repeatedly cut the bottom 50% by win rate and re-rank among
   survivors; record every strategy's rank in every round.
 - Per-match metrics: win credit (W) first, mean score (S) second. Also compute rankings
@@ -64,9 +71,16 @@ Metrics: head-to-head win rate and mean total score.
 - Riddler data (approved): FiveThirtyEight `riddler-castles`, rounds 1–4 only (round 5
   has 13 castles). Same 10 castles / 100 soldiers, but no bonus rules and ties split
   points, so it models how people allocate, not which battlefields they'd target here.
-  Keep raw entries (origin "riddler:rN") separate from bonus-adjusted variants
-  ("riddler_adj:rN") so the effect of our adjustment is measurable. Drop rows that fail
-  validate_allocation and report how many.
+  Measured under our rules, Riddler entries are not junk (rounds 2–3 rank just behind the
+  Claude/ChatGPT strategies), so there is no quality filter on opponents: weak players
+  are part of the real field. Use a seeded sample of 300 submissions per round (repeats
+  kept in proportion). Drop rows that fail validate_allocation and report how many.
+- Bonus-adjusted Riddler ("riddler_adj:<version>:r<N>", parent = raw row): a Riddler
+  player who noticed the bonuses makes ONE swap — stop contesting one battlefield (≥5
+  troops = contested) and move its troops, unchanged, to an uncontested one. The swap
+  must gain a bonus the plan lacked. Versions: all (any bonus; highest-scoring swap),
+  rule1 / rule2 / rule3 (only that bonus; smallest swap by value distance, ties → higher
+  score). No row if that player has nothing to fix.
 - LLM strategies: I collect them from ChatGPT and Gemini (and a fresh claude.ai chat with
   no project context), origin "llm:<tool>". Claude Code does not invent "LLM-style"
   answers itself.
@@ -76,7 +90,9 @@ Metrics: head-to-head win rate and mean total score.
   give each tool's first-listed strategy extra weight (Claude labeled #1 its top pick;
   ChatGPT/Gemini order may not be a ranking). Assign reasoning levels by behavior, not
   by tool (Gemini ≈ level 0, ChatGPT ≈ 0–1, Claude ≈ 1–2, which ran its own simulations).
-- Held-out check: Riddler round 4 is never used for building or selecting. After the
+- Held-out check: Riddler round 4 and its adjusted versions are in the pool (listed in
+  pool_meta.json holdout_origins) so the matrix covers them, but they are never used for
+  building or selecting. After the
   shortlist is chosen, it must still reach top 20% against a field that includes it.
 - Re-test: choose the shortlist on one set of seeds, make the final comparison on fresh
   seeds.
@@ -108,13 +124,15 @@ Metrics: head-to-head win rate and mean total score.
 - tests/ — pytest tests
 - analysis/ — exploratory scripts that write to results/ (e.g. lut_analysis.py); not pipeline stages
 - examples/ — small standalone teaching scripts (e.g. abc_example.py); not part of the pipeline
-- data/ — committed input data (llm_strategies.csv; Riddler CSVs)
+- data/ — committed input data (llm_strategies.csv; riddler/ rounds 1–4, downloaded
+  from github.com/fivethirtyeight/data/tree/master/riddler-castles)
 - results/ — saved outputs (CSV, committed)
 - cache/ — pool and matrices (gitignored, regenerable)
 
 ## Data formats
-- cache/pool.csv: id (str, stable, e.g. "P00042"), origin (str, e.g. "random_uniform",
-  "hand:proportional", "counter:r3"), b1..b10 (int, sum 100), weight (int ≥1, number
+- cache/pool.csv: id (str, stable, e.g. "P00042"), origin (str: "hand:<name>",
+  "hand:<name>:round5", "hand:<name>:noisy", "llm:<tool>:<index>", "riddler:r<N>",
+  "riddler_adj:<version>:r<N>", "random_uniform", later "counter:r<N>"), b1..b10 (int, sum 100), weight (int ≥1, number
   of merged duplicates), parent (id or empty). Rows sorted by id; row order = matrix
   index order.
 - cache/pool_meta.json: seed, generator settings, dedup threshold, pool_hash
