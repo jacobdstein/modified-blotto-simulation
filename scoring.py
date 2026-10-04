@@ -11,9 +11,10 @@ Conventions:
 - Scores are exact Fractions; score200() gives the exact integer 200 × score.
 """
 
+from collections.abc import Sequence
+from collections.abc import Set as AbstractSet
 from dataclasses import dataclass
 from fractions import Fraction
-from collections.abc import Sequence, Set
 
 NUM_BATTLEFIELDS = 10
 TOTAL_TROOPS = 100
@@ -50,7 +51,7 @@ def validate_allocation(allocation: Sequence[int]) -> tuple[int, ...]:
     return tuple(allocation)
 
 
-def validate_won(won: Set[int]) -> frozenset[int]:
+def validate_won(won: AbstractSet[int]) -> frozenset[int]:
     """Return the won set as a frozenset, or raise if it holds anything but 1..10."""
     for battlefield in won:
         if isinstance(battlefield, bool) or not isinstance(battlefield, int):
@@ -77,17 +78,17 @@ def battlefields_won(mine: Sequence[int], theirs: Sequence[int]) -> frozenset[in
 # --- Scoring rules ----------------------------------------------------------
 
 
-def base_score(won: Set[int]) -> int:
+def base_score(won: AbstractSet[int]) -> int:
     """Sum of the values of the won battlefields."""
     return sum(won)
 
 
-def has_won_neighbor(battlefield: int, won: Set[int]) -> bool:
+def has_won_neighbor(battlefield: int, won: AbstractSet[int]) -> bool:
     """True if battlefield - 1 or battlefield + 1 is also won. No wrap-around."""
     return (battlefield - 1) in won or (battlefield + 1) in won
 
 
-def apply_rule1_adjacency(won: Set[int]) -> Fraction:
+def apply_rule1_adjacency(won: AbstractSet[int]) -> Fraction:
     """Rule 1: each won battlefield with a won neighbor counts 1.5×, at most once."""
     score = Fraction(0)
     for battlefield in won:
@@ -103,12 +104,12 @@ def rule2_multiplier(base: int) -> Fraction:
     return MULTIPLE_OF_FIVE_MULTIPLIER if base % 5 == 0 else Fraction(1)
 
 
-def rule3_multiplier(won: Set[int]) -> Fraction:
+def rule3_multiplier(won: AbstractSet[int]) -> Fraction:
     """Rule 3: 1.1× if battlefield 6 is won, else 1×."""
     return BONUS_BATTLEFIELD_MULTIPLIER if BONUS_BATTLEFIELD in won else Fraction(1)
 
 
-def total_score(won: Set[int]) -> Fraction:
+def total_score(won: AbstractSet[int]) -> Fraction:
     """Exact total score for a set of won battlefields: Rule 1, then 2, then 3."""
     won = validate_won(won)
     score = apply_rule1_adjacency(won)
@@ -117,7 +118,7 @@ def total_score(won: Set[int]) -> Fraction:
     return score
 
 
-def score200(won: Set[int]) -> int:
+def score200(won: AbstractSet[int]) -> int:
     """Exact integer 200 × total_score(won). Use this for comparisons."""
     scaled = total_score(won) * SCORE_SCALE
     assert scaled.denominator == 1, f"200 × score is not an integer for {sorted(won)}"
