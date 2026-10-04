@@ -142,12 +142,16 @@ Metrics: head-to-head win rate and mean total score.
   index order.
 - cache/pool_meta.json: seed, generator settings, dedup threshold, pool_hash
   (sha256 of b1..b10 in row order).
-- cache/matrix_<pool_hash>.npz:
-  - ids (str[N])
+- cache/matrix_<first 16 chars of pool_hash>.npz (compressed; ~19 MB for 4,143 rows,
+  builds in ~5 s):
+  - ids (str[N]), pool_hash (full), lut_hash
   - S200 (int32[N,N]): S200[i,j] = 200 × i's total score when i plays j
   - W2 (int8[N,N]): 2 = i wins, 1 = draw (S200[i,j] == S200[j,i]), 0 = i loses; W = W2 / 2
-  - lut_hash
-  - Invariants: W2 + W2.T == 2; diag(W2) == 1; diag(S200) == 0.
+  - Invariants: W2 + W2.T == 2; diag(W2) == 1; diag(S200) == 0; W2 matches comparing
+    S200[i,j] with S200[j,i]. Checked on every build and every cache reuse.
+  - matrix.extend_matrices adds rows for new strategies (counterattack) without
+    recomputing old pairs; callers must re-run check_invariants and
+    check_against_scoring on the result.
   - The cache is valid only if pool_hash and lut_hash both match; otherwise rebuild.
 - Lookup table: LUT200[mask] (int64[1024]); bit i of mask = battlefield i+1 won.
   Built from scoring.py's integer score, never by rounding floats.
