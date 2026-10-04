@@ -1,0 +1,16 @@
+{
+  "pool_hash": "6b67566c654eaa8dcb065bb4da0b60bcf3957d2cb166b53193eee41c15785ee1",
+  "lut_hash": "eeb7f122bccccd9be02878ca14e709cea90b5547a0ba637d4f24ee62d53d6fb4",
+  "candidates": 3182,
+  "excluded_holdout_origins": [
+    "riddler:r4",
+    "riddler_adj:all:r4",
+    "riddler_adj:rule1:r4",
+    "riddler_adj:rule2:r4",
+    "riddler_adj:rule3:r4"
+  ],
+  "shortlist_top": 100,
+  "shortlist_per_family": 5,
+  "elimination_keep": 0.5,
+  "shortlist_size": 199
+}

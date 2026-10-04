@@ -60,6 +60,10 @@ Metrics: head-to-head win rate and mean total score.
   points, P(top 20%) with draw = 0, and how many ±1 neighbors stay close.
 - rankings.py is diagnostic (builds the shortlist and explains it); robustness.py
   applies this rule and picks the submission.
+- Shortlist (rankings.py): union of the top 100 by family-weighted round-robin rank, the
+  top 100 by elimination depth (rounds survived, then last-round rank), and the top 5 of
+  every source family. Elimination depth in the last few rounds is noisy (a handful of
+  strategies playing rock-paper-scissors), so it is one input, not a verdict.
 
 ## Field model
 - Build the pool in reasoning levels: level 0 = naive human-style allocations (round
