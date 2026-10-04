@@ -70,6 +70,12 @@ Metrics: head-to-head win rate and mean total score.
 - LLM strategies: I collect them from ChatGPT and Gemini (and a fresh claude.ai chat with
   no project context), origin "llm:<tool>". Claude Code does not invent "LLM-style"
   answers itself.
+- data/llm_strategies.csv: 10 each from Claude, ChatGPT, Gemini, one chat per tool. Each
+  got the PDF, my answers to its clarifying questions, and the goal "top 25%", so they
+  model AI-assisted applicants. Each tool's 10 are one correlated cluster: in fields,
+  give each tool's first-listed strategy extra weight (Claude labeled #1 its top pick;
+  ChatGPT/Gemini order may not be a ranking). Assign reasoning levels by behavior, not
+  by tool (Gemini ≈ level 0, ChatGPT ≈ 0–1, Claude ≈ 1–2, which ran its own simulations).
 - Held-out check: Riddler round 4 is never used for building or selecting. After the
   shortlist is chosen, it must still reach top 20% against a field that includes it.
 - Re-test: choose the shortlist on one set of seeds, make the final comparison on fresh
@@ -101,6 +107,7 @@ Metrics: head-to-head win rate and mean total score.
 - pool.py, matrix.py, rankings.py, robustness.py, counterattack.py — pipeline stages
 - tests/ — pytest tests
 - examples/ — small standalone teaching scripts (e.g. abc_example.py); not part of the pipeline
+- data/ — committed input data (llm_strategies.csv; Riddler CSVs)
 - results/ — saved outputs (CSV, committed)
 - cache/ — pool and matrices (gitignored, regenerable)
 
