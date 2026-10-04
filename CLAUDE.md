@@ -81,6 +81,11 @@ Metrics: head-to-head win rate and mean total score.
   must gain a bonus the plan lacked. Versions: all (any bonus; highest-scoring swap),
   rule1 / rule2 / rule3 (only that bonus; smallest swap by value distance, ties → higher
   score). No row if that player has nothing to fix.
+- Measured: the swap usually makes an entry weaker than its parent (median win-rate
+  change −4 to −7 points; rule3 ≈ 0), likely because moved troops are sized for the old
+  battlefield. Decision: keep as is, treat riddler_adj as "bonus-aware but clumsy"
+  players with a modest field weight; strong opponents come from llm:claude,
+  llm:chatgpt, and counterattack.
 - LLM strategies: I collect them from ChatGPT and Gemini (and a fresh claude.ai chat with
   no project context), origin "llm:<tool>". Claude Code does not invent "LLM-style"
   answers itself.
