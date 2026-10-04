@@ -1,0 +1,686 @@
+battlefields,count,base,score,price,rule2,rule3,guaranteed_win
+2 3 4 6 7 8,6,30,69.3,97,True,True,True
+5 6 9 10,4,30,69.3,100,True,True,True
+2 3 4 7 9 10,6,35,68.6,99,True,False,True
+1 2 3 4 7 8 10,7,35,66.5,98,True,False,True
+1 3 5 6 7 8,6,30,66.22,100,True,True,True
+2 3 6 9 10,5,30,64.68,91,True,True,True
+1 2 3 4 5 7 8,7,30,63.0,88,True,False,True
+1 2 8 9 10,5,30,63.0,90,True,False,True
+1 2 3 7 8 9,6,30,63.0,91,True,False,True
+2 3 5 7 8 10,6,35,63.0,100,True,False,True
+1 2 3 4 5 6 9,7,30,62.37,95,True,True,True
+1 3 4 5 8 9,6,30,62.3,93,True,False,True
+2 3 4 5 6 10,6,30,61.6,88,True,True,True
+2 4 5 9 10,5,30,61.6,88,True,False,True
+3 4 6 7 10,5,30,61.6,92,True,True,True
+1 3 4 6 7 9,6,30,61.6,99,True,True,True
+3 8 9 10,4,30,60.9,89,True,False,True
+1 4 6 9 10,5,30,60.83,98,True,True,True
+2 5 6 7 10,5,30,60.06,95,True,True,True
+1 2 3 5 9 10,6,30,59.5,82,True,False,True
+2 4 7 8 9,5,30,58.8,97,True,False,True
+1 5 7 8 9,5,30,58.8,100,True,False,True
+1 2 4 6 7 10,6,30,58.52,93,True,True,True
+3 4 5 6 7,5,25,57.75,82,True,True,False
+1 2 4 5 6 7,6,25,57.75,83,True,True,False
+2 3 7 8 10,5,30,56.0,84,True,False,True
+1 3 7 9 10,5,30,55.3,86,True,False,True
+4 7 9 10,4,30,55.3,92,True,False,True
+1 3 6 7 8,5,25,54.67,84,True,True,False
+4 6 7 8,4,25,54.67,90,True,True,False
+1 5 6 8 10,5,30,54.67,99,True,True,True
+6 9 10,3,25,53.13,84,True,True,False
+1 2 3 9 10,5,25,52.5,66,True,False,False
+1 2 3 4 7 8,6,25,52.5,72,True,False,False
+1 4 7 8 10,5,30,52.5,91,True,False,True
+5 7 8 10,4,30,52.5,93,True,False,True
+1 3 4 8 9,5,25,51.8,77,True,False,False
+1 4 5 7 8,5,25,51.8,81,True,False,False
+1 7 8 9,4,25,51.8,84,True,False,False
+2 3 4 5 7 9,6,30,51.8,89,True,False,True
+1 2 3 5 6 8,6,25,51.59,80,True,True,False
+2 6 8 9,4,25,51.59,89,True,True,True
+1 2 3 4 6 7 8,7,31,51.15,99,False,True,True
+1 2 3 4 5 9 10,7,34,51.0,94,False,False,True
+2 3 5 6 9,5,25,50.82,81,True,True,False
+1 2 6 7 9,5,25,50.82,86,True,True,True
+1 2 3 6 8 10,6,30,50.82,90,True,True,True
+1 3 4 5 7 10,6,30,50.4,83,True,False,False
+3 4 5 8 10,5,30,50.4,86,True,False,False
+1 2 4 5 8 10,6,30,50.4,87,True,False,True
+4 5 6 10,4,25,50.05,81,True,True,False
+2 4 5 6 8,5,25,50.05,86,True,True,False
+1 4 5 6 9,5,25,50.05,88,True,True,False
+2 3 4 5 9 10,6,33,49.5,92,False,False,True
+1 2 3 8 9 10,6,33,49.5,94,False,False,True
+3 4 6 9 10,5,32,49.5,100,False,True,True
+2 3 5 7 8,5,25,49.0,74,True,False,False
+1 2 5 8 9,5,25,49.0,80,True,False,False
+1 2 3 4 6 7 10,7,33,48.95,97,False,True,True
+2 3 5 6 7 10,6,33,48.95,99,False,True,True
+2 6 7 10,4,25,48.51,79,True,True,False
+3 6 7 9,4,25,48.51,85,True,True,False
+2 4 9 10,4,25,48.3,72,True,False,False
+1 5 9 10,4,25,48.3,75,True,False,False
+2 3 8 9 10,5,32,48.0,92,False,False,True
+1 2 3 4 5 8 9,7,32,48.0,96,False,False,True
+1 2 3 6 9 10,6,31,47.85,93,False,True,True
+1 2 5 6 7 8,6,29,47.85,99,False,True,True
+1 3 4 5 9 10,6,32,47.5,91,False,False,True
+1 3 4 7 8 9,6,32,47.5,100,False,False,True
+2 3 4 6 7 10,6,32,47.3,95,False,True,True
+1 3 4 6 7 8,6,29,47.3,96,False,True,True
+1 3 4 7 9 10,6,34,47.0,98,False,False,True
+1 3 5 6 10,5,25,46.97,75,True,True,False
+3 5 8 9,4,25,46.9,79,True,False,False
+3 4 5 9 10,5,31,46.5,89,False,False,True
+1 2 4 5 9 10,6,31,46.5,90,False,False,True
+2 3 4 5 8 9,6,31,46.5,94,False,False,True
+3 4 7 8 9,5,31,46.5,98,False,False,True
+2 4 8 9 10,5,33,46.5,100,False,False,True
+2 3 4 5 6,5,20,46.2,62,True,True,False
+3 4 6 7,4,20,46.2,66,True,True,False
+1 2 3 4 6 9,6,25,46.2,79,True,True,False
+1 2 3 4 5 6 7,7,28,46.2,87,False,True,True
+3 4 6 7 8,5,28,46.2,94,False,True,False
+2 4 6 8 10,5,30,46.2,96,True,True,True
+3 5 6 7 8,5,29,46.2,98,False,True,False
+2 3 4 6 7 9,6,31,46.2,100,False,True,True
+2 3 4 7 8 10,6,34,46.0,96,False,False,True
+3 4 7 9 10,5,33,46.0,96,False,False,True
+1 2 3 4 5 6 10,7,31,45.65,90,False,True,True
+1 2 5 6 7 10,6,31,45.65,97,False,True,True
+1 2 3 4 5 10,6,25,45.5,63,True,False,False
+7 8 10,3,25,45.5,77,True,False,False
+1 4 8 9 10,5,32,45.5,99,False,False,True
+2 3 4 6 10,5,25,45.43,72,True,True,False
+1 3 4 6 7 10,6,31,45.1,94,False,True,True
+2 5 6 7 8,5,28,45.1,97,False,True,True
+1 3 5 6 7 10,6,32,45.1,98,False,True,True
+2 5 6 7,4,20,44.66,69,True,True,False
+2 3 4 5 6 7,6,27,44.55,85,False,True,True
+1 2 3 6 7 8,6,27,44.55,87,False,True,True
+1 2 3 6 8 9,6,29,44.55,95,False,True,True
+2 4 6 9 10,5,31,44.55,99,False,True,True
+1 2 3 7 9 10,6,32,44.5,89,False,False,True
+1 3 8 9 10,5,31,44.5,91,False,False,False
+4 8 9 10,4,31,44.5,97,False,False,False
+1 2 4 7 8 9,6,31,44.5,99,False,False,True
+1 2 4 6 7 8,6,28,44.0,95,False,True,True
+1 3 4 7 8 10,6,33,44.0,95,False,False,True
+1 5 6 7 8,5,27,44.0,96,False,True,False
+3 5 6 7 10,5,31,44.0,96,False,True,True
+1 2 4 7 9 10,6,33,44.0,97,False,False,True
+1 2 3 4 9 10,6,29,43.5,78,False,False,True
+2 3 4 5 7 8,6,29,43.5,86,False,False,False
+2 3 7 8 9,5,29,43.5,89,False,False,False
+3 4 5 8 9,5,29,43.5,91,False,False,False
+1 2 4 5 8 9,6,29,43.5,92,False,False,True
+3 5 7 9 10,5,34,43.5,100,False,False,True
+1 2 3 4 5 6 8,7,29,43.45,92,False,True,True
+1 2 4 6 7,5,20,43.12,67,True,True,False
+1 4 5 9 10,5,29,43.0,87,False,False,True
+2 3 7 9 10,5,31,43.0,87,False,False,True
+3 4 7 8 10,5,32,43.0,93,False,False,True
+2 3 6 7 8,5,26,42.9,85,False,True,False
+1 2 6 9 10,5,28,42.9,89,False,True,True
+2 3 4 5 6 9,6,29,42.9,93,False,True,False
+2 3 6 8 9,5,28,42.9,93,False,True,True
+5 6 7 8,4,26,42.9,94,False,True,False
+3 4 6 7 9,5,29,42.9,97,False,True,True
+2 8 9 10,4,29,42.5,88,False,False,False
+2 5 7 9 10,5,33,42.5,99,False,False,True
+1 3 4 5 6 7,6,26,42.35,84,False,True,False
+1 2 3 6 7 10,6,29,42.35,85,False,True,True
+1 3 6 9 10,5,29,42.35,90,False,True,True
+4 6 9 10,4,29,42.35,96,False,True,False
+2 3 7 8,4,20,42.0,58,True,False,False
+1 2 8 9,4,20,42.0,64,True,False,False
+2 3 4 9 10,5,28,42.0,76,False,False,False
+4 5 9 10,4,28,42.0,85,False,False,False
+1 2 5 7 8 10,6,33,42.0,98,False,False,True
+1 3 4 5 6 10,6,29,41.8,87,False,True,True
+2 3 4 5 6 8,6,28,41.8,90,False,True,True
+1 5 6 7 10,5,29,41.8,94,False,True,True
+2 5 6 7 9,5,29,41.8,100,False,True,True
+1 3 4 5 7 8,6,28,41.5,85,False,False,False
+1 2 3 7 8 10,6,31,41.5,86,False,False,True
+1 8 9 10,4,28,41.5,87,False,False,False
+2 4 7 9 10,5,32,41.5,95,False,False,True
+1 5 7 9 10,5,32,41.5,98,False,False,True
+1 3 5 7 8 10,6,34,41.5,99,False,False,True
+1 9 10,3,20,41.3,59,True,False,False
+2 3 4 7 9,5,25,41.3,73,True,False,False
+4 5 7 9,4,25,41.3,82,True,False,False
+3 6 9 10,4,28,41.25,88,False,True,False
+1 2 3 6 7 9,6,28,41.25,90,False,True,True
+2 4 6 7 8,5,27,41.25,93,False,True,False
+2 3 4 6 8 10,6,33,41.25,100,False,True,True
+2 3 5 9 10,5,29,41.0,80,False,False,False
+2 4 5 8 9,5,28,41.0,90,False,False,True
+1 2 4 7 8 10,6,32,41.0,94,False,False,True
+1 4 7 8 9,5,29,41.0,96,False,False,True
+5 7 8 9,4,29,41.0,98,False,False,False
+2 3 6 7 10,5,28,40.7,83,False,True,True
+3 4 5 6 10,5,28,40.7,85,False,True,False
+1 2 4 5 6 10,6,28,40.7,86,False,True,True
+1 3 4 5 6 9,6,28,40.7,92,False,True,False
+5 6 7 10,4,28,40.7,92,False,True,False
+1 2 4 6 7 9,6,29,40.7,98,False,True,True
+1 5 6 7 9,5,28,40.7,99,False,True,True
+1 2 3 4 8 9,6,27,40.5,80,False,False,False
+3 4 5 7 8,5,27,40.5,83,False,False,False
+1 2 4 5 7 8,6,27,40.5,84,False,False,False
+8 9 10,3,27,40.5,85,False,False,False
+1 2 7 8 9,5,27,40.5,87,False,False,False
+1 2 3 4 5 8 10,7,33,40.5,91,False,False,True
+1 4 7 9 10,5,31,40.5,94,False,False,True
+5 7 9 10,4,31,40.5,96,False,False,True
+3 5 7 8 10,5,33,40.5,97,False,False,True
+2 6 9 10,4,27,40.15,87,False,True,False
+1 4 6 7 8,5,26,40.15,92,False,True,False
+1 4 6 8 9,5,28,40.15,100,False,True,True
+2 5 6 8 10,5,31,40.15,100,False,True,True
+1 3 4 9 10,5,27,40.0,75,False,False,False
+1 2 7 9 10,5,29,40.0,85,False,False,True
+1 3 7 8 9,5,28,40.0,88,False,False,False
+1 4 5 8 9,5,27,40.0,89,False,False,False
+4 7 8 9,4,28,40.0,94,False,False,False
+3 8 9,3,20,39.9,63,True,False,False
+1 3 4 7 10,5,25,39.9,67,True,False,False
+3 4 8 10,4,25,39.9,70,True,False,False
+1 2 3 5 6 7,6,24,39.6,75,False,True,False
+1 2 6 7 8,5,24,39.6,83,False,True,False
+2 3 6 7 9,5,27,39.6,88,False,True,True
+1 3 4 5 6 8,6,27,39.6,89,False,True,True
+3 4 5 6 9,5,27,39.6,90,False,True,False
+1 2 4 5 6 9,6,27,39.6,91,False,True,False
+1 2 6 8 9,5,26,39.6,91,False,True,True
+5 6 7 9,4,27,39.6,97,False,True,False
+1 2 3 5 8 9,6,28,39.5,84,False,False,True
+1 2 3 4 5 7 10,7,32,39.5,86,False,False,True
+2 5 7 8 10,5,32,39.5,96,False,False,True
+1 5 6 8,4,20,39.27,73,True,True,False
+5 6 9,3,20,39.27,74,True,True,False
+1 2 3 5 6 10,6,27,39.05,78,False,True,False
+1 6 9 10,4,26,39.05,86,False,True,False
+2 4 6 7 10,5,29,39.05,91,False,True,False
+1 3 6 8 9,5,27,39.05,92,False,True,True
+4 6 8 9,4,27,39.05,98,False,True,True
+1 3 4 6 8 10,6,32,39.05,99,False,True,True
+3 4 9 10,4,26,39.0,73,False,False,False
+2 3 4 8 9,5,26,39.0,78,False,False,False
+3 7 8 9,4,27,39.0,86,False,False,False
+4 5 8 9,4,26,39.0,87,False,False,False
+2 3 4 5 8 10,6,32,39.0,89,False,False,True
+1 4 7 8,4,20,38.5,65,True,False,False
+5 7 8,3,20,38.5,67,True,False,False
+2 4 5 6 7,5,24,38.5,81,False,True,False
+1 6 8 10,4,25,38.5,83,True,True,False
+3 7 9 10,4,29,38.5,84,False,False,False
+3 4 5 6 8,5,26,38.5,87,False,True,False
+1 2 4 5 6 8,6,26,38.5,88,False,True,False
+1 2 3 4 5 7 9,7,31,38.5,91,False,False,True
+2 4 7 8 10,5,31,38.5,92,False,False,False
+1 5 7 8 10,5,31,38.5,95,False,False,True
+1 2 5 9 10,5,27,38.0,78,False,False,False
+2 4 5 7 8,5,26,38.0,82,False,False,False
+2 3 5 8 9,5,27,38.0,82,False,False,True
+2 3 4 5 7 10,6,31,38.0,84,False,False,True
+2 7 8 9,4,26,38.0,85,False,False,False
+1 2 3 4 6 7,6,23,37.95,71,False,True,False
+2 3 5 6 7,5,23,37.95,73,False,True,False
+3 6 7 8,4,24,37.95,82,False,True,False
+1 2 3 5 6 9,6,26,37.95,83,False,True,False
+2 4 5 6 10,5,27,37.95,84,False,True,False
+3 6 8 9,4,26,37.95,90,False,True,True
+1 4 6 7 10,5,28,37.95,90,False,True,False
+2 4 6 7 9,5,28,37.95,96,False,True,True
+3 4 6 8 10,5,31,37.95,97,False,True,True
+5 6 8 10,4,29,37.95,97,False,True,False
+1 3 5 9 10,5,28,37.5,79,False,False,False
+2 7 9 10,4,28,37.5,83,False,False,False
+2 3 5 6 10,5,26,37.4,76,False,True,False
+1 4 5 6 7,5,23,37.4,80,False,True,False
+1 2 6 7 10,5,26,37.4,81,False,True,False
+1 2 5 7 10,5,25,37.1,70,True,False,False
+1 2 4 8 10,5,25,37.1,71,True,False,False
+1 2 4 9 10,5,26,37.0,74,False,False,False
+1 2 7 8 10,5,28,37.0,82,False,False,False
+1 3 4 5 8 10,6,31,37.0,88,False,False,True
+2 6 7 8,4,23,36.85,81,False,True,False
+1 3 6 7 10,5,27,36.85,82,False,True,False
+1 4 5 6 10,5,26,36.85,83,False,True,False
+4 6 7 10,4,27,36.85,88,False,True,False
+2 4 5 6 9,5,26,36.85,89,False,True,False
+1 4 6 7 9,5,27,36.85,95,False,True,True
+1 2 3 5 7 8,6,26,36.5,76,False,False,False
+3 5 9 10,4,27,36.5,77,False,False,False
+1 7 9 10,4,27,36.5,82,False,False,False
+1 3 7 8 10,5,29,36.5,83,False,False,False
+4 7 8 10,4,29,36.5,89,False,False,False
+1 3 4 5 7,5,20,36.4,57,True,False,False
+3 4 5 8,4,20,36.4,60,True,False,False
+1 2 4 5 8,5,20,36.4,61,True,False,False
+2 3 4 6 7,5,22,36.3,69,False,True,False
+4 5 6 7,4,22,36.3,78,False,True,False
+2 3 9 10,4,24,36.0,64,False,False,False
+2 3 4 7 8,5,24,36.0,70,False,False,False
+3 4 8 9,4,24,36.0,75,False,False,False
+4 5 7 8,4,24,36.0,79,False,False,False
+7 8 9,3,24,36.0,82,False,False,False
+1 6 7 8,4,22,35.75,80,False,True,False
+3 6 7 10,4,26,35.75,80,False,True,False
+1 3 6 7 9,5,26,35.75,87,False,True,True
+1 6 8 9,4,24,35.75,88,False,True,False
+4 6 7 9,4,26,35.75,93,False,True,True
+1 2 4 6 8 10,6,31,35.75,98,False,True,True
+2 5 9 10,4,26,35.5,76,False,False,False
+7 9 10,3,26,35.5,80,False,False,False
+3 7 8 10,4,28,35.5,81,False,False,False
+1 2 3 6 8,5,20,35.42,64,True,True,False
+2 3 5 6 8,5,24,35.2,78,False,True,False
+1 2 3 4 10,5,20,35.0,47,True,False,False
+3 5 7 10,4,25,35.0,69,True,False,False
+2 5 8 10,4,25,35.0,73,True,False,False
+1 3 5 7 9,5,25,35.0,76,True,False,False
+3 4 5 7 10,5,29,35.0,81,False,False,False
+1 2 4 5 7 10,6,29,35.0,82,False,False,False
+1 3 4 5 7 9,6,29,35.0,88,False,False,True
+4 5 6,3,15,34.65,55,True,True,False
+1 2 3 4 5 6,6,21,34.65,64,False,True,False
+2 3 6 9,4,20,34.65,65,True,True,False
+1 2 5 6 7,5,21,34.65,71,False,True,False
+6 7 8,3,21,34.65,78,False,True,False
+1 4 5 6 8,5,24,34.65,85,False,True,False
+4 5 6 9,4,24,34.65,86,False,True,False
+6 8 9,3,23,34.65,86,False,True,False
+2 3 6 8 10,5,29,34.65,88,False,True,False
+1 2 3 8 9,5,23,34.5,68,False,False,False
+2 7 8 10,4,27,34.5,80,False,False,False
+1 3 5 8 9,5,26,34.5,81,False,False,False
+1 4 5 10,4,20,34.3,56,True,False,False
+2 4 5 9,4,20,34.3,62,True,False,False
+1 3 4 6 7,5,21,34.1,68,False,True,False
+1 3 5 6 7,5,22,34.1,72,False,True,False
+1 2 3 4 6 10,6,26,34.1,74,False,True,False
+1 2 5 6 10,5,24,34.1,74,False,True,False
+1 3 4 7 8,5,23,34.0,69,False,False,False
+1 2 4 8 9,5,24,34.0,76,False,False,False
+3 4 5 7 9,5,28,34.0,86,False,False,False
+1 2 4 5 7 9,6,28,34.0,87,False,False,True
+1 6 7 10,4,24,33.55,78,False,True,False
+4 5 6 8,4,23,33.55,83,False,True,False
+2 6 7 9,4,24,33.55,84,False,True,False
+1 4 9 10,4,24,33.5,71,False,False,False
+5 9 10,3,24,33.5,73,False,False,False
+1 7 8 10,4,26,33.5,79,False,False,False
+2 4 5 8 10,5,29,33.5,85,False,False,False
+2 6 7,3,15,33.11,53,True,True,False
+1 2 9 10,4,22,33.0,62,False,False,False
+2 3 8 9,4,22,33.0,66,False,False,False
+3 4 7 8,4,22,33.0,67,False,False,False
+3 5 6 7,4,21,33.0,70,False,True,False
+1 2 3 4 8 10,6,28,33.0,75,False,False,False
+1 2 5 6 9,5,23,33.0,79,False,True,False
+1 3 9 10,4,23,32.5,63,False,False,False
+4 9 10,3,23,32.5,69,False,False,False
+2 5 8 9,4,24,32.5,78,False,False,False
+2 4 5 7 10,5,28,32.5,80,False,False,False
+1 4 5 8 10,5,28,32.5,84,False,False,False
+3 5 6 10,4,24,32.45,73,False,True,False
+6 7 10,3,23,32.45,76,False,True,False
+1 3 5 6 9,5,24,32.45,80,False,True,False
+1 6 7 9,4,23,32.45,83,False,True,False
+1 2 3 5 9,5,20,32.2,56,True,False,False
+1 2 3 4 7 10,6,27,32.0,70,False,False,False
+1 2 5 7 8,5,23,32.0,72,False,False,False
+1 2 3 5 8 10,6,29,32.0,79,False,False,False
+1 2 3 4 6 8,6,24,31.9,76,False,True,False
+1 2 5 6 8,5,22,31.9,76,False,True,False
+1 4 6 8 10,5,29,31.9,95,False,True,True
+1 3 5 6,4,15,31.57,49,True,True,False
+1 2 3 4 5,5,15,31.5,37,True,False,False
+2 3 5 10,4,20,31.5,49,True,False,False
+7 8,2,15,31.5,51,True,False,False
+1 2 3 7 8,5,21,31.5,60,False,False,False
+3 9 10,3,22,31.5,61,False,False,False
+1 2 3 4 5 9,6,24,31.5,68,False,False,False
+1 3 5 7 8,5,24,31.5,73,False,False,False
+2 3 4 8 10,5,27,31.5,73,False,False,False
+2 4 8 9,4,23,31.5,74,False,False,False
+1 5 8 9,4,23,31.5,77,False,False,False
+1 4 5 7 10,5,27,31.5,79,False,False,False
+4 5 8 10,4,27,31.5,82,False,False,False
+2 4 5 7 9,5,27,31.5,85,False,False,False
+1 2 3 6 7,5,19,31.35,59,False,True,False
+2 5 6 10,4,23,31.35,72,False,True,False
+1 3 5 6 8,5,23,31.35,77,False,True,False
+2 3 4 6 9,5,24,31.35,77,False,True,False
+3 5 6 9,4,23,31.35,78,False,True,False
+6 7 9,3,22,31.35,81,False,True,False
+1 2 6 8 10,5,27,31.35,86,False,True,False
+2 3 4 5 10,5,24,31.0,61,False,False,False
+1 2 4 7 8,5,22,31.0,68,False,False,False
+1 2 3 5 7 10,6,28,31.0,74,False,False,False
+1 2 3 4 7 9,6,26,31.0,75,False,False,False
+1 3 6 10,4,20,30.8,59,True,True,False
+1 3 4 5 6,5,19,30.8,61,False,True,False
+4 6 10,3,20,30.8,65,True,True,False
+1 5 6 7,4,19,30.8,68,False,True,False
+2 4 6 8,4,20,30.8,70,True,True,False
+1 4 6 9,4,20,30.8,72,True,True,False
+1 3 6 8 10,5,28,30.8,87,False,True,False
+4 6 8 10,4,28,30.8,93,False,True,False
+2 9 10,3,21,30.5,60,False,False,False
+1 2 3 4 5 8,6,23,30.5,65,False,False,False
+2 3 4 7 10,5,26,30.5,68,False,False,False
+3 5 7 8,4,23,30.5,71,False,False,False
+1 4 8 9,4,22,30.5,73,False,False,False
+5 8 9,3,22,30.5,75,False,False,False
+4 5 7 10,4,26,30.5,77,False,False,False
+2 3 5 8 10,5,28,30.5,77,False,False,False
+1 4 5 7 9,5,26,30.5,84,False,False,False
+1 3 4 6 10,5,24,30.25,71,False,True,False
+1 5 6 10,4,22,30.25,71,False,True,False
+2 3 4 6 8,5,23,30.25,74,False,True,False
+3 5 6 8,4,22,30.25,75,False,True,False
+2 5 6 9,4,22,30.25,77,False,True,False
+1 2 7 10,4,20,30.1,54,True,False,False
+2 3 4 6,4,15,30.03,46,True,True,False
+2 3 4 5 9,5,23,30.0,66,False,False,False
+1 2 3 5 7 9,6,27,30.0,79,False,False,False
+2 3 6 7,4,18,29.7,57,False,True,False
+3 4 5 6,4,18,29.7,59,False,True,False
+1 2 4 5 6,5,18,29.7,60,False,True,False
+5 6 7,3,18,29.7,66,False,True,False
+3 6 8 10,4,27,29.7,85,False,True,False
+1 2 3 4 5 7,6,22,29.5,60,False,False,False
+1 3 8 9,4,21,29.5,65,False,False,False
+2 5 7 8,4,22,29.5,70,False,False,False
+4 8 9,3,21,29.5,71,False,False,False
+2 3 5 7 10,5,27,29.5,72,False,False,False
+1 3 4 8 10,5,26,29.5,72,False,False,False
+3 4 6 10,4,23,29.15,69,False,True,False
+5 6 10,3,21,29.15,69,False,True,False
+2 5 6 8,4,21,29.15,74,False,True,False
+1 3 4 6 9,5,23,29.15,76,False,True,False
+1 5 6 9,4,21,29.15,76,False,True,False
+1 3 4 5 10,5,23,29.0,60,False,False,False
+2 3 4 5 8,5,22,29.0,63,False,False,False
+2 6 8 10,4,26,28.6,84,False,True,False
+9 10,2,19,28.5,57,False,False,False
+2 4 7 8,4,21,28.5,66,False,False,False
+1 5 7 8,4,21,28.5,69,False,False,False
+2 3 5 7 9,5,26,28.5,77,False,False,False
+1 2 3 5 6,5,17,28.05,52,False,True,False
+2 4 6 7,4,19,28.05,65,False,True,False
+1 3 4 6 8,5,22,28.05,73,False,True,False
+3 4 6 9,4,22,28.05,74,False,True,False
+3 7 10,3,20,28.0,53,True,False,False
+2 8 10,3,20,28.0,57,True,False,False
+2 3 4 5 7,5,21,28.0,58,False,False,False
+3 4 5 10,4,22,28.0,58,False,False,False
+1 2 4 5 10,5,22,28.0,59,False,False,False
+1 3 7 9,4,20,28.0,60,True,False,False
+1 3 4 5 9,5,22,28.0,65,False,False,False
+4 7 9,3,20,28.0,66,True,False,False
+2 8 9,3,19,27.5,62,False,False,False
+1 2 3 6 10,5,22,27.5,62,False,True,False
+3 4 7 10,4,24,27.5,65,False,False,False
+1 3 4 7 9,5,24,27.5,72,False,False,False
+1 2 5 8 10,5,26,27.5,75,False,False,False
+1 2 7 8,4,18,27.0,56,False,False,False
+1 3 4 5 8,5,21,27.0,62,False,False,False
+3 4 5 9,4,21,27.0,63,False,False,False
+1 2 3 8 10,5,24,27.0,63,False,False,False
+1 2 4 5 9,5,21,27.0,64,False,False,False
+1 3 5 8 10,5,27,27.0,76,False,False,False
+2 4 5 6,4,17,26.95,58,False,True,False
+1 4 6 7,4,18,26.95,64,False,True,False
+1 2 4 6 10,5,23,26.95,70,False,True,False
+3 4 6 8,4,21,26.95,71,False,True,False
+5 6 8,3,19,26.95,71,False,True,False
+1 3 7 8,4,19,26.5,57,False,False,False
+1 8 9,3,18,26.5,61,False,False,False
+4 7 8,3,19,26.5,63,False,False,False
+3 4 7 9,4,23,26.5,70,False,False,False
+2 3 5 6,4,16,26.4,50,False,True,False
+1 2 6 7,4,16,26.4,55,False,True,False
+1 2 3 6 9,5,21,26.4,67,False,True,False
+6 8 10,3,24,26.4,81,False,True,False
+1 2 3 7 10,5,23,26.0,58,False,False,False
+1 3 5 7 10,5,26,26.0,71,False,False,False
+3 5 8 10,4,26,26.0,74,False,False,False
+1 3 4 7,4,15,25.9,41,True,False,False
+3 4 8,3,15,25.9,44,True,False,False
+1 3 6 7,4,17,25.85,56,False,True,False
+1 4 5 6,4,16,25.85,57,False,True,False
+2 3 6 10,4,21,25.85,60,False,True,False
+4 6 7,3,17,25.85,62,False,True,False
+1 2 4 6 9,5,22,25.85,75,False,True,False
+3 7 8,3,18,25.5,55,False,False,False
+2 4 5 10,4,21,25.5,57,False,False,False
+8 9,2,17,25.5,59,False,False,False
+2 3 8 10,4,23,25.5,61,False,False,False
+1 2 4 7 10,5,24,25.5,66,False,False,False
+1 2 5 7 9,5,24,25.5,75,False,False,False
+1 2 3 9,4,15,25.2,40,True,False,False
+3 4 5 7,4,19,25.0,55,False,False,False
+1 2 4 5 7,5,19,25.0,56,False,False,False
+1 2 3 7 9,5,22,25.0,63,False,False,False
+3 6 7,3,16,24.75,54,False,True,False
+1 2 4 6 8,5,21,24.75,72,False,True,False
+2 3 10,3,15,24.5,33,True,False,False
+2 7 8,3,17,24.5,54,False,False,False
+2 3 7 10,4,22,24.5,56,False,False,False
+1 2 4 7 9,5,23,24.5,71,False,False,False
+2 4 6 10,4,22,24.2,68,False,True,False
+1 2 3 5 10,5,21,24.0,51,False,False,False
+1 2 3 4 9,5,19,24.0,52,False,False,False
+2 5 7 10,4,24,24.0,68,False,False,False
+2 4 8 10,4,24,24.0,69,False,False,False
+1 5 8 10,4,24,24.0,72,False,False,False
+3 5 7 9,4,24,24.0,74,False,False,False
+2 3 6 8,4,19,23.65,62,False,True,False
+2 3 4 10,4,19,23.5,45,False,False,False
+1 7 8,3,16,23.5,53,False,False,False
+4 5 10,3,19,23.5,54,False,False,False
+2 4 5 8,4,19,23.5,59,False,False,False
+1 4 5 9,4,19,23.5,61,False,False,False
+2 3 7 9,4,21,23.5,61,False,False,False
+1 2 5 7,4,15,23.1,44,True,False,False
+1 2 4 8,4,15,23.1,45,True,False,False
+1 2 3 4 6,5,16,23.1,48,False,True,False
+1 2 5 6,4,14,23.1,48,False,True,False
+1 6 8,3,15,23.1,57,True,True,False
+6 9,2,15,23.1,58,True,True,False
+1 4 6 10,4,21,23.1,67,False,True,False
+2 4 6 9,4,21,23.1,73,False,True,False
+1 2 3 4 8,5,18,23.0,49,False,False,False
+2 4 7 10,4,23,23.0,64,False,False,False
+1 5 7 10,4,23,23.0,67,False,False,False
+1 4 8 10,4,23,23.0,68,False,False,False
+5 8 10,3,23,23.0,70,False,False,False
+2 5 7 9,4,23,23.0,73,False,False,False
+1 6 7,3,14,22.55,52,False,True,False
+1 2 6 10,4,19,22.55,58,False,True,False
+2 3 4 9,4,18,22.5,50,False,False,False
+2 4 5 7,4,18,22.5,54,False,False,False
+1 4 5 8,4,18,22.5,58,False,False,False
+4 5 9,3,18,22.5,59,False,False,False
+1 2 8 10,4,21,22.5,59,False,False,False
+1 2 3 4 7,5,17,22.0,44,False,False,False
+1 2 3 5 8,5,19,22.0,53,False,False,False
+1 3 8 10,4,22,22.0,60,False,False,False
+1 4 7 10,4,22,22.0,63,False,False,False
+5 7 10,3,22,22.0,65,False,False,False
+4 8 10,3,22,22.0,66,False,False,False
+2 4 7 9,4,22,22.0,69,False,False,False
+1 5 7 9,4,22,22.0,72,False,False,False
+1 3 4 10,4,18,21.5,44,False,False,False
+2 3 4 8,4,17,21.5,47,False,False,False
+1 4 5 7,4,17,21.5,53,False,False,False
+2 3 5 9,4,19,21.5,54,False,False,False
+4 5 8,3,17,21.5,56,False,False,False
+3 5 6,3,14,21.45,47,False,True,False
+6 7,2,13,21.45,50,False,True,False
+1 2 6 9,4,18,21.45,63,False,True,False
+1 2 3 4,4,10,21.0,21,True,False,False
+2 3 4 5,4,14,21.0,35,False,False,False
+1 4 10,3,15,21.0,40,True,False,False
+5 10,2,15,21.0,42,True,False,False
+3 5 7,3,15,21.0,43,True,False,False
+2 4 9,3,15,21.0,46,True,False,False
+2 5 8,3,15,21.0,47,True,False,False
+1 2 3 5 7,5,18,21.0,48,False,False,False
+1 5 9,3,15,21.0,49,True,False,False
+1 3 7 10,4,21,21.0,55,False,False,False
+3 8 10,3,21,21.0,58,False,False,False
+4 7 10,3,21,21.0,61,False,False,False
+1 4 7 9,4,21,21.0,68,False,False,False
+5 7 9,3,21,21.0,70,False,False,False
+3 6 10,3,19,20.9,57,False,True,False
+1 3 6 9,4,19,20.9,64,False,True,False
+1 4 6 8,4,19,20.9,69,False,True,False
+4 6 9,3,19,20.9,70,False,True,False
+2 3 4 7,4,16,20.5,42,False,False,False
+3 4 10,3,17,20.5,42,False,False,False
+1 3 4 9,4,17,20.5,49,False,False,False
+4 5 7,3,16,20.5,51,False,False,False
+2 3 5 8,4,18,20.5,51,False,False,False
+1 2 7 9,4,19,20.5,59,False,False,False
+2 5 6,3,13,20.35,46,False,True,False
+1 2 6 8,4,17,20.35,60,False,True,False
+1 4 5,3,10,20.3,30,True,False,False
+2 6 10,3,18,19.8,56,False,True,False
+1 3 6 8,4,18,19.8,61,False,True,False
+3 6 9,3,18,19.8,62,False,True,False
+4 6 8,3,18,19.8,67,False,True,False
+2 3 5 7,4,17,19.5,46,False,False,False
+1 3 4 8,4,16,19.5,46,False,False,False
+3 4 9,3,16,19.5,47,False,False,False
+1 2 5 10,4,18,19.5,47,False,False,False
+1 3 4 6,4,14,19.25,45,False,True,False
+1 5 6,3,12,19.25,45,False,True,False
+1 3 4 5,4,13,19.0,34,False,False,False
+1 2 3 10,4,16,19.0,35,False,False,False
+1 3 5 10,4,19,19.0,48,False,False,False
+2 7 10,3,19,19.0,52,False,False,False
+1 8 10,3,19,19.0,56,False,False,False
+3 7 9,3,19,19.0,58,False,False,False
+1 6 10,3,17,18.7,55,False,True,False
+3 6 8,3,17,18.7,59,False,True,False
+2 6 9,3,17,18.7,61,False,True,False
+1 2 4 10,4,17,18.5,43,False,False,False
+1 2 5 9,4,17,18.5,52,False,False,False
+3 4 6,3,13,18.15,43,False,True,False
+5 6,2,11,18.15,43,False,True,False
+3 4 5,3,12,18.0,32,False,False,False
+1 2 4 5,4,12,18.0,33,False,False,False
+3 5 10,3,18,18.0,46,False,False,False
+1 7 10,3,18,18.0,51,False,False,False
+1 3 5 9,4,18,18.0,53,False,False,False
+8 10,2,18,18.0,54,False,False,False
+2 7 9,3,18,18.0,57,False,False,False
+6 10,2,16,17.6,53,False,True,False
+2 6 8,3,16,17.6,58,False,True,False
+1 6 9,3,16,17.6,60,False,True,False
+2 3 5,3,10,17.5,23,True,False,False
+3 4 7,3,14,17.5,39,False,False,False
+1 2 4 9,4,16,17.5,48,False,False,False
+1 2 5 8,4,16,17.5,49,False,False,False
+1 2 3 8,4,14,17.0,37,False,False,False
+2 5 10,3,17,17.0,45,False,False,False
+7 10,2,17,17.0,49,False,False,False
+1 3 5 8,4,17,17.0,50,False,False,False
+3 5 9,3,17,17.0,51,False,False,False
+1 7 9,3,17,17.0,56,False,False,False
+1 2 3 6,4,12,16.5,36,False,True,False
+2 3 9,3,14,16.5,38,False,False,False
+1 2 7,3,10,16.1,28,True,False,False
+1 2 3 7,4,13,16.0,32,False,False,False
+2 4 10,3,16,16.0,41,False,False,False
+1 5 10,3,16,16.0,44,False,False,False
+1 3 5 7,4,16,16.0,45,False,False,False
+3 5 8,3,16,16.0,48,False,False,False
+2 5 9,3,16,16.0,50,False,False,False
+7 9,2,16,16.0,54,False,False,False
+1 2 4 6,4,13,15.95,44,False,True,False
+2 4 5,3,11,15.5,31,False,False,False
+2 3 8,3,13,15.5,35,False,False,False
+1 2 4 7,4,14,15.5,40,False,False,False
+1 3 6,3,10,15.4,33,True,True,False
+4 6,2,10,15.4,39,True,True,False
+6 8,2,14,15.4,55,False,True,False
+2 3 6,3,11,14.85,34,False,True,False
+2 3 7,3,12,14.5,30,False,False,False
+1 2 10,3,13,14.5,31,False,False,False
+1 2 3 5,4,11,14.0,25,False,False,False
+10,1,10,14.0,26,True,False,False
+3 7,2,10,14.0,27,True,False,False
+2 8,2,10,14.0,31,True,False,False
+1 3 10,3,14,14.0,32,False,False,False
+1 9,2,10,14.0,33,True,False,False
+4 10,2,14,14.0,38,False,False,False
+2 5 7,3,14,14.0,42,False,False,False
+2 4 8,3,14,14.0,43,False,False,False
+1 4 9,3,14,14.0,45,False,False,False
+1 5 8,3,14,14.0,46,False,False,False
+5 9,2,14,14.0,47,False,False,False
+2 3 4,3,9,13.5,19,False,False,False
+4 5,2,9,13.5,28,False,False,False
+1 2 9,3,12,13.5,36,False,False,False
+2 4 6,3,12,13.2,42,False,True,False
+3 10,2,13,13.0,30,False,False,False
+1 3 9,3,13,13.0,37,False,False,False
+2 4 7,3,13,13.0,38,False,False,False
+1 5 7,3,13,13.0,41,False,False,False
+1 4 8,3,13,13.0,42,False,False,False
+4 9,2,13,13.0,43,False,False,False
+5 8,2,13,13.0,44,False,False,False
+1 2 8,3,11,12.5,33,False,False,False
+1 4 6,3,11,12.1,41,False,True,False
+2 10,2,12,12.0,29,False,False,False
+1 3 8,3,12,12.0,34,False,False,False
+3 9,2,12,12.0,35,False,False,False
+1 4 7,3,12,12.0,37,False,False,False
+5 7,2,12,12.0,39,False,False,False
+4 8,2,12,12.0,40,False,False,False
+1 2 6,3,9,11.55,32,False,True,False
+1 3 4,3,8,11.5,18,False,False,False
+1 10,2,11,11.0,28,False,False,False
+1 3 7,3,11,11.0,29,False,False,False
+3 8,2,11,11.0,32,False,False,False
+2 9,2,11,11.0,34,False,False,False
+4 7,2,11,11.0,35,False,False,False
+2 3,2,5,10.5,7,True,False,False
+3 4,2,7,10.5,16,False,False,False
+3 6,2,9,9.9,31,False,True,False
+1 2 5,3,8,9.5,21,False,False,False
+1 2 3,3,6,9.0,9,False,False,False
+1 3 5,3,9,9.0,22,False,False,False
+2 7,2,9,9.0,26,False,False,False
+1 8,2,9,9.0,30,False,False,False
+9,1,9,9.0,31,False,False,False
+2 6,2,8,8.8,30,False,True,False
+1 2 4,3,7,8.5,17,False,False,False
+3 5,2,8,8.0,20,False,False,False
+1 7,2,8,8.0,25,False,False,False
+8,1,8,8.0,28,False,False,False
+1 6,2,7,7.7,29,False,True,False
+1 4,2,5,7.0,14,True,False,False
+5,1,5,7.0,16,True,False,False
+2 5,2,7,7.0,19,False,False,False
+7,1,7,7.0,23,False,False,False
+6,1,6,6.6,27,False,True,False
+2 4,2,6,6.0,15,False,False,False
+1 5,2,6,6.0,18,False,False,False
+1 2,2,3,4.5,5,False,False,False
+1 3,2,4,4.0,6,False,False,False
+4,1,4,4.0,12,False,False,False
+3,1,3,3.0,4,False,False,False
+2,1,2,2.0,3,False,False,False
+1,1,1,1.0,2,False,False,False
+,0,0,0.0,0,True,False,False
