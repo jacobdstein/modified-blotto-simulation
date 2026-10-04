@@ -1,0 +1,27 @@
+{
+  "round": 3,
+  "pool_hash": "45af2ebfa300fbee37a59ca4b6df0a05241c04a7f52c99803ee272ac187c19d3",
+  "finalists": [
+    "P04460",
+    "P04459",
+    "P04463",
+    "P04467",
+    "P04468",
+    "P04462",
+    "P04465",
+    "P04466",
+    "P04464",
+    "P04461"
+  ],
+  "finalist_weight": 0.5,
+  "starts": {
+    "from_pool": 20,
+    "random": 20
+  },
+  "keep": 20,
+  "seed": [
+    20261004,
+    3
+  ],
+  "seconds": 10.9
+}

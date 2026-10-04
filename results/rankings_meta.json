@@ -1,5 +1,5 @@
 {
-  "pool_hash": "45af2ebfa300fbee37a59ca4b6df0a05241c04a7f52c99803ee272ac187c19d3",
+  "pool_hash": "70678b40a11135245f3c27cb7229f001e2c11d6bac42838bcf95a3e7a5be85df",
   "lut_hash": "eeb7f122bccccd9be02878ca14e709cea90b5547a0ba637d4f24ee62d53d6fb4",
   "candidates": 3517,
   "excluded_holdout_origins": [
@@ -13,7 +13,7 @@
   "shortlist_per_family": 5,
   "elimination_keep": 0.5,
   "shortlist_size": 202,
-  "nash_support": 193,
+  "nash_support": 175,
   "nash_value": -0.0,
-  "nash_exploitability": 6.026429355543428e-15
+  "nash_exploitability": 2.192690473634684e-15
 }

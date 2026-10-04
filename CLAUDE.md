@@ -128,6 +128,11 @@ the probability of finishing in the top 20% of a simulated field of applicants (
 - Final opponent-only round (2026-10-04, decided before round 3 ran). Because the newest
   counters always lead untested, round 3 counters are opponents only, so the pick must
   hold up against a counterattack aimed at it.
+- Counterattack round 3 result (2026-10-04). The round-2 leader P04460
+  [1,5,5,3,2,5,28,6,36,9] stayed #1 after a round of counters aimed at it: pooled
+  P(top 20%) 1.000 → 0.997 (sophisticated-heavy 0.989), points 0.922, draw0 0.997,
+  hold-out 0.996, all ±1 neighbors close, Nash 0.184, no flags. For comparison after
+  round 3: round-1 leader P04443 0.976, original leader P01229 0.925.
 - Flags before the Nash tiebreaker (2026-10-04). With Nash as the first tiebreaker and a
   1-point tie window, the rule picked P01353 (score 99.5%, Nash 20.1%) over P01229
   (score 100%, Nash 19.3%), although P01353 fails the points check and P01229 has no
@@ -211,7 +216,8 @@ the probability of finishing in the top 20% of a simulated field of applicants (
 - Done: scoring.py, lookup table, pool (step 1), matrices (step 2), rankings + Nash mix +
   shortlist (step 3), lookup-table analysis.
 - Done: robustness.py (step 4); counterattack.py (step 5) rounds 1–2.
-- Next: counterattack round 3 (opponent-only), the final pick, and the writeup.
+- Done: counterattack rounds 1–3 (round 3 opponent-only). Selection-rule pick: P04460.
+- Next: the final pick (my judgment among near-ties) and the writeup.
 - Optional if time allows: replicator dynamics; re-running the lookup-table price
   analysis with Riddler as the reference field. If time is short, cut optional analysis
   before cutting writeup time.
