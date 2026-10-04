@@ -1,10 +1,16 @@
 """Tests for analysis/lut_analysis.py."""
 
 import numpy as np
+import pandas as pd
 import pytest
 
 from analysis.lut_analysis import (
     battlefield_prices,
+    by_count_table,
+    format_set,
+    parse_set,
+    prices_table,
+    save_results,
     best_opponent_score,
     best_subset_score,
     harmful_additions_table,
@@ -76,3 +82,36 @@ def test_battlefield_prices():
     field = np.array([[10] * 10, [0] * 9 + [100], [20] * 5 + [0] * 5])
     prices = battlefield_prices(field, percentile=50)
     assert prices.tolist() == [11] * 5 + [1] * 4 + [11]
+
+
+def test_format_and_parse_set():
+    assert format_set({7, 3, 5, 6}) == "{3 5 6 7}"
+    assert format_set(set()) == "{}"
+    assert parse_set("{3 5 6 7}") == [3, 5, 6, 7]
+    assert parse_set("{}") == []
+
+
+def test_saved_files_read_back_correctly(tmp_path, lut, sets):
+    # Check the CSVs as written to disk, not just the in-memory tables.
+    won_sets = sets.reset_index()
+    save_results(
+        {
+            "won_sets": won_sets,
+            "by_count": by_count_table(won_sets),
+            "harmful": harmful_additions_table(lut),
+            "prices": prices_table(won_sets, np.full(10, 5)),
+        },
+        tmp_path,
+    )
+    read = {name: pd.read_csv(tmp_path / f"{name}.csv") for name in ("won_sets", "by_count", "harmful", "prices")}
+
+    assert read["won_sets"].loc[read["won_sets"]["mask"] == 0, "battlefields"].item() == "{}"
+    for name in ("won_sets", "by_count", "prices"):
+        assert not read[name].isna().any().any(), name
+
+    # The only missing values: worst_case_set for battlefields 5 and 10, which never hurt.
+    harmful = read["harmful"].set_index("battlefield_added")
+    missing = harmful.index[harmful["worst_case_set"].isna()].tolist()
+    assert missing == [5, 10]
+    assert (harmful.loc[missing, "worst_drop"] == 0).all()
+    assert harmful.drop(columns="worst_case_set").notna().all().all()

@@ -31,6 +31,17 @@ DEFAULT_FIELD = ROOT / "data" / "llm_strategies.csv"
 PRICE_PERCENTILE = 75
 
 
+def format_set(battlefields) -> str:
+    """Set notation: '{3 5 6 7}', and '{}' for the empty set, so a set is never written
+    as a blank cell (which a CSV can't tell apart from missing data)."""
+    return "{" + " ".join(map(str, sorted(battlefields))) + "}"
+
+
+def parse_set(text: str) -> list[int]:
+    """Inverse of format_set."""
+    return [int(b) for b in text.strip("{}").split()]
+
+
 def battlefield_count(mask: int) -> int:
     """Number of battlefields won in a mask."""
     return bin(mask).count("1")
@@ -62,7 +73,8 @@ def best_opponent_score(lut: np.ndarray) -> np.ndarray:
 
 
 def won_sets_table(lut: np.ndarray) -> pd.DataFrame:
-    """One row per won-set with its score, bonuses, and guaranteed-win status."""
+    """One row per won-set with its score, bonuses, and guaranteed-win status.
+    Note: the empty set has rule2 = True (0 is a multiple of 5); harmless, 1.4 × 0 = 0."""
     opponent = best_opponent_score(lut)
     guaranteed = lut > opponent
     rows = []
@@ -71,7 +83,7 @@ def won_sets_table(lut: np.ndarray) -> pd.DataFrame:
         rows.append(
             {
                 "mask": mask,
-                "battlefields": " ".join(map(str, won)),
+                "battlefields": format_set(won),
                 "count": len(won),
                 "base": sum(won),
                 "score": lut[mask] / 200,
@@ -106,7 +118,9 @@ def by_count_table(sets: pd.DataFrame) -> pd.DataFrame:
 
 
 def harmful_additions_table(lut: np.ndarray) -> pd.DataFrame:
-    """For each battlefield: how often winning it in addition lowers your score."""
+    """For each battlefield: how often winning it in addition lowers your score.
+    worst_case_set is genuinely missing (blank in the CSV, NaN when read back) when
+    adding that battlefield never lowers the score; worst_drop is then 0.0."""
     rows = []
     for b in range(NUM_BATTLEFIELDS):
         bit = 1 << b
@@ -119,7 +133,7 @@ def harmful_additions_table(lut: np.ndarray) -> pd.DataFrame:
                 "battlefield_added": b + 1,
                 "share_of_sets_where_it_lowers_score": len(harmful) / len(without),
                 "worst_drop": -worst_drop / 200 if worst_drop < 0 else 0.0,
-                "worst_case_set": " ".join(map(str, sorted(won_from_mask(worst_mask)))) if worst_drop < 0 else "",
+                "worst_case_set": format_set(won_from_mask(worst_mask)) if worst_drop < 0 else None,
             }
         )
     return pd.DataFrame(rows)
@@ -143,10 +157,17 @@ def prices_table(sets: pd.DataFrame, prices: np.ndarray) -> pd.DataFrame:
     """Each won-set's price at the given per-battlefield prices, if affordable (≤ 100)."""
     priced = sets.copy()
     priced["price"] = [
-        int(sum(prices[b - 1] for b in map(int, s.split()))) if s else 0 for s in priced["battlefields"]
+        int(sum(prices[b - 1] for b in parse_set(s))) for s in priced["battlefields"]
     ]
     affordable = priced[priced["price"] <= 100].sort_values(["score", "price"], ascending=[False, True])
     return affordable[["battlefields", "count", "base", "score", "price", "rule2", "rule3", "guaranteed_win"]]
+
+
+def save_results(tables: dict[str, pd.DataFrame], results_dir: Path = RESULTS) -> None:
+    """Write each table to results_dir/<name>.csv."""
+    results_dir.mkdir(exist_ok=True)
+    for name, table in tables.items():
+        table.to_csv(results_dir / f"{name}.csv", index=False)
 
 
 def main() -> None:
@@ -158,11 +179,14 @@ def main() -> None:
     prices = battlefield_prices(load_field(field_path))
     priced = prices_table(sets, prices)
 
-    RESULTS.mkdir(exist_ok=True)
-    sets.to_csv(RESULTS / "lut_won_sets.csv", index=False)
-    by_count.to_csv(RESULTS / "lut_by_battlefield_count.csv", index=False)
-    harmful.to_csv(RESULTS / "lut_harmful_additions.csv", index=False)
-    priced.to_csv(RESULTS / f"lut_affordable_sets_p{PRICE_PERCENTILE}_{field_path.stem}.csv", index=False)
+    save_results(
+        {
+            "lut_won_sets": sets,
+            "lut_by_battlefield_count": by_count,
+            "lut_harmful_additions": harmful,
+            f"lut_affordable_sets_p{PRICE_PERCENTILE}_{field_path.stem}": priced,
+        }
+    )
 
     pd.set_option("display.width", 120)
     print("Scores by number of battlefields won:\n", by_count.to_string(index=False))

@@ -1,1025 +1,1025 @@
 mask,battlefields,count,base,score,rule2,rule3,best_opponent_score,guaranteed_win,minimal_guaranteed
-0,,0,0,0.0,True,False,127.05,False,False
-1,1,1,1,1.0,False,False,115.5,False,False
-2,2,1,2,2.0,False,False,114.73,False,False
-3,1 2,2,3,4.5,False,False,103.95,False,False
-4,3,1,3,3.0,False,False,114.73,False,False
-5,1 3,2,4,4.0,False,False,103.95,False,False
-6,2 3,2,5,10.5,True,False,114.73,False,False
-7,1 2 3,3,6,9.0,False,False,103.95,False,False
-8,4,1,4,4.0,False,False,115.5,False,False
-9,1 4,2,5,7.0,True,False,115.5,False,False
-10,2 4,2,6,6.0,False,False,103.95,False,False
-11,1 2 4,3,7,8.5,False,False,103.95,False,False
-12,3 4,2,7,10.5,False,False,103.95,False,False
-13,1 3 4,3,8,11.5,False,False,103.95,False,False
-14,2 3 4,3,9,13.5,False,False,103.95,False,False
-15,1 2 3 4,4,10,21.0,True,False,103.95,False,False
-16,5,1,5,7.0,True,False,115.5,False,False
-17,1 5,2,6,6.0,False,False,103.95,False,False
-18,2 5,2,7,7.0,False,False,100.1,False,False
-19,1 2 5,3,8,9.5,False,False,92.4,False,False
-20,3 5,2,8,8.0,False,False,100.1,False,False
-21,1 3 5,3,9,9.0,False,False,92.4,False,False
-22,2 3 5,3,10,17.5,True,False,100.1,False,False
-23,1 2 3 5,4,11,14.0,False,False,92.4,False,False
-24,4 5,2,9,13.5,False,False,103.95,False,False
-25,1 4 5,3,10,20.3,True,False,103.95,False,False
-26,2 4 5,3,11,15.5,False,False,92.4,False,False
-27,1 2 4 5,4,12,18.0,False,False,92.4,False,False
-28,3 4 5,3,12,18.0,False,False,92.4,False,False
-29,1 3 4 5,4,13,19.0,False,False,92.4,False,False
-30,2 3 4 5,4,14,21.0,False,False,92.4,False,False
-31,1 2 3 4 5,5,15,31.5,True,False,92.4,False,False
-32,6,1,6,6.6,False,True,93.1,False,False
-33,1 6,2,7,7.7,False,True,93.1,False,False
-34,2 6,2,8,8.8,False,True,83.3,False,False
-35,1 2 6,3,9,11.55,False,True,69.0,False,False
-36,3 6,2,9,9.9,False,True,93.1,False,False
-37,1 3 6,3,10,15.4,True,True,93.1,False,False
-38,2 3 6,3,11,14.85,False,True,79.8,False,False
-39,1 2 3 6,4,12,16.5,False,True,68.6,False,False
-40,4 6,2,10,15.4,True,True,91.0,False,False
-41,1 4 6,3,11,12.1,False,True,67.9,False,False
-42,2 4 6,3,12,13.2,False,True,79.8,False,False
-43,1 2 4 6,4,13,15.95,False,True,67.9,False,False
-44,3 4 6,3,13,18.15,False,True,79.8,False,False
-45,1 3 4 6,4,14,19.25,False,True,58.0,False,False
-46,2 3 4 6,4,15,30.03,True,True,79.8,False,False
-47,1 2 3 4 6,5,16,23.1,False,True,56.0,False,False
-48,5 6,2,11,18.15,False,True,84.0,False,False
-49,1 5 6,3,12,19.25,False,True,79.8,False,False
-50,2 5 6,3,13,20.35,False,True,72.8,False,False
-51,1 2 5 6,4,14,23.1,False,True,61.5,False,False
-52,3 5 6,3,14,21.45,False,True,79.8,False,False
-53,1 3 5 6,4,15,31.57,True,True,79.8,False,False
-54,2 3 5 6,4,16,26.4,False,True,72.8,False,False
-55,1 2 3 5 6,5,17,28.05,False,True,55.3,False,False
-56,4 5 6,3,15,34.65,True,True,84.0,False,False
-57,1 4 5 6,4,16,25.85,False,True,60.9,False,False
-58,2 4 5 6,4,17,26.95,False,True,72.8,False,False
-59,1 2 4 5 6,5,18,29.7,False,True,60.9,False,False
-60,3 4 5 6,4,18,29.7,False,True,72.8,False,False
-61,1 3 4 5 6,5,19,30.8,False,True,53.0,False,False
-62,2 3 4 5 6,5,20,46.2,True,True,72.8,False,False
-63,1 2 3 4 5 6,6,21,34.65,False,True,51.0,False,False
-64,7,1,7,7.0,False,False,103.95,False,False
-65,1 7,2,8,8.0,False,False,103.95,False,False
-66,2 7,2,9,9.0,False,False,103.95,False,False
-67,1 2 7,3,10,16.1,True,False,103.95,False,False
-68,3 7,2,10,14.0,True,False,103.95,False,False
-69,1 3 7,3,11,11.0,False,False,90.86,False,False
-70,2 3 7,3,12,14.5,False,False,80.08,False,False
-71,1 2 3 7,4,13,16.0,False,False,69.3,False,False
-72,4 7,2,11,11.0,False,False,90.86,False,False
-73,1 4 7,3,12,12.0,False,False,90.86,False,False
-74,2 4 7,3,13,13.0,False,False,69.3,False,False
-75,1 2 4 7,4,14,15.5,False,False,69.3,False,False
-76,3 4 7,3,14,17.5,False,False,90.86,False,False
-77,1 3 4 7,4,15,25.9,True,False,90.86,False,False
-78,2 3 4 7,4,16,20.5,False,False,69.3,False,False
-79,1 2 3 4 7,5,17,22.0,False,False,69.3,False,False
-80,5 7,2,12,12.0,False,False,87.78,False,False
-81,1 5 7,3,13,13.0,False,False,87.78,False,False
-82,2 5 7,3,14,14.0,False,False,87.78,False,False
-83,1 2 5 7,4,15,23.1,True,False,87.78,False,False
-84,3 5 7,3,15,21.0,True,False,84.7,False,False
-85,1 3 5 7,4,16,16.0,False,False,74.69,False,False
-86,2 3 5 7,4,17,19.5,False,False,60.83,False,False
-87,1 2 3 5 7,5,18,21.0,False,False,55.55,False,False
-88,4 5 7,3,16,20.5,False,False,74.69,False,False
-89,1 4 5 7,4,17,21.5,False,False,74.69,False,False
-90,2 4 5 7,4,18,22.5,False,False,60.9,False,False
-91,1 2 4 5 7,5,19,25.0,False,False,60.9,False,False
-92,3 4 5 7,4,19,25.0,False,False,74.69,False,False
-93,1 3 4 5 7,5,20,36.4,True,False,74.69,False,False
-94,2 3 4 5 7,5,21,28.0,False,False,53.13,False,False
-95,1 2 3 4 5 7,6,22,29.5,False,False,53.13,False,False
-96,6 7,2,13,21.45,False,True,83.3,False,False
-97,1 6 7,3,14,22.55,False,True,67.9,False,False
-98,2 6 7,3,15,33.11,True,True,83.3,False,False
-99,1 2 6 7,4,16,26.4,False,True,67.9,False,False
-100,3 6 7,3,16,24.75,False,True,70.0,False,False
-101,1 3 6 7,4,17,25.85,False,True,61.6,False,False
-102,2 3 6 7,4,18,29.7,False,True,55.0,False,False
-103,1 2 3 6 7,5,19,31.35,False,True,54.0,False,False
-104,4 6 7,3,17,25.85,False,True,70.0,False,False
-105,1 4 6 7,4,18,26.95,False,True,67.9,False,False
-106,2 4 6 7,4,19,28.05,False,True,67.9,False,False
-107,1 2 4 6 7,5,20,43.12,True,True,67.9,False,False
-108,3 4 6 7,4,20,46.2,True,True,70.0,False,False
-109,1 3 4 6 7,5,21,34.1,False,True,47.5,False,False
-110,2 3 4 6 7,5,22,36.3,False,True,48.3,False,False
-111,1 2 3 4 6 7,6,23,37.95,False,True,45.5,False,False
-112,5 6 7,3,18,29.7,False,True,72.8,False,False
-113,1 5 6 7,4,19,30.8,False,True,60.9,False,False
-114,2 5 6 7,4,20,44.66,True,True,72.8,False,False
-115,1 2 5 6 7,5,21,34.65,False,True,60.9,False,False
-116,3 5 6 7,4,21,33.0,False,True,63.0,False,False
-117,1 3 5 6 7,5,22,34.1,False,True,48.3,False,False
-118,2 3 5 6 7,5,23,37.95,False,True,45.5,False,False
-119,1 2 3 5 6 7,6,24,39.6,False,True,44.5,False,False
-120,4 5 6 7,4,22,36.3,False,True,63.0,False,False
-121,1 4 5 6 7,5,23,37.4,False,True,60.9,False,False
-122,2 4 5 6 7,5,24,38.5,False,True,60.9,False,False
-123,1 2 4 5 6 7,6,25,57.75,True,True,60.9,False,False
-124,3 4 5 6 7,5,25,57.75,True,True,63.0,False,False
-125,1 3 4 5 6 7,6,26,42.35,False,True,42.5,False,False
-126,2 3 4 5 6 7,6,27,44.55,False,True,41.5,True,True
-127,1 2 3 4 5 6 7,7,28,46.2,False,True,40.5,True,False
-128,8,1,8,8.0,False,False,103.18,False,False
-129,1 8,2,9,9.0,False,False,90.09,False,False
-130,2 8,2,10,14.0,True,False,103.18,False,False
-131,1 2 8,3,11,12.5,False,False,90.09,False,False
-132,3 8,2,11,11.0,False,False,92.4,False,False
-133,1 3 8,3,12,12.0,False,False,69.85,False,False
-134,2 3 8,3,13,15.5,False,False,80.08,False,False
-135,1 2 3 8,4,14,17.0,False,False,69.3,False,False
-136,4 8,2,12,12.0,False,False,92.4,False,False
-137,1 4 8,3,13,13.0,False,False,90.09,False,False
-138,2 4 8,3,14,14.0,False,False,90.09,False,False
-139,1 2 4 8,4,15,23.1,True,False,90.09,False,False
-140,3 4 8,3,15,25.9,True,False,92.4,False,False
-141,1 3 4 8,4,16,19.5,False,False,69.3,False,False
-142,2 3 4 8,4,17,21.5,False,False,69.3,False,False
-143,1 2 3 4 8,5,18,23.0,False,False,69.3,False,False
-144,5 8,2,13,13.0,False,False,91.63,False,False
-145,1 5 8,3,14,14.0,False,False,78.54,False,False
-146,2 5 8,3,15,21.0,True,False,91.63,False,False
-147,1 2 5 8,4,16,17.5,False,False,78.54,False,False
-148,3 5 8,3,16,16.0,False,False,80.85,False,False
-149,1 3 5 8,4,17,17.0,False,False,59.4,False,False
-150,2 3 5 8,4,18,20.5,False,False,60.83,False,False
-151,1 2 3 5 8,5,19,22.0,False,False,57.2,False,False
-152,4 5 8,3,17,21.5,False,False,80.85,False,False
-153,1 4 5 8,4,18,22.5,False,False,78.54,False,False
-154,2 4 5 8,4,19,23.5,False,False,78.54,False,False
-155,1 2 4 5 8,5,20,36.4,True,False,78.54,False,False
-156,3 4 5 8,4,20,36.4,True,False,80.85,False,False
-157,1 3 4 5 8,5,21,27.0,False,False,55.0,False,False
-158,2 3 4 5 8,5,22,29.0,False,False,53.9,False,False
-159,1 2 3 4 5 8,6,23,30.5,False,False,53.13,False,False
-160,6 8,2,14,15.4,False,True,79.1,False,False
-161,1 6 8,3,15,23.1,True,True,79.1,False,False
-162,2 6 8,3,16,17.6,False,True,68.6,False,False
-163,1 2 6 8,4,17,20.35,False,True,68.6,False,False
-164,3 6 8,3,17,18.7,False,True,68.6,False,False
-165,1 3 6 8,4,18,19.8,False,True,68.6,False,False
-166,2 3 6 8,4,19,23.65,False,True,68.6,False,False
-167,1 2 3 6 8,5,20,35.42,True,True,68.6,False,False
-168,4 6 8,3,18,19.8,False,True,62.3,False,False
-169,1 4 6 8,4,19,20.9,False,True,48.0,False,False
-170,2 4 6 8,4,20,30.8,True,True,62.3,False,False
-171,1 2 4 6 8,5,21,24.75,False,True,43.5,False,False
-172,3 4 6 8,4,21,26.95,False,True,48.3,False,False
-173,1 3 4 6 8,5,22,28.05,False,True,42.5,False,False
-174,2 3 4 6 8,5,23,30.25,False,True,48.3,False,False
-175,1 2 3 4 6 8,6,24,31.9,False,True,40.5,False,False
-176,5 6 8,3,19,26.95,False,True,68.6,False,False
-177,1 5 6 8,4,20,39.27,True,True,68.6,False,False
-178,2 5 6 8,4,21,29.15,False,True,55.3,False,False
-179,1 2 5 6 8,5,22,31.9,False,True,55.3,False,False
-180,3 5 6 8,4,22,30.25,False,True,55.3,False,False
-181,1 3 5 6 8,5,23,31.35,False,True,55.3,False,False
-182,2 3 5 6 8,5,24,35.2,False,True,55.3,False,False
-183,1 2 3 5 6 8,6,25,51.59,True,True,55.3,False,False
-184,4 5 6 8,4,23,33.55,False,True,55.3,False,False
-185,1 4 5 6 8,5,24,34.65,False,True,43.0,False,False
-186,2 4 5 6 8,5,25,50.05,True,True,55.3,False,False
-187,1 2 4 5 6 8,6,26,38.5,False,True,38.5,False,False
-188,3 4 5 6 8,5,26,38.5,False,True,41.3,False,False
-189,1 3 4 5 6 8,6,27,39.6,False,True,37.5,True,True
-190,2 3 4 5 6 8,6,28,41.8,False,True,41.3,True,True
-191,1 2 3 4 5 6 8,7,29,43.45,False,True,35.5,True,False
-192,7 8,2,15,31.5,True,False,92.4,False,False
-193,1 7 8,3,16,23.5,False,False,80.85,False,False
-194,2 7 8,3,17,24.5,False,False,80.08,False,False
-195,1 2 7 8,4,18,27.0,False,False,69.3,False,False
-196,3 7 8,3,18,25.5,False,False,80.08,False,False
-197,1 3 7 8,4,19,26.5,False,False,69.3,False,False
-198,2 3 7 8,4,20,42.0,True,False,80.08,False,False
-199,1 2 3 7 8,5,21,31.5,False,False,69.3,False,False
-200,4 7 8,3,19,26.5,False,False,80.85,False,False
-201,1 4 7 8,4,20,38.5,True,False,80.85,False,False
-202,2 4 7 8,4,21,28.5,False,False,69.3,False,False
-203,1 2 4 7 8,5,22,31.0,False,False,69.3,False,False
-204,3 4 7 8,4,22,33.0,False,False,69.3,False,False
-205,1 3 4 7 8,5,23,34.0,False,False,69.3,False,False
-206,2 3 4 7 8,5,24,36.0,False,False,69.3,False,False
-207,1 2 3 4 7 8,6,25,52.5,True,False,69.3,False,False
-208,5 7 8,3,20,38.5,True,False,76.23,False,False
-209,1 5 7 8,4,21,28.5,False,False,64.68,False,False
-210,2 5 7 8,4,22,29.5,False,False,60.83,False,False
-211,1 2 5 7 8,5,23,32.0,False,False,53.13,False,False
-212,3 5 7 8,4,23,30.5,False,False,60.83,False,False
-213,1 3 5 7 8,5,24,31.5,False,False,53.13,False,False
-214,2 3 5 7 8,5,25,49.0,True,False,60.83,False,False
-215,1 2 3 5 7 8,6,26,36.5,False,False,53.13,False,False
-216,4 5 7 8,4,24,36.0,False,False,64.68,False,False
-217,1 4 5 7 8,5,25,51.8,True,False,64.68,False,False
-218,2 4 5 7 8,5,26,38.0,False,False,53.13,False,False
-219,1 2 4 5 7 8,6,27,40.5,False,False,53.13,False,False
-220,3 4 5 7 8,5,27,40.5,False,False,53.13,False,False
-221,1 3 4 5 7 8,6,28,41.5,False,False,53.13,False,False
-222,2 3 4 5 7 8,6,29,43.5,False,False,53.13,False,False
-223,1 2 3 4 5 7 8,7,30,63.0,True,False,53.13,True,True
-224,6 7 8,3,21,34.65,False,True,61.6,False,False
-225,1 6 7 8,4,22,35.75,False,True,61.6,False,False
-226,2 6 7 8,4,23,36.85,False,True,48.3,False,False
-227,1 2 6 7 8,5,24,39.6,False,True,46.5,False,False
-228,3 6 7 8,4,24,37.95,False,True,61.6,False,False
-229,1 3 6 7 8,5,25,54.67,True,True,61.6,False,False
-230,2 3 6 7 8,5,26,42.9,False,True,48.3,False,False
-231,1 2 3 6 7 8,6,27,44.55,False,True,42.0,True,True
-232,4 6 7 8,4,25,54.67,True,True,59.5,False,False
-233,1 4 6 7 8,5,26,40.15,False,True,41.0,False,False
-234,2 4 6 7 8,5,27,41.25,False,True,48.3,False,False
-235,1 2 4 6 7 8,6,28,44.0,False,True,36.5,True,True
-236,3 4 6 7 8,5,28,46.2,False,True,48.3,False,False
-237,1 3 4 6 7 8,6,29,47.3,False,True,35.5,True,True
-238,2 3 4 6 7 8,6,30,69.3,True,True,48.3,True,True
-239,1 2 3 4 6 7 8,7,31,51.15,False,True,33.5,True,False
-240,5 6 7 8,4,26,42.9,False,True,52.5,False,False
-241,1 5 6 7 8,5,27,44.0,False,True,48.3,False,False
-242,2 5 6 7 8,5,28,45.1,False,True,41.3,True,True
-243,1 2 5 6 7 8,6,29,47.85,False,True,39.0,True,False
-244,3 5 6 7 8,5,29,46.2,False,True,48.3,False,False
-245,1 3 5 6 7 8,6,30,66.22,True,True,48.3,True,True
-246,2 3 5 6 7 8,6,31,51.15,False,True,41.3,True,False
-247,1 2 3 5 6 7 8,7,32,52.8,False,True,32.5,True,False
-248,4 5 6 7 8,5,30,69.3,True,True,52.5,True,True
-249,1 4 5 6 7 8,6,31,50.6,False,True,36.0,True,False
-250,2 4 5 6 7 8,6,32,51.7,False,True,41.3,True,False
-251,1 2 4 5 6 7 8,7,33,54.45,False,True,31.5,True,False
-252,3 4 5 6 7 8,6,33,54.45,False,True,41.3,True,False
-253,1 3 4 5 6 7 8,7,34,55.55,False,True,30.5,True,False
-254,2 3 4 5 6 7 8,7,35,80.85,True,True,41.3,True,False
-255,1 2 3 4 5 6 7 8,8,36,59.4,False,True,28.5,True,False
-256,9,1,9,9.0,False,False,96.25,False,False
-257,1 9,2,10,14.0,True,False,96.25,False,False
-258,2 9,2,11,11.0,False,False,84.7,False,False
-259,1 2 9,3,12,13.5,False,False,84.7,False,False
-260,3 9,2,12,12.0,False,False,84.7,False,False
-261,1 3 9,3,13,13.0,False,False,84.7,False,False
-262,2 3 9,3,14,16.5,False,False,84.7,False,False
-263,1 2 3 9,4,15,25.2,True,False,84.7,False,False
-264,4 9,2,13,13.0,False,False,81.62,False,False
-265,1 4 9,3,14,14.0,False,False,63.0,False,False
-266,2 4 9,3,15,21.0,True,False,81.62,False,False
-267,1 2 4 9,4,16,17.5,False,False,57.2,False,False
-268,3 4 9,3,16,19.5,False,False,60.06,False,False
-269,1 3 4 9,4,17,20.5,False,False,60.06,False,False
-270,2 3 4 9,4,18,22.5,False,False,55.0,False,False
-271,1 2 3 4 9,5,19,24.0,False,False,53.9,False,False
-272,5 9,2,14,14.0,False,False,84.7,False,False
-273,1 5 9,3,15,21.0,True,False,84.7,False,False
-274,2 5 9,3,16,16.0,False,False,70.07,False,False
-275,1 2 5 9,4,17,18.5,False,False,70.07,False,False
-276,3 5 9,3,17,17.0,False,False,70.07,False,False
-277,1 3 5 9,4,18,18.0,False,False,70.07,False,False
-278,2 3 5 9,4,19,21.5,False,False,70.07,False,False
-279,1 2 3 5 9,5,20,32.2,True,False,70.07,False,False
-280,4 5 9,3,18,22.5,False,False,70.07,False,False
-281,1 4 5 9,4,19,23.5,False,False,56.0,False,False
-282,2 4 5 9,4,20,34.3,True,False,70.07,False,False
-283,1 2 4 5 9,5,21,27.0,False,False,48.95,False,False
-284,3 4 5 9,4,21,27.0,False,False,50.6,False,False
-285,1 3 4 5 9,5,22,28.0,False,False,48.51,False,False
-286,2 3 4 5 9,5,23,30.0,False,False,46.75,False,False
-287,1 2 3 4 5 9,6,24,31.5,False,False,45.65,False,False
-288,6 9,2,15,23.1,True,True,77.0,False,False
-289,1 6 9,3,16,17.6,False,True,63.0,False,False
-290,2 6 9,3,17,18.7,False,True,65.8,False,False
-291,1 2 6 9,4,18,21.45,False,True,52.5,False,False
-292,3 6 9,3,18,19.8,False,True,65.8,False,False
-293,1 3 6 9,4,19,20.9,False,True,52.5,False,False
-294,2 3 6 9,4,20,34.65,True,True,65.8,False,False
-295,1 2 3 6 9,5,21,26.4,False,True,52.5,False,False
-296,4 6 9,3,19,20.9,False,True,63.0,False,False
-297,1 4 6 9,4,20,30.8,True,True,63.0,False,False
-298,2 4 6 9,4,21,23.1,False,True,52.5,False,False
-299,1 2 4 6 9,5,22,25.85,False,True,52.5,False,False
-300,3 4 6 9,4,22,28.05,False,True,52.5,False,False
-301,1 3 4 6 9,5,23,29.15,False,True,52.5,False,False
-302,2 3 4 6 9,5,24,31.35,False,True,52.5,False,False
-303,1 2 3 4 6 9,6,25,46.2,True,True,52.5,False,False
-304,5 6 9,3,20,39.27,True,True,66.5,False,False
-305,1 5 6 9,4,21,29.15,False,True,56.0,False,False
-306,2 5 6 9,4,22,30.25,False,True,52.5,False,False
-307,1 2 5 6 9,5,23,33.0,False,True,45.5,False,False
-308,3 5 6 9,4,23,31.35,False,True,52.5,False,False
-309,1 3 5 6 9,5,24,32.45,False,True,45.5,False,False
-310,2 3 5 6 9,5,25,50.82,True,True,52.5,False,False
-311,1 2 3 5 6 9,6,26,37.95,False,True,45.5,False,False
-312,4 5 6 9,4,24,34.65,False,True,56.0,False,False
-313,1 4 5 6 9,5,25,50.05,True,True,56.0,False,False
-314,2 4 5 6 9,5,26,36.85,False,True,45.5,False,False
-315,1 2 4 5 6 9,6,27,39.6,False,True,45.5,False,False
-316,3 4 5 6 9,5,27,39.6,False,True,45.5,False,False
-317,1 3 4 5 6 9,6,28,40.7,False,True,45.5,False,False
-318,2 3 4 5 6 9,6,29,42.9,False,True,45.5,False,False
-319,1 2 3 4 5 6 9,7,30,62.37,True,True,45.5,True,True
-320,7 9,2,16,16.0,False,False,66.99,False,False
-321,1 7 9,3,17,17.0,False,False,65.45,False,False
-322,2 7 9,3,18,18.0,False,False,54.67,False,False
-323,1 2 7 9,4,19,20.5,False,False,50.4,False,False
-324,3 7 9,3,19,19.0,False,False,65.45,False,False
-325,1 3 7 9,4,20,28.0,True,False,65.45,False,False
-326,2 3 7 9,4,21,23.5,False,False,54.67,False,False
-327,1 2 3 7 9,5,22,25.0,False,False,50.05,False,False
-328,4 7 9,3,20,28.0,True,False,66.99,False,False
-329,1 4 7 9,4,21,21.0,False,False,46.2,False,False
-330,2 4 7 9,4,22,22.0,False,False,54.67,False,False
-331,1 2 4 7 9,5,23,24.5,False,False,41.25,False,False
-332,3 4 7 9,4,23,26.5,False,False,54.67,False,False
-333,1 3 4 7 9,5,24,27.5,False,False,40.15,False,False
-334,2 3 4 7 9,5,25,41.3,True,False,54.67,False,False
-335,1 2 3 4 7 9,6,26,31.0,False,False,37.95,False,False
-336,5 7 9,3,21,21.0,False,False,50.82,False,False
-337,1 5 7 9,4,22,22.0,False,False,46.2,False,False
-338,2 5 7 9,4,23,23.0,False,False,39.9,False,False
-339,1 2 5 7 9,5,24,25.5,False,False,39.9,False,False
-340,3 5 7 9,4,24,24.0,False,False,46.2,False,False
-341,1 3 5 7 9,5,25,35.0,True,False,46.2,False,False
-342,2 3 5 7 9,5,26,28.5,False,False,38.5,False,False
-343,1 2 3 5 7 9,6,27,30.0,False,False,30.8,False,False
-344,4 5 7 9,4,25,41.3,True,False,50.82,False,False
-345,1 4 5 7 9,5,26,30.5,False,False,34.65,False,False
-346,2 4 5 7 9,5,27,31.5,False,False,38.5,False,False
-347,1 2 4 5 7 9,6,28,34.0,False,False,29.7,True,True
-348,3 4 5 7 9,5,28,34.0,False,False,38.5,False,False
-349,1 3 4 5 7 9,6,29,35.0,False,False,28.6,True,True
-350,2 3 4 5 7 9,6,30,51.8,True,False,38.5,True,True
-351,1 2 3 4 5 7 9,7,31,38.5,False,False,26.4,True,False
-352,6 7 9,3,22,31.35,False,True,50.4,False,False
-353,1 6 7 9,4,23,32.45,False,True,50.4,False,False
-354,2 6 7 9,4,24,33.55,False,True,50.4,False,False
-355,1 2 6 7 9,5,25,50.82,True,True,50.4,True,True
-356,3 6 7 9,4,25,48.51,True,True,50.4,False,False
-357,1 3 6 7 9,5,26,35.75,False,True,35.0,True,True
-358,2 3 6 7 9,5,27,39.6,False,True,34.3,True,True
-359,1 2 3 6 7 9,6,28,41.25,False,True,31.5,True,False
-360,4 6 7 9,4,26,35.75,False,True,35.0,True,True
-361,1 4 6 7 9,5,27,36.85,False,True,35.0,True,False
-362,2 4 6 7 9,5,28,37.95,False,True,27.0,True,False
-363,1 2 4 6 7 9,6,29,40.7,False,True,26.0,True,False
-364,3 4 6 7 9,5,29,42.9,False,True,35.0,True,False
-365,1 3 4 6 7 9,6,30,61.6,True,True,35.0,True,False
-366,2 3 4 6 7 9,6,31,46.2,False,True,24.0,True,False
-367,1 2 3 4 6 7 9,7,32,47.85,False,True,23.0,True,False
-368,5 6 7 9,4,27,39.6,False,True,39.9,False,False
-369,1 5 6 7 9,5,28,40.7,False,True,39.9,True,True
-370,2 5 6 7 9,5,29,41.8,False,True,39.9,True,True
-371,1 2 5 6 7 9,6,30,62.37,True,True,39.9,True,False
-372,3 5 6 7 9,5,30,60.06,True,True,37.1,True,True
-373,1 3 5 6 7 9,6,31,44.0,False,True,28.0,True,False
-374,2 3 5 6 7 9,6,32,47.85,False,True,23.0,True,False
-375,1 2 3 5 6 7 9,7,33,49.5,False,True,22.0,True,False
-376,4 5 6 7 9,5,31,46.2,False,True,28.0,True,False
-377,1 4 5 6 7 9,6,32,47.3,False,True,28.0,True,False
-378,2 4 5 6 7 9,6,33,48.4,False,True,22.0,True,False
-379,1 2 4 5 6 7 9,7,34,51.15,False,True,21.0,True,False
-380,3 4 5 6 7 9,6,34,51.15,False,True,28.0,True,False
-381,1 3 4 5 6 7 9,7,35,73.15,True,True,28.0,True,False
-382,2 3 4 5 6 7 9,7,36,54.45,False,True,19.0,True,False
-383,1 2 3 4 5 6 7 9,8,37,56.1,False,True,18.0,True,False
-384,8 9,2,17,25.5,False,False,73.15,False,False
-385,1 8 9,3,18,26.5,False,False,73.15,False,False
-386,2 8 9,3,19,27.5,False,False,73.15,False,False
-387,1 2 8 9,4,20,42.0,True,False,73.15,False,False
-388,3 8 9,3,20,39.9,True,False,73.15,False,False
-389,1 3 8 9,4,21,29.5,False,False,60.06,False,False
-390,2 3 8 9,4,22,33.0,False,False,50.05,False,False
-391,1 2 3 8 9,5,23,34.5,False,False,50.05,False,False
-392,4 8 9,3,21,29.5,False,False,60.06,False,False
-393,1 4 8 9,4,22,30.5,False,False,60.06,False,False
-394,2 4 8 9,4,23,31.5,False,False,46.97,False,False
-395,1 2 4 8 9,5,24,34.0,False,False,44.0,False,False
-396,3 4 8 9,4,24,36.0,False,False,60.06,False,False
-397,1 3 4 8 9,5,25,51.8,True,False,60.06,False,False
-398,2 3 4 8 9,5,26,39.0,False,False,41.8,False,False
-399,1 2 3 4 8 9,6,27,40.5,False,False,40.7,False,False
-400,5 8 9,3,22,30.5,False,False,61.6,False,False
-401,1 5 8 9,4,23,31.5,False,False,61.6,False,False
-402,2 5 8 9,4,24,32.5,False,False,61.6,False,False
-403,1 2 5 8 9,5,25,49.0,True,False,61.6,False,False
-404,3 5 8 9,4,25,46.9,True,False,58.52,False,False
-405,1 3 5 8 9,5,26,34.5,False,False,48.51,False,False
-406,2 3 5 8 9,5,27,38.0,False,False,37.95,True,True
-407,1 2 3 5 8 9,6,28,39.5,False,False,36.85,True,False
-408,4 5 8 9,4,26,39.0,False,False,48.51,False,False
-409,1 4 5 8 9,5,27,40.0,False,False,48.51,False,False
-410,2 4 5 8 9,5,28,41.0,False,False,36.85,True,True
-411,1 2 4 5 8 9,6,29,43.5,False,False,35.75,True,False
-412,3 4 5 8 9,5,29,43.5,False,False,48.51,False,False
-413,1 3 4 5 8 9,6,30,62.3,True,False,48.51,True,True
-414,2 3 4 5 8 9,6,31,46.5,False,False,33.55,True,False
-415,1 2 3 4 5 8 9,7,32,48.0,False,False,32.45,True,False
-416,6 8 9,3,23,34.65,False,True,50.4,False,False
-417,1 6 8 9,4,24,35.75,False,True,38.0,False,False
-418,2 6 8 9,4,25,51.59,True,True,50.4,True,True
-419,1 2 6 8 9,5,26,39.6,False,True,35.0,True,False
-420,3 6 8 9,4,26,37.95,False,True,37.1,True,True
-421,1 3 6 8 9,5,27,39.05,False,True,32.5,True,False
-422,2 3 6 8 9,5,28,42.9,False,True,34.3,True,False
-423,1 2 3 6 8 9,6,29,44.55,False,True,30.5,True,False
-424,4 6 8 9,4,27,39.05,False,True,37.1,True,True
-425,1 4 6 8 9,5,28,40.15,False,True,35.0,True,False
-426,2 4 6 8 9,5,29,41.25,False,True,35.0,True,False
-427,1 2 4 6 8 9,6,30,61.6,True,True,35.0,True,False
-428,3 4 6 8 9,5,30,64.68,True,True,37.1,True,False
-429,1 3 4 6 8 9,6,31,47.3,False,True,24.0,True,False
-430,2 3 4 6 8 9,6,32,49.5,False,True,23.0,True,False
-431,1 2 3 4 6 8 9,7,33,51.15,False,True,22.0,True,False
-432,5 6 8 9,4,28,46.2,False,True,39.9,True,True
-433,1 5 6 8 9,5,29,47.3,False,True,30.5,True,False
-434,2 5 6 8 9,5,30,67.76,True,True,39.9,True,False
-435,1 2 5 6 8 9,6,31,51.15,False,True,28.0,True,False
-436,3 5 6 8 9,5,31,49.5,False,True,30.1,True,False
-437,1 3 5 6 8 9,6,32,50.6,False,True,23.0,True,False
-438,2 3 5 6 8 9,6,33,54.45,False,True,22.0,True,False
-439,1 2 3 5 6 8 9,7,34,56.1,False,True,21.0,True,False
-440,4 5 6 8 9,5,32,52.8,False,True,30.1,True,False
-441,1 4 5 6 8 9,6,33,53.9,False,True,28.0,True,False
-442,2 4 5 6 8 9,6,34,55.0,False,True,28.0,True,False
-443,1 2 4 5 6 8 9,7,35,80.85,True,True,28.0,True,False
-444,3 4 5 6 8 9,6,35,80.85,True,True,30.1,True,False
-445,1 3 4 5 6 8 9,7,36,58.85,False,True,19.0,True,False
-446,2 3 4 5 6 8 9,7,37,61.05,False,True,18.0,True,False
-447,1 2 3 4 5 6 8 9,8,38,62.7,False,True,17.0,True,False
-448,7 8 9,3,24,36.0,False,False,61.6,False,False
-449,1 7 8 9,4,25,51.8,True,False,61.6,False,False
-450,2 7 8 9,4,26,38.0,False,False,50.05,False,False
-451,1 2 7 8 9,5,27,40.5,False,False,50.05,False,False
-452,3 7 8 9,4,27,39.0,False,False,50.05,False,False
-453,1 3 7 8 9,5,28,40.0,False,False,50.05,False,False
-454,2 3 7 8 9,5,29,43.5,False,False,50.05,False,False
-455,1 2 3 7 8 9,6,30,63.0,True,False,50.05,True,True
-456,4 7 8 9,4,28,40.0,False,False,46.97,False,False
-457,1 4 7 8 9,5,29,41.0,False,False,37.4,True,True
-458,2 4 7 8 9,5,30,58.8,True,False,46.97,True,True
-459,1 2 4 7 8 9,6,31,44.5,False,False,32.45,True,False
-460,3 4 7 8 9,5,31,46.5,False,False,34.1,True,True
-461,1 3 4 7 8 9,6,32,47.5,False,False,31.35,True,False
-462,2 3 4 7 8 9,6,33,49.5,False,False,30.25,True,False
-463,1 2 3 4 7 8 9,7,34,51.0,False,False,29.15,True,False
-464,5 7 8 9,4,29,41.0,False,False,45.43,False,False
-465,1 5 7 8 9,5,30,58.8,True,False,45.43,True,True
-466,2 5 7 8 9,5,31,43.0,False,False,30.8,True,True
-467,1 2 5 7 8 9,6,32,45.5,False,False,30.8,True,False
-468,3 5 7 8 9,5,32,44.0,False,False,30.8,True,True
-469,1 3 5 7 8 9,6,33,45.0,False,False,30.8,True,False
-470,2 3 5 7 8 9,6,34,48.5,False,False,30.8,True,False
-471,1 2 3 5 7 8 9,7,35,70.0,True,False,30.8,True,False
-472,4 5 7 8 9,5,33,49.5,False,False,30.8,True,True
-473,1 4 5 7 8 9,6,34,50.5,False,False,25.85,True,False
-474,2 4 5 7 8 9,6,35,72.1,True,False,30.8,True,False
-475,1 2 4 5 7 8 9,7,36,54.0,False,False,20.9,True,False
-476,3 4 5 7 8 9,6,36,54.0,False,False,22.55,True,False
-477,1 3 4 5 7 8 9,7,37,55.0,False,False,19.8,True,False
-478,2 3 4 5 7 8 9,7,38,57.0,False,False,18.7,True,False
-479,1 2 3 4 5 7 8 9,8,39,58.5,False,False,17.6,True,False
-480,6 7 8 9,4,30,69.3,True,True,45.5,True,True
-481,1 6 7 8 9,5,31,50.6,False,True,31.5,True,False
-482,2 6 7 8 9,5,32,51.7,False,True,34.3,True,False
-483,1 2 6 7 8 9,6,33,54.45,False,True,28.0,True,False
-484,3 6 7 8 9,5,33,52.8,False,True,34.3,True,False
-485,1 3 6 7 8 9,6,34,53.9,False,True,25.5,True,False
-486,2 3 6 7 8 9,6,35,80.85,True,True,34.3,True,False
-487,1 2 3 6 7 8 9,7,36,59.4,False,True,23.5,True,False
-488,4 6 7 8 9,5,34,53.9,False,True,31.5,True,False
-489,1 4 6 7 8 9,6,35,77.0,True,True,31.5,True,False
-490,2 4 6 7 8 9,6,36,56.1,False,True,21.0,True,False
-491,1 2 4 6 7 8 9,7,37,58.85,False,True,21.0,True,False
-492,3 4 6 7 8 9,6,37,61.05,False,True,21.0,True,False
-493,1 3 4 6 7 8 9,7,38,62.15,False,True,21.0,True,False
-494,2 3 4 6 7 8 9,7,39,64.35,False,True,21.0,True,False
-495,1 2 3 4 6 7 8 9,8,40,92.4,True,True,21.0,True,False
-496,5 6 7 8 9,5,35,80.85,True,True,35.0,True,False
-497,1 5 6 7 8 9,6,36,58.85,False,True,24.5,True,False
-498,2 5 6 7 8 9,6,37,59.95,False,True,21.5,True,False
-499,1 2 5 6 7 8 9,7,38,62.7,False,True,20.5,True,False
-500,3 5 6 7 8 9,6,38,61.05,False,True,21.0,True,False
-501,1 3 5 6 7 8 9,7,39,62.15,False,True,16.0,True,False
-502,2 3 5 6 7 8 9,7,40,92.4,True,True,21.0,True,False
-503,1 2 3 5 6 7 8 9,8,41,67.65,False,True,14.0,True,False
-504,4 5 6 7 8 9,6,39,64.35,False,True,24.5,True,False
-505,1 4 5 6 7 8 9,7,40,91.63,True,True,24.5,True,False
-506,2 4 5 6 7 8 9,7,41,66.55,False,True,14.0,True,False
-507,1 2 4 5 6 7 8 9,8,42,69.3,False,True,14.0,True,False
-508,3 4 5 6 7 8 9,7,42,69.3,False,True,14.5,True,False
-509,1 3 4 5 6 7 8 9,8,43,70.4,False,True,14.0,True,False
-510,2 3 4 5 6 7 8 9,8,44,72.6,False,True,14.0,True,False
-511,1 2 3 4 5 6 7 8 9,9,45,103.95,True,True,14.0,True,False
-512,10,1,10,14.0,True,False,103.95,False,False
-513,1 10,2,11,11.0,False,False,92.4,False,False
-514,2 10,2,12,12.0,False,False,91.63,False,False
-515,1 2 10,3,13,14.5,False,False,80.85,False,False
-516,3 10,2,13,13.0,False,False,91.63,False,False
-517,1 3 10,3,14,14.0,False,False,80.85,False,False
-518,2 3 10,3,15,24.5,True,False,91.63,False,False
-519,1 2 3 10,4,16,19.0,False,False,80.85,False,False
-520,4 10,2,14,14.0,False,False,92.4,False,False
-521,1 4 10,3,15,21.0,True,False,92.4,False,False
-522,2 4 10,3,16,16.0,False,False,80.85,False,False
-523,1 2 4 10,4,17,18.5,False,False,80.85,False,False
-524,3 4 10,3,17,20.5,False,False,80.85,False,False
-525,1 3 4 10,4,18,21.5,False,False,80.85,False,False
-526,2 3 4 10,4,19,23.5,False,False,80.85,False,False
-527,1 2 3 4 10,5,20,35.0,True,False,80.85,False,False
-528,5 10,2,15,21.0,True,False,92.4,False,False
-529,1 5 10,3,16,16.0,False,False,80.85,False,False
-530,2 5 10,3,17,17.0,False,False,77.0,False,False
-531,1 2 5 10,4,18,19.5,False,False,69.3,False,False
-532,3 5 10,3,18,18.0,False,False,77.0,False,False
-533,1 3 5 10,4,19,19.0,False,False,69.3,False,False
-534,2 3 5 10,4,20,31.5,True,False,77.0,False,False
-535,1 2 3 5 10,5,21,24.0,False,False,69.3,False,False
-536,4 5 10,3,19,23.5,False,False,80.85,False,False
-537,1 4 5 10,4,20,34.3,True,False,80.85,False,False
-538,2 4 5 10,4,21,25.5,False,False,69.3,False,False
-539,1 2 4 5 10,5,22,28.0,False,False,69.3,False,False
-540,3 4 5 10,4,22,28.0,False,False,69.3,False,False
-541,1 3 4 5 10,5,23,29.0,False,False,69.3,False,False
-542,2 3 4 5 10,5,24,31.0,False,False,69.3,False,False
-543,1 2 3 4 5 10,6,25,45.5,True,False,69.3,False,False
-544,6 10,2,16,17.6,False,True,72.1,False,False
-545,1 6 10,3,17,18.7,False,True,72.1,False,False
-546,2 6 10,3,18,19.8,False,True,62.3,False,False
-547,1 2 6 10,4,19,22.55,False,True,54.0,False,False
-548,3 6 10,3,19,20.9,False,True,72.1,False,False
-549,1 3 6 10,4,20,30.8,True,True,72.1,False,False
-550,2 3 6 10,4,21,25.85,False,True,58.8,False,False
-551,1 2 3 6 10,5,22,27.5,False,True,49.5,False,False
-552,4 6 10,3,20,30.8,True,True,70.0,False,False
-553,1 4 6 10,4,21,23.1,False,True,49.0,False,False
-554,2 4 6 10,4,22,24.2,False,True,58.8,False,False
-555,1 2 4 6 10,5,23,26.95,False,True,46.9,False,False
-556,3 4 6 10,4,23,29.15,False,True,58.8,False,False
-557,1 3 4 6 10,5,24,30.25,False,True,43.0,False,False
-558,2 3 4 6 10,5,25,45.43,True,True,58.8,False,False
-559,1 2 3 4 6 10,6,26,34.1,False,True,41.0,False,False
-560,5 6 10,3,21,29.15,False,True,63.0,False,False
-561,1 5 6 10,4,22,30.25,False,True,58.8,False,False
-562,2 5 6 10,4,23,31.35,False,True,51.8,False,False
-563,1 2 5 6 10,5,24,34.1,False,True,46.5,False,False
-564,3 5 6 10,4,24,32.45,False,True,58.8,False,False
-565,1 3 5 6 10,5,25,46.97,True,True,58.8,False,False
-566,2 3 5 6 10,5,26,37.4,False,True,51.8,False,False
-567,1 2 3 5 6 10,6,27,39.05,False,True,40.0,False,False
-568,4 5 6 10,4,25,50.05,True,True,63.0,False,False
-569,1 4 5 6 10,5,26,36.85,False,True,43.5,False,False
-570,2 4 5 6 10,5,27,37.95,False,True,51.8,False,False
-571,1 2 4 5 6 10,6,28,40.7,False,True,39.9,True,True
-572,3 4 5 6 10,5,28,40.7,False,True,51.8,False,False
-573,1 3 4 5 6 10,6,29,41.8,False,True,38.0,True,True
-574,2 3 4 5 6 10,6,30,61.6,True,True,51.8,True,True
-575,1 2 3 4 5 6 10,7,31,45.65,False,True,36.0,True,False
-576,7 10,2,17,17.0,False,False,80.85,False,False
-577,1 7 10,3,18,18.0,False,False,80.85,False,False
-578,2 7 10,3,19,19.0,False,False,80.85,False,False
-579,1 2 7 10,4,20,30.1,True,False,80.85,False,False
-580,3 7 10,3,20,28.0,True,False,80.85,False,False
-581,1 3 7 10,4,21,21.0,False,False,67.76,False,False
-582,2 3 7 10,4,22,24.5,False,False,53.9,False,False
-583,1 2 3 7 10,5,23,26.0,False,False,52.8,False,False
-584,4 7 10,3,21,21.0,False,False,67.76,False,False
-585,1 4 7 10,4,22,22.0,False,False,67.76,False,False
-586,2 4 7 10,4,23,23.0,False,False,50.6,False,False
-587,1 2 4 7 10,5,24,25.5,False,False,49.5,False,False
-588,3 4 7 10,4,24,27.5,False,False,67.76,False,False
-589,1 3 4 7 10,5,25,39.9,True,False,67.76,False,False
-590,2 3 4 7 10,5,26,30.5,False,False,47.3,False,False
-591,1 2 3 4 7 10,6,27,32.0,False,False,46.2,False,False
-592,5 7 10,3,22,22.0,False,False,64.68,False,False
-593,1 5 7 10,4,23,23.0,False,False,64.68,False,False
-594,2 5 7 10,4,24,24.0,False,False,64.68,False,False
-595,1 2 5 7 10,5,25,37.1,True,False,64.68,False,False
-596,3 5 7 10,4,25,35.0,True,False,61.6,False,False
-597,1 3 5 7 10,5,26,26.0,False,False,51.59,False,False
-598,2 3 5 7 10,5,27,29.5,False,False,40.15,False,False
-599,1 2 3 5 7 10,6,28,31.0,False,False,39.05,False,False
-600,4 5 7 10,4,26,30.5,False,False,51.59,False,False
-601,1 4 5 7 10,5,27,31.5,False,False,51.59,False,False
-602,2 4 5 7 10,5,28,32.5,False,False,39.9,False,False
-603,1 2 4 5 7 10,6,29,35.0,False,False,39.9,False,False
-604,3 4 5 7 10,5,29,35.0,False,False,51.59,False,False
-605,1 3 4 5 7 10,6,30,50.4,True,False,51.59,False,False
-606,2 3 4 5 7 10,6,31,38.0,False,False,35.75,True,True
-607,1 2 3 4 5 7 10,7,32,39.5,False,False,34.65,True,False
-608,6 7 10,3,23,32.45,False,True,62.3,False,False
-609,1 6 7 10,4,24,33.55,False,True,46.9,False,False
-610,2 6 7 10,4,25,48.51,True,True,62.3,False,False
-611,1 2 6 7 10,5,26,37.4,False,True,46.9,False,False
-612,3 6 7 10,4,26,35.75,False,True,49.0,False,False
-613,1 3 6 7 10,5,27,36.85,False,True,41.0,False,False
-614,2 3 6 7 10,5,28,40.7,False,True,40.0,True,True
-615,1 2 3 6 7 10,6,29,42.35,False,True,39.0,True,False
-616,4 6 7 10,4,27,36.85,False,True,49.0,False,False
-617,1 4 6 7 10,5,28,37.95,False,True,46.9,False,False
-618,2 4 6 7 10,5,29,39.05,False,True,46.9,False,False
-619,1 2 4 6 7 10,6,30,58.52,True,True,46.9,True,True
-620,3 4 6 7 10,5,30,61.6,True,True,49.0,True,True
-621,1 3 4 6 7 10,6,31,45.1,False,True,32.5,True,False
-622,2 3 4 6 7 10,6,32,47.3,False,True,31.5,True,False
-623,1 2 3 4 6 7 10,7,33,48.95,False,True,30.5,True,False
-624,5 6 7 10,4,28,40.7,False,True,51.8,False,False
-625,1 5 6 7 10,5,29,41.8,False,True,39.9,True,True
-626,2 5 6 7 10,5,30,60.06,True,True,51.8,True,True
-627,1 2 5 6 7 10,6,31,45.65,False,True,39.9,True,False
-628,3 5 6 7 10,5,31,44.0,False,True,42.0,True,True
-629,1 3 5 6 7 10,6,32,45.1,False,True,31.5,True,False
-630,2 3 5 6 7 10,6,33,48.95,False,True,30.5,True,False
-631,1 2 3 5 6 7 10,7,34,50.6,False,True,29.5,True,False
-632,4 5 6 7 10,5,32,47.3,False,True,42.0,True,True
-633,1 4 5 6 7 10,6,33,48.4,False,True,39.9,True,False
-634,2 4 5 6 7 10,6,34,49.5,False,True,39.9,True,False
-635,1 2 4 5 6 7 10,7,35,73.15,True,True,39.9,True,False
-636,3 4 5 6 7 10,6,35,73.15,True,True,42.0,True,False
-637,1 3 4 5 6 7 10,7,36,53.35,False,True,27.5,True,False
-638,2 3 4 5 6 7 10,7,37,55.55,False,True,26.5,True,False
-639,1 2 3 4 5 6 7 10,8,38,57.2,False,True,25.5,True,False
-640,8 10,2,18,18.0,False,False,73.15,False,False
-641,1 8 10,3,19,19.0,False,False,60.06,False,False
-642,2 8 10,3,20,28.0,True,False,73.15,False,False
-643,1 2 8 10,4,21,22.5,False,False,60.06,False,False
-644,3 8 10,3,21,21.0,False,False,62.37,False,False
-645,1 3 8 10,4,22,22.0,False,False,48.4,False,False
-646,2 3 8 10,4,23,25.5,False,False,50.05,False,False
-647,1 2 3 8 10,5,24,27.0,False,False,46.2,False,False
-648,4 8 10,3,22,22.0,False,False,62.37,False,False
-649,1 4 8 10,4,23,23.0,False,False,60.06,False,False
-650,2 4 8 10,4,24,24.0,False,False,60.06,False,False
-651,1 2 4 8 10,5,25,37.1,True,False,60.06,False,False
-652,3 4 8 10,4,25,39.9,True,False,62.37,False,False
-653,1 3 4 8 10,5,26,29.5,False,False,44.66,False,False
-654,2 3 4 8 10,5,27,31.5,False,False,40.7,False,False
-655,1 2 3 4 8 10,6,28,33.0,False,False,39.6,False,False
-656,5 8 10,3,23,23.0,False,False,61.6,False,False
-657,1 5 8 10,4,24,24.0,False,False,48.51,False,False
-658,2 5 8 10,4,25,35.0,True,False,61.6,False,False
-659,1 2 5 8 10,5,26,27.5,False,False,48.51,False,False
-660,3 5 8 10,4,26,26.0,False,False,50.82,False,False
-661,1 3 5 8 10,5,27,27.0,False,False,37.95,False,False
-662,2 3 5 8 10,5,28,30.5,False,False,36.85,False,False
-663,1 2 3 5 8 10,6,29,32.0,False,False,35.75,False,False
-664,4 5 8 10,4,27,31.5,False,False,50.82,False,False
-665,1 4 5 8 10,5,28,32.5,False,False,48.51,False,False
-666,2 4 5 8 10,5,29,33.5,False,False,48.51,False,False
-667,1 2 4 5 8 10,6,30,50.4,True,False,48.51,True,True
-668,3 4 5 8 10,5,30,50.4,True,False,50.82,False,False
-669,1 3 4 5 8 10,6,31,37.0,False,False,33.55,True,True
-670,2 3 4 5 8 10,6,32,39.0,False,False,32.45,True,True
-671,1 2 3 4 5 8 10,7,33,40.5,False,False,31.35,True,False
-672,6 8 10,3,24,26.4,False,True,51.8,False,False
-673,1 6 8 10,4,25,38.5,True,True,51.8,False,False
-674,2 6 8 10,4,26,28.6,False,True,41.3,False,False
-675,1 2 6 8 10,5,27,31.35,False,True,41.3,False,False
-676,3 6 8 10,4,27,29.7,False,True,41.3,False,False
-677,1 3 6 8 10,5,28,30.8,False,True,41.3,False,False
-678,2 3 6 8 10,5,29,34.65,False,True,41.3,False,False
-679,1 2 3 6 8 10,6,30,50.82,True,True,41.3,True,True
-680,4 6 8 10,4,28,30.8,False,True,35.0,False,False
-681,1 4 6 8 10,5,29,31.9,False,True,28.5,True,True
-682,2 4 6 8 10,5,30,46.2,True,True,35.0,True,True
-683,1 2 4 6 8 10,6,31,35.75,False,True,24.0,True,False
-684,3 4 6 8 10,5,31,37.95,False,True,25.5,True,True
-685,1 3 4 6 8 10,6,32,39.05,False,True,23.0,True,False
-686,2 3 4 6 8 10,6,33,41.25,False,True,22.0,True,False
-687,1 2 3 4 6 8 10,7,34,42.9,False,True,21.0,True,False
-688,5 6 8 10,4,29,37.95,False,True,41.3,False,False
-689,1 5 6 8 10,5,30,54.67,True,True,41.3,True,True
-690,2 5 6 8 10,5,31,40.15,False,True,28.0,True,True
-691,1 2 5 6 8 10,6,32,42.9,False,True,28.0,True,False
-692,3 5 6 8 10,5,32,41.25,False,True,28.0,True,True
-693,1 3 5 6 8 10,6,33,42.35,False,True,28.0,True,False
-694,2 3 5 6 8 10,6,34,46.2,False,True,28.0,True,False
-695,1 2 3 5 6 8 10,7,35,66.99,True,True,28.0,True,False
-696,4 5 6 8 10,5,33,44.55,False,True,28.0,True,True
-697,1 4 5 6 8 10,6,34,45.65,False,True,23.5,True,False
-698,2 4 5 6 8 10,6,35,65.45,True,True,28.0,True,False
-699,1 2 4 5 6 8 10,7,36,49.5,False,True,19.0,True,False
-700,3 4 5 6 8 10,6,36,49.5,False,True,20.5,True,False
-701,1 3 4 5 6 8 10,7,37,50.6,False,True,18.0,True,False
-702,2 3 4 5 6 8 10,7,38,52.8,False,True,17.0,True,False
-703,1 2 3 4 5 6 8 10,8,39,54.45,False,True,16.0,True,False
-704,7 8 10,3,25,45.5,True,False,62.37,False,False
-705,1 7 8 10,4,26,33.5,False,False,50.82,False,False
-706,2 7 8 10,4,27,34.5,False,False,50.05,False,False
-707,1 2 7 8 10,5,28,37.0,False,False,39.6,False,False
-708,3 7 8 10,4,28,35.5,False,False,50.05,False,False
-709,1 3 7 8 10,5,29,36.5,False,False,39.27,False,False
-710,2 3 7 8 10,5,30,56.0,True,False,50.05,True,True
-711,1 2 3 7 8 10,6,31,41.5,False,False,39.27,True,False
-712,4 7 8 10,4,29,36.5,False,False,50.82,False,False
-713,1 4 7 8 10,5,30,52.5,True,False,50.82,True,True
-714,2 4 7 8 10,5,31,38.5,False,False,39.27,False,False
-715,1 2 4 7 8 10,6,32,41.0,False,False,39.27,True,False
-716,3 4 7 8 10,5,32,43.0,False,False,39.27,True,True
-717,1 3 4 7 8 10,6,33,44.0,False,False,39.27,True,False
-718,2 3 4 7 8 10,6,34,46.0,False,False,39.27,True,False
-719,1 2 3 4 7 8 10,7,35,66.5,True,False,39.27,True,False
-720,5 7 8 10,4,30,52.5,True,False,46.2,True,True
-721,1 5 7 8 10,5,31,38.5,False,False,34.65,True,False
-722,2 5 7 8 10,5,32,39.5,False,False,30.8,True,False
-723,1 2 5 7 8 10,6,33,42.0,False,False,28.05,True,False
-724,3 5 7 8 10,5,33,40.5,False,False,30.8,True,False
-725,1 3 5 7 8 10,6,34,41.5,False,False,23.1,True,False
-726,2 3 5 7 8 10,6,35,63.0,True,False,30.8,True,False
-727,1 2 3 5 7 8 10,7,36,46.5,False,False,23.1,True,False
-728,4 5 7 8 10,5,34,46.0,False,False,34.65,True,False
-729,1 4 5 7 8 10,6,35,65.8,True,False,34.65,True,False
-730,2 4 5 7 8 10,6,36,48.0,False,False,23.1,True,False
-731,1 2 4 5 7 8 10,7,37,50.5,False,False,23.1,True,False
-732,3 4 5 7 8 10,6,37,50.5,False,False,23.1,True,False
-733,1 3 4 5 7 8 10,7,38,51.5,False,False,23.1,True,False
-734,2 3 4 5 7 8 10,7,39,53.5,False,False,23.1,True,False
-735,1 2 3 4 5 7 8 10,8,40,77.0,True,False,23.1,True,False
-736,6 7 8 10,4,31,45.65,False,True,34.3,True,True
-737,1 6 7 8 10,5,32,46.75,False,True,34.3,True,False
-738,2 6 7 8 10,5,33,47.85,False,True,28.0,True,False
-739,1 2 6 7 8 10,6,34,50.6,False,True,27.0,True,False
-740,3 6 7 8 10,5,34,48.95,False,True,34.3,True,False
-741,1 3 6 7 8 10,6,35,70.07,True,True,34.3,True,False
-742,2 3 6 7 8 10,6,36,53.9,False,True,23.5,True,False
-743,1 2 3 6 7 8 10,7,37,55.55,False,True,22.5,True,False
-744,4 6 7 8 10,5,35,70.07,True,True,32.2,True,False
-745,1 4 6 7 8 10,6,36,51.15,False,True,21.5,True,False
-746,2 4 6 7 8 10,6,37,52.25,False,True,21.0,True,False
-747,1 2 4 6 7 8 10,7,38,55.0,False,True,17.0,True,False
-748,3 4 6 7 8 10,6,38,57.2,False,True,21.0,True,False
-749,1 3 4 6 7 8 10,7,39,58.3,False,True,16.0,True,False
-750,2 3 4 6 7 8 10,7,40,84.7,True,True,21.0,True,False
-751,1 2 3 4 6 7 8 10,8,41,62.15,False,True,14.0,True,False
-752,5 6 7 8 10,5,36,53.9,False,True,25.2,True,False
-753,1 5 6 7 8 10,6,37,55.0,False,True,22.5,True,False
-754,2 5 6 7 8 10,6,38,56.1,False,True,20.5,True,False
-755,1 2 5 6 7 8 10,7,39,58.85,False,True,19.5,True,False
-756,3 5 6 7 8 10,6,39,57.2,False,True,21.0,True,False
-757,1 3 5 6 7 8 10,7,40,81.62,True,True,21.0,True,False
-758,2 3 5 6 7 8 10,7,41,62.15,False,True,14.0,True,False
-759,1 2 3 5 6 7 8 10,8,42,63.8,False,True,13.0,True,False
-760,4 5 6 7 8 10,6,40,84.7,True,True,25.2,True,False
-761,1 4 5 6 7 8 10,7,41,61.6,False,True,16.5,True,False
-762,2 4 5 6 7 8 10,7,42,62.7,False,True,14.0,True,False
-763,1 2 4 5 6 7 8 10,8,43,65.45,False,True,12.0,True,False
-764,3 4 5 6 7 8 10,7,43,65.45,False,True,14.0,True,False
-765,1 3 4 5 6 7 8 10,8,44,66.55,False,True,11.0,True,False
-766,2 3 4 5 6 7 8 10,8,45,96.25,True,True,14.0,True,False
-767,1 2 3 4 5 6 7 8 10,9,46,70.4,False,True,9.0,True,False
-768,9 10,2,19,28.5,False,False,80.85,False,False
-769,1 9 10,3,20,41.3,True,False,80.85,False,False
-770,2 9 10,3,21,30.5,False,False,69.3,False,False
-771,1 2 9 10,4,22,33.0,False,False,69.3,False,False
-772,3 9 10,3,22,31.5,False,False,69.3,False,False
-773,1 3 9 10,4,23,32.5,False,False,69.3,False,False
-774,2 3 9 10,4,24,36.0,False,False,69.3,False,False
-775,1 2 3 9 10,5,25,52.5,True,False,69.3,False,False
-776,4 9 10,3,23,32.5,False,False,66.22,False,False
-777,1 4 9 10,4,24,33.5,False,False,51.15,False,False
-778,2 4 9 10,4,25,48.3,True,False,66.22,False,False
-779,1 2 4 9 10,5,26,37.0,False,False,46.2,False,False
-780,3 4 9 10,4,26,39.0,False,False,47.85,False,False
-781,1 3 4 9 10,5,27,40.0,False,False,45.1,False,False
-782,2 3 4 9 10,5,28,42.0,False,False,44.0,False,False
-783,1 2 3 4 9 10,6,29,43.5,False,False,42.9,True,True
-784,5 9 10,3,24,33.5,False,False,69.3,False,False
-785,1 5 9 10,4,25,48.3,True,False,69.3,False,False
-786,2 5 9 10,4,26,35.5,False,False,54.67,False,False
-787,1 2 5 9 10,5,27,38.0,False,False,54.67,False,False
-788,3 5 9 10,4,27,36.5,False,False,54.67,False,False
-789,1 3 5 9 10,5,28,37.5,False,False,54.67,False,False
-790,2 3 5 9 10,5,29,41.0,False,False,54.67,False,False
-791,1 2 3 5 9 10,6,30,59.5,True,False,54.67,True,True
-792,4 5 9 10,4,28,42.0,False,False,54.67,False,False
-793,1 4 5 9 10,5,29,43.0,False,False,42.9,True,True
-794,2 4 5 9 10,5,30,61.6,True,False,54.67,True,True
-795,1 2 4 5 9 10,6,31,46.5,False,False,37.95,True,False
-796,3 4 5 9 10,5,31,46.5,False,False,39.6,True,True
-797,1 3 4 5 9 10,6,32,47.5,False,False,36.85,True,False
-798,2 3 4 5 9 10,6,33,49.5,False,False,35.75,True,False
-799,1 2 3 4 5 9 10,7,34,51.0,False,False,34.65,True,False
-800,6 9 10,3,25,53.13,True,True,63.0,False,False
-801,1 6 9 10,4,26,39.05,False,True,49.0,False,False
-802,2 6 9 10,4,27,40.15,False,True,51.8,False,False
-803,1 2 6 9 10,5,28,42.9,False,True,40.5,True,True
-804,3 6 9 10,4,28,41.25,False,True,51.8,False,False
-805,1 3 6 9 10,5,29,42.35,False,True,38.5,True,True
-806,2 3 6 9 10,5,30,64.68,True,True,51.8,True,True
-807,1 2 3 6 9 10,6,31,47.85,False,True,38.5,True,False
-808,4 6 9 10,4,29,42.35,False,True,49.0,False,False
-809,1 4 6 9 10,5,30,60.83,True,True,49.0,True,True
-810,2 4 6 9 10,5,31,44.55,False,True,38.5,True,True
-811,1 2 4 6 9 10,6,32,47.3,False,True,38.5,True,False
-812,3 4 6 9 10,5,32,49.5,False,True,38.5,True,True
-813,1 3 4 6 9 10,6,33,50.6,False,True,38.5,True,False
-814,2 3 4 6 9 10,6,34,52.8,False,True,38.5,True,False
-815,1 2 3 4 6 9 10,7,35,76.23,True,True,38.5,True,False
-816,5 6 9 10,4,30,69.3,True,True,52.5,True,True
-817,1 5 6 9 10,5,31,50.6,False,True,42.0,True,False
-818,2 5 6 9 10,5,32,51.7,False,True,38.5,True,False
-819,1 2 5 6 9 10,6,33,54.45,False,True,33.0,True,False
-820,3 5 6 9 10,5,33,52.8,False,True,38.5,True,False
-821,1 3 5 6 9 10,6,34,53.9,False,True,31.5,True,False
-822,2 3 5 6 9 10,6,35,80.85,True,True,38.5,True,False
-823,1 2 3 5 6 9 10,7,36,59.4,False,True,31.5,True,False
-824,4 5 6 9 10,5,34,56.1,False,True,42.0,True,False
-825,1 4 5 6 9 10,6,35,80.08,True,True,42.0,True,False
-826,2 4 5 6 9 10,6,36,58.3,False,True,31.5,True,False
-827,1 2 4 5 6 9 10,7,37,61.05,False,True,31.5,True,False
-828,3 4 5 6 9 10,6,37,61.05,False,True,31.5,True,False
-829,1 3 4 5 6 9 10,7,38,62.15,False,True,31.5,True,False
-830,2 3 4 5 6 9 10,7,39,64.35,False,True,31.5,True,False
-831,1 2 3 4 5 6 9 10,8,40,92.4,True,True,31.5,True,False
-832,7 9 10,3,26,35.5,False,False,51.59,False,False
-833,1 7 9 10,4,27,36.5,False,False,50.05,False,False
-834,2 7 9 10,4,28,37.5,False,False,39.6,False,False
-835,1 2 7 9 10,5,29,40.0,False,False,38.5,True,True
-836,3 7 9 10,4,29,38.5,False,False,50.05,False,False
-837,1 3 7 9 10,5,30,55.3,True,False,50.05,True,True
-838,2 3 7 9 10,5,31,43.0,False,False,39.27,True,True
-839,1 2 3 7 9 10,6,32,44.5,False,False,34.65,True,False
-840,4 7 9 10,4,30,55.3,True,False,51.59,True,True
-841,1 4 7 9 10,5,31,40.5,False,False,35.2,True,False
-842,2 4 7 9 10,5,32,41.5,False,False,39.27,True,False
-843,1 2 4 7 9 10,6,33,44.0,False,False,30.25,True,False
-844,3 4 7 9 10,5,33,46.0,False,False,39.27,True,False
-845,1 3 4 7 9 10,6,34,47.0,False,False,29.15,True,False
-846,2 3 4 7 9 10,6,35,68.6,True,False,39.27,True,False
-847,1 2 3 4 7 9 10,7,36,50.5,False,False,26.95,True,False
-848,5 7 9 10,4,31,40.5,False,False,35.42,True,True
-849,1 5 7 9 10,5,32,41.5,False,False,30.8,True,False
-850,2 5 7 9 10,5,33,42.5,False,False,28.05,True,False
-851,1 2 5 7 9 10,6,34,45.0,False,False,26.95,True,False
-852,3 5 7 9 10,5,34,43.5,False,False,30.8,True,False
-853,1 3 5 7 9 10,6,35,62.3,True,False,30.8,True,False
-854,2 3 5 7 9 10,6,36,48.0,False,False,23.1,True,False
-855,1 2 3 5 7 9 10,7,37,49.5,False,False,19.8,True,False
-856,4 5 7 9 10,5,35,68.6,True,False,35.42,True,False
-857,1 4 5 7 9 10,6,36,50.0,False,False,23.65,True,False
-858,2 4 5 7 9 10,6,37,51.0,False,False,23.1,True,False
-859,1 2 4 5 7 9 10,7,38,53.5,False,False,18.7,True,False
-860,3 4 5 7 9 10,6,38,53.5,False,False,23.1,True,False
-861,1 3 4 5 7 9 10,7,39,54.5,False,False,17.6,True,False
-862,2 3 4 5 7 9 10,7,40,79.1,True,False,23.1,True,False
-863,1 2 3 4 5 7 9 10,8,41,58.0,False,False,15.4,True,False
-864,6 7 9 10,4,32,52.8,False,True,36.4,True,True
-865,1 6 7 9 10,5,33,53.9,False,True,36.4,True,False
-866,2 6 7 9 10,5,34,55.0,False,True,36.4,True,False
-867,1 2 6 7 9 10,6,35,80.85,True,True,36.4,True,False
-868,3 6 7 9 10,5,35,78.54,True,True,36.4,True,False
-869,1 3 6 7 9 10,6,36,57.2,False,True,23.5,True,False
-870,2 3 6 7 9 10,6,37,61.05,False,True,22.5,True,False
-871,1 2 3 6 7 9 10,7,38,62.7,False,True,21.5,True,False
-872,4 6 7 9 10,5,36,57.2,False,True,22.0,True,False
-873,1 4 6 7 9 10,6,37,58.3,False,True,21.0,True,False
-874,2 4 6 7 9 10,6,38,59.4,False,True,17.0,True,False
-875,1 2 4 6 7 9 10,7,39,62.15,False,True,16.0,True,False
-876,3 4 6 7 9 10,6,39,64.35,False,True,21.0,True,False
-877,1 3 4 6 7 9 10,7,40,91.63,True,True,21.0,True,False
-878,2 3 4 6 7 9 10,7,41,67.65,False,True,14.0,True,False
-879,1 2 3 4 6 7 9 10,8,42,69.3,False,True,13.0,True,False
-880,5 6 7 9 10,5,37,61.05,False,True,25.9,True,False
-881,1 5 6 7 9 10,6,38,62.15,False,True,25.9,True,False
-882,2 5 6 7 9 10,6,39,63.25,False,True,25.9,True,False
-883,1 2 5 6 7 9 10,7,40,92.4,True,True,25.9,True,False
-884,3 5 6 7 9 10,6,40,90.09,True,True,23.1,True,False
-885,1 3 5 6 7 9 10,7,41,65.45,False,True,14.0,True,False
-886,2 3 5 6 7 9 10,7,42,69.3,False,True,13.0,True,False
-887,1 2 3 5 6 7 9 10,8,43,70.95,False,True,12.0,True,False
-888,4 5 6 7 9 10,6,41,67.65,False,True,17.0,True,False
-889,1 4 5 6 7 9 10,7,42,68.75,False,True,15.5,True,False
-890,2 4 5 6 7 9 10,7,43,69.85,False,True,12.0,True,False
-891,1 2 4 5 6 7 9 10,8,44,72.6,False,True,11.0,True,False
-892,3 4 5 6 7 9 10,7,44,72.6,False,True,14.0,True,False
-893,1 3 4 5 6 7 9 10,8,45,103.18,True,True,14.0,True,False
-894,2 3 4 5 6 7 9 10,8,46,75.9,False,True,9.0,True,False
-895,1 2 3 4 5 6 7 9 10,9,47,77.55,False,True,8.0,True,False
-896,8 9 10,3,27,40.5,False,False,57.75,False,False
-897,1 8 9 10,4,28,41.5,False,False,57.75,False,False
-898,2 8 9 10,4,29,42.5,False,False,57.75,False,False
-899,1 2 8 9 10,5,30,63.0,True,False,57.75,True,True
-900,3 8 9 10,4,30,60.9,True,False,57.75,True,True
-901,1 3 8 9 10,5,31,44.5,False,False,44.66,False,False
-902,2 3 8 9 10,5,32,48.0,False,False,37.4,True,False
-903,1 2 3 8 9 10,6,33,49.5,False,False,36.3,True,False
-904,4 8 9 10,4,31,44.5,False,False,44.66,False,False
-905,1 4 8 9 10,5,32,45.5,False,False,44.66,True,True
-906,2 4 8 9 10,5,33,46.5,False,False,34.1,True,True
-907,1 2 4 8 9 10,6,34,49.0,False,False,33.0,True,False
-908,3 4 8 9 10,5,34,51.0,False,False,44.66,True,False
-909,1 3 4 8 9 10,6,35,72.8,True,False,44.66,True,False
-910,2 3 4 8 9 10,6,36,54.0,False,False,30.8,True,False
-911,1 2 3 4 8 9 10,7,37,55.5,False,False,29.7,True,False
-912,5 8 9 10,4,32,45.5,False,False,46.2,False,False
-913,1 5 8 9 10,5,33,46.5,False,False,46.2,True,True
-914,2 5 8 9 10,5,34,47.5,False,False,46.2,True,True
-915,1 2 5 8 9 10,6,35,70.0,True,False,46.2,True,False
-916,3 5 8 9 10,5,35,67.9,True,False,43.12,True,False
-917,1 3 5 8 9 10,6,36,49.5,False,False,33.11,True,False
-918,2 3 5 8 9 10,6,37,53.0,False,False,26.95,True,False
-919,1 2 3 5 8 9 10,7,38,54.5,False,False,25.85,True,False
-920,4 5 8 9 10,5,36,54.0,False,False,33.11,True,True
-921,1 4 5 8 9 10,6,37,55.0,False,False,33.11,True,False
-922,2 4 5 8 9 10,6,38,56.0,False,False,25.85,True,False
-923,1 2 4 5 8 9 10,7,39,58.5,False,False,24.75,True,False
-924,3 4 5 8 9 10,6,39,58.5,False,False,33.11,True,False
-925,1 3 4 5 8 9 10,7,40,83.3,True,False,33.11,True,False
-926,2 3 4 5 8 9 10,7,41,61.5,False,False,22.55,True,False
-927,1 2 3 4 5 8 9 10,8,42,63.0,False,False,21.45,True,False
-928,6 8 9 10,4,33,51.15,False,True,36.4,True,True
-929,1 6 8 9 10,5,34,52.25,False,True,28.0,True,False
-930,2 6 8 9 10,5,35,74.69,True,True,36.4,True,False
-931,1 2 6 8 9 10,6,36,56.1,False,True,25.0,True,False
-932,3 6 8 9 10,5,36,54.45,False,True,25.0,True,False
-933,1 3 6 8 9 10,6,37,55.55,False,True,22.5,True,False
-934,2 3 6 8 9 10,6,38,59.4,False,True,21.5,True,False
-935,1 2 3 6 8 9 10,7,39,61.05,False,True,20.5,True,False
-936,4 6 8 9 10,5,37,55.55,False,True,23.1,True,False
-937,1 4 6 8 9 10,6,38,56.65,False,True,21.0,True,False
-938,2 4 6 8 9 10,6,39,57.75,False,True,21.0,True,False
-939,1 2 4 6 8 9 10,7,40,84.7,True,True,21.0,True,False
-940,3 4 6 8 9 10,6,40,87.78,True,True,23.1,True,False
-941,1 3 4 6 8 9 10,7,41,63.8,False,True,14.0,True,False
-942,2 3 4 6 8 9 10,7,42,66.0,False,True,13.0,True,False
-943,1 2 3 4 6 8 9 10,8,43,67.65,False,True,12.0,True,False
-944,5 6 8 9 10,5,38,62.7,False,True,25.9,True,False
-945,1 5 6 8 9 10,6,39,63.8,False,True,20.5,True,False
-946,2 5 6 8 9 10,6,40,90.86,True,True,25.9,True,False
-947,1 2 5 6 8 9 10,7,41,67.65,False,True,17.5,True,False
-948,3 5 6 8 9 10,6,41,66.0,False,True,16.1,True,False
-949,1 3 5 6 8 9 10,7,42,67.1,False,True,13.0,True,False
-950,2 3 5 6 8 9 10,7,43,70.95,False,True,12.0,True,False
-951,1 2 3 5 6 8 9 10,8,44,72.6,False,True,11.0,True,False
-952,4 5 6 8 9 10,6,42,69.3,False,True,16.1,True,False
-953,1 4 5 6 8 9 10,7,43,70.4,False,True,14.5,True,False
-954,2 4 5 6 8 9 10,7,44,71.5,False,True,14.0,True,False
-955,1 2 4 5 6 8 9 10,8,45,103.95,True,True,14.0,True,False
-956,3 4 5 6 8 9 10,7,45,103.95,True,True,16.1,True,False
-957,1 3 4 5 6 8 9 10,8,46,75.35,False,True,9.0,True,False
-958,2 3 4 5 6 8 9 10,8,47,77.55,False,True,8.0,True,False
-959,1 2 3 4 5 6 8 9 10,9,48,79.2,False,True,7.0,True,False
-960,7 8 9 10,4,34,51.0,False,False,46.2,True,True
-961,1 7 8 9 10,5,35,72.8,True,False,46.2,True,False
-962,2 7 8 9 10,5,36,53.0,False,False,34.65,True,False
-963,1 2 7 8 9 10,6,37,55.5,False,False,34.65,True,False
-964,3 7 8 9 10,5,37,54.0,False,False,34.65,True,False
-965,1 3 7 8 9 10,6,38,55.0,False,False,34.65,True,False
-966,2 3 7 8 9 10,6,39,58.5,False,False,34.65,True,False
-967,1 2 3 7 8 9 10,7,40,84.0,True,False,34.65,True,False
-968,4 7 8 9 10,5,38,55.0,False,False,31.57,True,False
-969,1 4 7 8 9 10,6,39,56.0,False,False,26.4,True,False
-970,2 4 7 8 9 10,6,40,79.8,True,False,31.57,True,False
-971,1 2 4 7 8 9 10,7,41,59.5,False,False,21.45,True,False
-972,3 4 7 8 9 10,6,41,61.5,False,False,23.1,True,False
-973,1 3 4 7 8 9 10,7,42,62.5,False,False,20.35,True,False
-974,2 3 4 7 8 9 10,7,43,64.5,False,False,19.25,True,False
-975,1 2 3 4 7 8 9 10,8,44,66.0,False,False,18.15,True,False
-976,5 7 8 9 10,5,39,56.0,False,False,30.03,True,False
-977,1 5 7 8 9 10,6,40,79.8,True,False,30.03,True,False
-978,2 5 7 8 9 10,6,41,58.0,False,False,19.25,True,False
-979,1 2 5 7 8 9 10,7,42,60.5,False,False,18.15,True,False
-980,3 5 7 8 9 10,6,42,59.0,False,False,15.95,True,False
-981,1 3 5 7 8 9 10,7,43,60.0,False,False,15.4,True,False
-982,2 3 5 7 8 9 10,7,44,63.5,False,False,15.4,True,False
-983,1 2 3 5 7 8 9 10,8,45,91.0,True,False,15.4,True,False
-984,4 5 7 8 9 10,6,43,64.5,False,False,16.5,True,False
-985,1 4 5 7 8 9 10,7,44,65.5,False,False,14.85,True,False
-986,2 4 5 7 8 9 10,7,45,93.1,True,False,15.4,True,False
-987,1 2 4 5 7 8 9 10,8,46,69.0,False,False,9.9,True,False
-988,3 4 5 7 8 9 10,7,46,69.0,False,False,11.55,True,False
-989,1 3 4 5 7 8 9 10,8,47,70.0,False,False,8.8,True,False
-990,2 3 4 5 7 8 9 10,8,48,72.0,False,False,7.7,True,False
-991,1 2 3 4 5 7 8 9 10,9,49,73.5,False,False,6.6,True,False
-992,6 7 8 9 10,5,40,92.4,True,True,31.5,True,False
-993,1 6 7 8 9 10,6,41,67.1,False,True,21.0,True,False
-994,2 6 7 8 9 10,6,42,68.2,False,True,20.3,True,False
-995,1 2 6 7 8 9 10,7,43,70.95,False,True,18.0,True,False
-996,3 6 7 8 9 10,6,43,69.3,False,True,20.3,True,False
-997,1 3 6 7 8 9 10,7,44,70.4,False,True,15.5,True,False
-998,2 3 6 7 8 9 10,7,45,103.95,True,True,20.3,True,False
-999,1 2 3 6 7 8 9 10,8,46,75.9,False,True,13.5,True,False
-1000,4 6 7 8 9 10,6,44,70.4,False,True,17.5,True,False
-1001,1 4 6 7 8 9 10,7,45,100.1,True,True,17.5,True,False
-1002,2 4 6 7 8 9 10,7,46,72.6,False,True,9.0,True,False
-1003,1 2 4 6 7 8 9 10,8,47,75.35,False,True,8.0,True,False
-1004,3 4 6 7 8 9 10,7,47,77.55,False,True,9.5,True,False
-1005,1 3 4 6 7 8 9 10,8,48,78.65,False,True,7.0,True,False
-1006,2 3 4 6 7 8 9 10,8,49,80.85,False,True,7.0,True,False
-1007,1 2 3 4 6 7 8 9 10,9,50,115.5,True,True,7.0,True,False
-1008,5 6 7 8 9 10,6,45,103.95,True,True,21.0,True,False
-1009,1 5 6 7 8 9 10,7,46,75.35,False,True,13.5,True,False
-1010,2 5 6 7 8 9 10,7,47,76.45,False,True,11.5,True,False
-1011,1 2 5 6 7 8 9 10,8,48,79.2,False,True,10.5,True,False
-1012,3 5 6 7 8 9 10,7,48,77.55,False,True,8.5,True,False
-1013,1 3 5 6 7 8 9 10,8,49,78.65,False,True,6.0,True,False
-1014,2 3 5 6 7 8 9 10,8,50,115.5,True,True,7.0,True,False
-1015,1 2 3 5 6 7 8 9 10,9,51,84.15,False,True,4.0,True,False
-1016,4 5 6 7 8 9 10,7,49,80.85,False,True,10.5,True,False
-1017,1 4 5 6 7 8 9 10,8,50,114.73,True,True,10.5,True,False
-1018,2 4 5 6 7 8 9 10,8,51,83.05,False,True,4.0,True,False
-1019,1 2 4 5 6 7 8 9 10,9,52,85.8,False,True,3.0,True,False
-1020,3 4 5 6 7 8 9 10,8,52,85.8,False,True,4.5,True,False
-1021,1 3 4 5 6 7 8 9 10,9,53,86.9,False,True,2.0,True,False
-1022,2 3 4 5 6 7 8 9 10,9,54,89.1,False,True,1.0,True,False
-1023,1 2 3 4 5 6 7 8 9 10,10,55,127.05,True,True,0.0,True,False
+0,{},0,0,0.0,True,False,127.05,False,False
+1,{1},1,1,1.0,False,False,115.5,False,False
+2,{2},1,2,2.0,False,False,114.73,False,False
+3,{1 2},2,3,4.5,False,False,103.95,False,False
+4,{3},1,3,3.0,False,False,114.73,False,False
+5,{1 3},2,4,4.0,False,False,103.95,False,False
+6,{2 3},2,5,10.5,True,False,114.73,False,False
+7,{1 2 3},3,6,9.0,False,False,103.95,False,False
+8,{4},1,4,4.0,False,False,115.5,False,False
+9,{1 4},2,5,7.0,True,False,115.5,False,False
+10,{2 4},2,6,6.0,False,False,103.95,False,False
+11,{1 2 4},3,7,8.5,False,False,103.95,False,False
+12,{3 4},2,7,10.5,False,False,103.95,False,False
+13,{1 3 4},3,8,11.5,False,False,103.95,False,False
+14,{2 3 4},3,9,13.5,False,False,103.95,False,False
+15,{1 2 3 4},4,10,21.0,True,False,103.95,False,False
+16,{5},1,5,7.0,True,False,115.5,False,False
+17,{1 5},2,6,6.0,False,False,103.95,False,False
+18,{2 5},2,7,7.0,False,False,100.1,False,False
+19,{1 2 5},3,8,9.5,False,False,92.4,False,False
+20,{3 5},2,8,8.0,False,False,100.1,False,False
+21,{1 3 5},3,9,9.0,False,False,92.4,False,False
+22,{2 3 5},3,10,17.5,True,False,100.1,False,False
+23,{1 2 3 5},4,11,14.0,False,False,92.4,False,False
+24,{4 5},2,9,13.5,False,False,103.95,False,False
+25,{1 4 5},3,10,20.3,True,False,103.95,False,False
+26,{2 4 5},3,11,15.5,False,False,92.4,False,False
+27,{1 2 4 5},4,12,18.0,False,False,92.4,False,False
+28,{3 4 5},3,12,18.0,False,False,92.4,False,False
+29,{1 3 4 5},4,13,19.0,False,False,92.4,False,False
+30,{2 3 4 5},4,14,21.0,False,False,92.4,False,False
+31,{1 2 3 4 5},5,15,31.5,True,False,92.4,False,False
+32,{6},1,6,6.6,False,True,93.1,False,False
+33,{1 6},2,7,7.7,False,True,93.1,False,False
+34,{2 6},2,8,8.8,False,True,83.3,False,False
+35,{1 2 6},3,9,11.55,False,True,69.0,False,False
+36,{3 6},2,9,9.9,False,True,93.1,False,False
+37,{1 3 6},3,10,15.4,True,True,93.1,False,False
+38,{2 3 6},3,11,14.85,False,True,79.8,False,False
+39,{1 2 3 6},4,12,16.5,False,True,68.6,False,False
+40,{4 6},2,10,15.4,True,True,91.0,False,False
+41,{1 4 6},3,11,12.1,False,True,67.9,False,False
+42,{2 4 6},3,12,13.2,False,True,79.8,False,False
+43,{1 2 4 6},4,13,15.95,False,True,67.9,False,False
+44,{3 4 6},3,13,18.15,False,True,79.8,False,False
+45,{1 3 4 6},4,14,19.25,False,True,58.0,False,False
+46,{2 3 4 6},4,15,30.03,True,True,79.8,False,False
+47,{1 2 3 4 6},5,16,23.1,False,True,56.0,False,False
+48,{5 6},2,11,18.15,False,True,84.0,False,False
+49,{1 5 6},3,12,19.25,False,True,79.8,False,False
+50,{2 5 6},3,13,20.35,False,True,72.8,False,False
+51,{1 2 5 6},4,14,23.1,False,True,61.5,False,False
+52,{3 5 6},3,14,21.45,False,True,79.8,False,False
+53,{1 3 5 6},4,15,31.57,True,True,79.8,False,False
+54,{2 3 5 6},4,16,26.4,False,True,72.8,False,False
+55,{1 2 3 5 6},5,17,28.05,False,True,55.3,False,False
+56,{4 5 6},3,15,34.65,True,True,84.0,False,False
+57,{1 4 5 6},4,16,25.85,False,True,60.9,False,False
+58,{2 4 5 6},4,17,26.95,False,True,72.8,False,False
+59,{1 2 4 5 6},5,18,29.7,False,True,60.9,False,False
+60,{3 4 5 6},4,18,29.7,False,True,72.8,False,False
+61,{1 3 4 5 6},5,19,30.8,False,True,53.0,False,False
+62,{2 3 4 5 6},5,20,46.2,True,True,72.8,False,False
+63,{1 2 3 4 5 6},6,21,34.65,False,True,51.0,False,False
+64,{7},1,7,7.0,False,False,103.95,False,False
+65,{1 7},2,8,8.0,False,False,103.95,False,False
+66,{2 7},2,9,9.0,False,False,103.95,False,False
+67,{1 2 7},3,10,16.1,True,False,103.95,False,False
+68,{3 7},2,10,14.0,True,False,103.95,False,False
+69,{1 3 7},3,11,11.0,False,False,90.86,False,False
+70,{2 3 7},3,12,14.5,False,False,80.08,False,False
+71,{1 2 3 7},4,13,16.0,False,False,69.3,False,False
+72,{4 7},2,11,11.0,False,False,90.86,False,False
+73,{1 4 7},3,12,12.0,False,False,90.86,False,False
+74,{2 4 7},3,13,13.0,False,False,69.3,False,False
+75,{1 2 4 7},4,14,15.5,False,False,69.3,False,False
+76,{3 4 7},3,14,17.5,False,False,90.86,False,False
+77,{1 3 4 7},4,15,25.9,True,False,90.86,False,False
+78,{2 3 4 7},4,16,20.5,False,False,69.3,False,False
+79,{1 2 3 4 7},5,17,22.0,False,False,69.3,False,False
+80,{5 7},2,12,12.0,False,False,87.78,False,False
+81,{1 5 7},3,13,13.0,False,False,87.78,False,False
+82,{2 5 7},3,14,14.0,False,False,87.78,False,False
+83,{1 2 5 7},4,15,23.1,True,False,87.78,False,False
+84,{3 5 7},3,15,21.0,True,False,84.7,False,False
+85,{1 3 5 7},4,16,16.0,False,False,74.69,False,False
+86,{2 3 5 7},4,17,19.5,False,False,60.83,False,False
+87,{1 2 3 5 7},5,18,21.0,False,False,55.55,False,False
+88,{4 5 7},3,16,20.5,False,False,74.69,False,False
+89,{1 4 5 7},4,17,21.5,False,False,74.69,False,False
+90,{2 4 5 7},4,18,22.5,False,False,60.9,False,False
+91,{1 2 4 5 7},5,19,25.0,False,False,60.9,False,False
+92,{3 4 5 7},4,19,25.0,False,False,74.69,False,False
+93,{1 3 4 5 7},5,20,36.4,True,False,74.69,False,False
+94,{2 3 4 5 7},5,21,28.0,False,False,53.13,False,False
+95,{1 2 3 4 5 7},6,22,29.5,False,False,53.13,False,False
+96,{6 7},2,13,21.45,False,True,83.3,False,False
+97,{1 6 7},3,14,22.55,False,True,67.9,False,False
+98,{2 6 7},3,15,33.11,True,True,83.3,False,False
+99,{1 2 6 7},4,16,26.4,False,True,67.9,False,False
+100,{3 6 7},3,16,24.75,False,True,70.0,False,False
+101,{1 3 6 7},4,17,25.85,False,True,61.6,False,False
+102,{2 3 6 7},4,18,29.7,False,True,55.0,False,False
+103,{1 2 3 6 7},5,19,31.35,False,True,54.0,False,False
+104,{4 6 7},3,17,25.85,False,True,70.0,False,False
+105,{1 4 6 7},4,18,26.95,False,True,67.9,False,False
+106,{2 4 6 7},4,19,28.05,False,True,67.9,False,False
+107,{1 2 4 6 7},5,20,43.12,True,True,67.9,False,False
+108,{3 4 6 7},4,20,46.2,True,True,70.0,False,False
+109,{1 3 4 6 7},5,21,34.1,False,True,47.5,False,False
+110,{2 3 4 6 7},5,22,36.3,False,True,48.3,False,False
+111,{1 2 3 4 6 7},6,23,37.95,False,True,45.5,False,False
+112,{5 6 7},3,18,29.7,False,True,72.8,False,False
+113,{1 5 6 7},4,19,30.8,False,True,60.9,False,False
+114,{2 5 6 7},4,20,44.66,True,True,72.8,False,False
+115,{1 2 5 6 7},5,21,34.65,False,True,60.9,False,False
+116,{3 5 6 7},4,21,33.0,False,True,63.0,False,False
+117,{1 3 5 6 7},5,22,34.1,False,True,48.3,False,False
+118,{2 3 5 6 7},5,23,37.95,False,True,45.5,False,False
+119,{1 2 3 5 6 7},6,24,39.6,False,True,44.5,False,False
+120,{4 5 6 7},4,22,36.3,False,True,63.0,False,False
+121,{1 4 5 6 7},5,23,37.4,False,True,60.9,False,False
+122,{2 4 5 6 7},5,24,38.5,False,True,60.9,False,False
+123,{1 2 4 5 6 7},6,25,57.75,True,True,60.9,False,False
+124,{3 4 5 6 7},5,25,57.75,True,True,63.0,False,False
+125,{1 3 4 5 6 7},6,26,42.35,False,True,42.5,False,False
+126,{2 3 4 5 6 7},6,27,44.55,False,True,41.5,True,True
+127,{1 2 3 4 5 6 7},7,28,46.2,False,True,40.5,True,False
+128,{8},1,8,8.0,False,False,103.18,False,False
+129,{1 8},2,9,9.0,False,False,90.09,False,False
+130,{2 8},2,10,14.0,True,False,103.18,False,False
+131,{1 2 8},3,11,12.5,False,False,90.09,False,False
+132,{3 8},2,11,11.0,False,False,92.4,False,False
+133,{1 3 8},3,12,12.0,False,False,69.85,False,False
+134,{2 3 8},3,13,15.5,False,False,80.08,False,False
+135,{1 2 3 8},4,14,17.0,False,False,69.3,False,False
+136,{4 8},2,12,12.0,False,False,92.4,False,False
+137,{1 4 8},3,13,13.0,False,False,90.09,False,False
+138,{2 4 8},3,14,14.0,False,False,90.09,False,False
+139,{1 2 4 8},4,15,23.1,True,False,90.09,False,False
+140,{3 4 8},3,15,25.9,True,False,92.4,False,False
+141,{1 3 4 8},4,16,19.5,False,False,69.3,False,False
+142,{2 3 4 8},4,17,21.5,False,False,69.3,False,False
+143,{1 2 3 4 8},5,18,23.0,False,False,69.3,False,False
+144,{5 8},2,13,13.0,False,False,91.63,False,False
+145,{1 5 8},3,14,14.0,False,False,78.54,False,False
+146,{2 5 8},3,15,21.0,True,False,91.63,False,False
+147,{1 2 5 8},4,16,17.5,False,False,78.54,False,False
+148,{3 5 8},3,16,16.0,False,False,80.85,False,False
+149,{1 3 5 8},4,17,17.0,False,False,59.4,False,False
+150,{2 3 5 8},4,18,20.5,False,False,60.83,False,False
+151,{1 2 3 5 8},5,19,22.0,False,False,57.2,False,False
+152,{4 5 8},3,17,21.5,False,False,80.85,False,False
+153,{1 4 5 8},4,18,22.5,False,False,78.54,False,False
+154,{2 4 5 8},4,19,23.5,False,False,78.54,False,False
+155,{1 2 4 5 8},5,20,36.4,True,False,78.54,False,False
+156,{3 4 5 8},4,20,36.4,True,False,80.85,False,False
+157,{1 3 4 5 8},5,21,27.0,False,False,55.0,False,False
+158,{2 3 4 5 8},5,22,29.0,False,False,53.9,False,False
+159,{1 2 3 4 5 8},6,23,30.5,False,False,53.13,False,False
+160,{6 8},2,14,15.4,False,True,79.1,False,False
+161,{1 6 8},3,15,23.1,True,True,79.1,False,False
+162,{2 6 8},3,16,17.6,False,True,68.6,False,False
+163,{1 2 6 8},4,17,20.35,False,True,68.6,False,False
+164,{3 6 8},3,17,18.7,False,True,68.6,False,False
+165,{1 3 6 8},4,18,19.8,False,True,68.6,False,False
+166,{2 3 6 8},4,19,23.65,False,True,68.6,False,False
+167,{1 2 3 6 8},5,20,35.42,True,True,68.6,False,False
+168,{4 6 8},3,18,19.8,False,True,62.3,False,False
+169,{1 4 6 8},4,19,20.9,False,True,48.0,False,False
+170,{2 4 6 8},4,20,30.8,True,True,62.3,False,False
+171,{1 2 4 6 8},5,21,24.75,False,True,43.5,False,False
+172,{3 4 6 8},4,21,26.95,False,True,48.3,False,False
+173,{1 3 4 6 8},5,22,28.05,False,True,42.5,False,False
+174,{2 3 4 6 8},5,23,30.25,False,True,48.3,False,False
+175,{1 2 3 4 6 8},6,24,31.9,False,True,40.5,False,False
+176,{5 6 8},3,19,26.95,False,True,68.6,False,False
+177,{1 5 6 8},4,20,39.27,True,True,68.6,False,False
+178,{2 5 6 8},4,21,29.15,False,True,55.3,False,False
+179,{1 2 5 6 8},5,22,31.9,False,True,55.3,False,False
+180,{3 5 6 8},4,22,30.25,False,True,55.3,False,False
+181,{1 3 5 6 8},5,23,31.35,False,True,55.3,False,False
+182,{2 3 5 6 8},5,24,35.2,False,True,55.3,False,False
+183,{1 2 3 5 6 8},6,25,51.59,True,True,55.3,False,False
+184,{4 5 6 8},4,23,33.55,False,True,55.3,False,False
+185,{1 4 5 6 8},5,24,34.65,False,True,43.0,False,False
+186,{2 4 5 6 8},5,25,50.05,True,True,55.3,False,False
+187,{1 2 4 5 6 8},6,26,38.5,False,True,38.5,False,False
+188,{3 4 5 6 8},5,26,38.5,False,True,41.3,False,False
+189,{1 3 4 5 6 8},6,27,39.6,False,True,37.5,True,True
+190,{2 3 4 5 6 8},6,28,41.8,False,True,41.3,True,True
+191,{1 2 3 4 5 6 8},7,29,43.45,False,True,35.5,True,False
+192,{7 8},2,15,31.5,True,False,92.4,False,False
+193,{1 7 8},3,16,23.5,False,False,80.85,False,False
+194,{2 7 8},3,17,24.5,False,False,80.08,False,False
+195,{1 2 7 8},4,18,27.0,False,False,69.3,False,False
+196,{3 7 8},3,18,25.5,False,False,80.08,False,False
+197,{1 3 7 8},4,19,26.5,False,False,69.3,False,False
+198,{2 3 7 8},4,20,42.0,True,False,80.08,False,False
+199,{1 2 3 7 8},5,21,31.5,False,False,69.3,False,False
+200,{4 7 8},3,19,26.5,False,False,80.85,False,False
+201,{1 4 7 8},4,20,38.5,True,False,80.85,False,False
+202,{2 4 7 8},4,21,28.5,False,False,69.3,False,False
+203,{1 2 4 7 8},5,22,31.0,False,False,69.3,False,False
+204,{3 4 7 8},4,22,33.0,False,False,69.3,False,False
+205,{1 3 4 7 8},5,23,34.0,False,False,69.3,False,False
+206,{2 3 4 7 8},5,24,36.0,False,False,69.3,False,False
+207,{1 2 3 4 7 8},6,25,52.5,True,False,69.3,False,False
+208,{5 7 8},3,20,38.5,True,False,76.23,False,False
+209,{1 5 7 8},4,21,28.5,False,False,64.68,False,False
+210,{2 5 7 8},4,22,29.5,False,False,60.83,False,False
+211,{1 2 5 7 8},5,23,32.0,False,False,53.13,False,False
+212,{3 5 7 8},4,23,30.5,False,False,60.83,False,False
+213,{1 3 5 7 8},5,24,31.5,False,False,53.13,False,False
+214,{2 3 5 7 8},5,25,49.0,True,False,60.83,False,False
+215,{1 2 3 5 7 8},6,26,36.5,False,False,53.13,False,False
+216,{4 5 7 8},4,24,36.0,False,False,64.68,False,False
+217,{1 4 5 7 8},5,25,51.8,True,False,64.68,False,False
+218,{2 4 5 7 8},5,26,38.0,False,False,53.13,False,False
+219,{1 2 4 5 7 8},6,27,40.5,False,False,53.13,False,False
+220,{3 4 5 7 8},5,27,40.5,False,False,53.13,False,False
+221,{1 3 4 5 7 8},6,28,41.5,False,False,53.13,False,False
+222,{2 3 4 5 7 8},6,29,43.5,False,False,53.13,False,False
+223,{1 2 3 4 5 7 8},7,30,63.0,True,False,53.13,True,True
+224,{6 7 8},3,21,34.65,False,True,61.6,False,False
+225,{1 6 7 8},4,22,35.75,False,True,61.6,False,False
+226,{2 6 7 8},4,23,36.85,False,True,48.3,False,False
+227,{1 2 6 7 8},5,24,39.6,False,True,46.5,False,False
+228,{3 6 7 8},4,24,37.95,False,True,61.6,False,False
+229,{1 3 6 7 8},5,25,54.67,True,True,61.6,False,False
+230,{2 3 6 7 8},5,26,42.9,False,True,48.3,False,False
+231,{1 2 3 6 7 8},6,27,44.55,False,True,42.0,True,True
+232,{4 6 7 8},4,25,54.67,True,True,59.5,False,False
+233,{1 4 6 7 8},5,26,40.15,False,True,41.0,False,False
+234,{2 4 6 7 8},5,27,41.25,False,True,48.3,False,False
+235,{1 2 4 6 7 8},6,28,44.0,False,True,36.5,True,True
+236,{3 4 6 7 8},5,28,46.2,False,True,48.3,False,False
+237,{1 3 4 6 7 8},6,29,47.3,False,True,35.5,True,True
+238,{2 3 4 6 7 8},6,30,69.3,True,True,48.3,True,True
+239,{1 2 3 4 6 7 8},7,31,51.15,False,True,33.5,True,False
+240,{5 6 7 8},4,26,42.9,False,True,52.5,False,False
+241,{1 5 6 7 8},5,27,44.0,False,True,48.3,False,False
+242,{2 5 6 7 8},5,28,45.1,False,True,41.3,True,True
+243,{1 2 5 6 7 8},6,29,47.85,False,True,39.0,True,False
+244,{3 5 6 7 8},5,29,46.2,False,True,48.3,False,False
+245,{1 3 5 6 7 8},6,30,66.22,True,True,48.3,True,True
+246,{2 3 5 6 7 8},6,31,51.15,False,True,41.3,True,False
+247,{1 2 3 5 6 7 8},7,32,52.8,False,True,32.5,True,False
+248,{4 5 6 7 8},5,30,69.3,True,True,52.5,True,True
+249,{1 4 5 6 7 8},6,31,50.6,False,True,36.0,True,False
+250,{2 4 5 6 7 8},6,32,51.7,False,True,41.3,True,False
+251,{1 2 4 5 6 7 8},7,33,54.45,False,True,31.5,True,False
+252,{3 4 5 6 7 8},6,33,54.45,False,True,41.3,True,False
+253,{1 3 4 5 6 7 8},7,34,55.55,False,True,30.5,True,False
+254,{2 3 4 5 6 7 8},7,35,80.85,True,True,41.3,True,False
+255,{1 2 3 4 5 6 7 8},8,36,59.4,False,True,28.5,True,False
+256,{9},1,9,9.0,False,False,96.25,False,False
+257,{1 9},2,10,14.0,True,False,96.25,False,False
+258,{2 9},2,11,11.0,False,False,84.7,False,False
+259,{1 2 9},3,12,13.5,False,False,84.7,False,False
+260,{3 9},2,12,12.0,False,False,84.7,False,False
+261,{1 3 9},3,13,13.0,False,False,84.7,False,False
+262,{2 3 9},3,14,16.5,False,False,84.7,False,False
+263,{1 2 3 9},4,15,25.2,True,False,84.7,False,False
+264,{4 9},2,13,13.0,False,False,81.62,False,False
+265,{1 4 9},3,14,14.0,False,False,63.0,False,False
+266,{2 4 9},3,15,21.0,True,False,81.62,False,False
+267,{1 2 4 9},4,16,17.5,False,False,57.2,False,False
+268,{3 4 9},3,16,19.5,False,False,60.06,False,False
+269,{1 3 4 9},4,17,20.5,False,False,60.06,False,False
+270,{2 3 4 9},4,18,22.5,False,False,55.0,False,False
+271,{1 2 3 4 9},5,19,24.0,False,False,53.9,False,False
+272,{5 9},2,14,14.0,False,False,84.7,False,False
+273,{1 5 9},3,15,21.0,True,False,84.7,False,False
+274,{2 5 9},3,16,16.0,False,False,70.07,False,False
+275,{1 2 5 9},4,17,18.5,False,False,70.07,False,False
+276,{3 5 9},3,17,17.0,False,False,70.07,False,False
+277,{1 3 5 9},4,18,18.0,False,False,70.07,False,False
+278,{2 3 5 9},4,19,21.5,False,False,70.07,False,False
+279,{1 2 3 5 9},5,20,32.2,True,False,70.07,False,False
+280,{4 5 9},3,18,22.5,False,False,70.07,False,False
+281,{1 4 5 9},4,19,23.5,False,False,56.0,False,False
+282,{2 4 5 9},4,20,34.3,True,False,70.07,False,False
+283,{1 2 4 5 9},5,21,27.0,False,False,48.95,False,False
+284,{3 4 5 9},4,21,27.0,False,False,50.6,False,False
+285,{1 3 4 5 9},5,22,28.0,False,False,48.51,False,False
+286,{2 3 4 5 9},5,23,30.0,False,False,46.75,False,False
+287,{1 2 3 4 5 9},6,24,31.5,False,False,45.65,False,False
+288,{6 9},2,15,23.1,True,True,77.0,False,False
+289,{1 6 9},3,16,17.6,False,True,63.0,False,False
+290,{2 6 9},3,17,18.7,False,True,65.8,False,False
+291,{1 2 6 9},4,18,21.45,False,True,52.5,False,False
+292,{3 6 9},3,18,19.8,False,True,65.8,False,False
+293,{1 3 6 9},4,19,20.9,False,True,52.5,False,False
+294,{2 3 6 9},4,20,34.65,True,True,65.8,False,False
+295,{1 2 3 6 9},5,21,26.4,False,True,52.5,False,False
+296,{4 6 9},3,19,20.9,False,True,63.0,False,False
+297,{1 4 6 9},4,20,30.8,True,True,63.0,False,False
+298,{2 4 6 9},4,21,23.1,False,True,52.5,False,False
+299,{1 2 4 6 9},5,22,25.85,False,True,52.5,False,False
+300,{3 4 6 9},4,22,28.05,False,True,52.5,False,False
+301,{1 3 4 6 9},5,23,29.15,False,True,52.5,False,False
+302,{2 3 4 6 9},5,24,31.35,False,True,52.5,False,False
+303,{1 2 3 4 6 9},6,25,46.2,True,True,52.5,False,False
+304,{5 6 9},3,20,39.27,True,True,66.5,False,False
+305,{1 5 6 9},4,21,29.15,False,True,56.0,False,False
+306,{2 5 6 9},4,22,30.25,False,True,52.5,False,False
+307,{1 2 5 6 9},5,23,33.0,False,True,45.5,False,False
+308,{3 5 6 9},4,23,31.35,False,True,52.5,False,False
+309,{1 3 5 6 9},5,24,32.45,False,True,45.5,False,False
+310,{2 3 5 6 9},5,25,50.82,True,True,52.5,False,False
+311,{1 2 3 5 6 9},6,26,37.95,False,True,45.5,False,False
+312,{4 5 6 9},4,24,34.65,False,True,56.0,False,False
+313,{1 4 5 6 9},5,25,50.05,True,True,56.0,False,False
+314,{2 4 5 6 9},5,26,36.85,False,True,45.5,False,False
+315,{1 2 4 5 6 9},6,27,39.6,False,True,45.5,False,False
+316,{3 4 5 6 9},5,27,39.6,False,True,45.5,False,False
+317,{1 3 4 5 6 9},6,28,40.7,False,True,45.5,False,False
+318,{2 3 4 5 6 9},6,29,42.9,False,True,45.5,False,False
+319,{1 2 3 4 5 6 9},7,30,62.37,True,True,45.5,True,True
+320,{7 9},2,16,16.0,False,False,66.99,False,False
+321,{1 7 9},3,17,17.0,False,False,65.45,False,False
+322,{2 7 9},3,18,18.0,False,False,54.67,False,False
+323,{1 2 7 9},4,19,20.5,False,False,50.4,False,False
+324,{3 7 9},3,19,19.0,False,False,65.45,False,False
+325,{1 3 7 9},4,20,28.0,True,False,65.45,False,False
+326,{2 3 7 9},4,21,23.5,False,False,54.67,False,False
+327,{1 2 3 7 9},5,22,25.0,False,False,50.05,False,False
+328,{4 7 9},3,20,28.0,True,False,66.99,False,False
+329,{1 4 7 9},4,21,21.0,False,False,46.2,False,False
+330,{2 4 7 9},4,22,22.0,False,False,54.67,False,False
+331,{1 2 4 7 9},5,23,24.5,False,False,41.25,False,False
+332,{3 4 7 9},4,23,26.5,False,False,54.67,False,False
+333,{1 3 4 7 9},5,24,27.5,False,False,40.15,False,False
+334,{2 3 4 7 9},5,25,41.3,True,False,54.67,False,False
+335,{1 2 3 4 7 9},6,26,31.0,False,False,37.95,False,False
+336,{5 7 9},3,21,21.0,False,False,50.82,False,False
+337,{1 5 7 9},4,22,22.0,False,False,46.2,False,False
+338,{2 5 7 9},4,23,23.0,False,False,39.9,False,False
+339,{1 2 5 7 9},5,24,25.5,False,False,39.9,False,False
+340,{3 5 7 9},4,24,24.0,False,False,46.2,False,False
+341,{1 3 5 7 9},5,25,35.0,True,False,46.2,False,False
+342,{2 3 5 7 9},5,26,28.5,False,False,38.5,False,False
+343,{1 2 3 5 7 9},6,27,30.0,False,False,30.8,False,False
+344,{4 5 7 9},4,25,41.3,True,False,50.82,False,False
+345,{1 4 5 7 9},5,26,30.5,False,False,34.65,False,False
+346,{2 4 5 7 9},5,27,31.5,False,False,38.5,False,False
+347,{1 2 4 5 7 9},6,28,34.0,False,False,29.7,True,True
+348,{3 4 5 7 9},5,28,34.0,False,False,38.5,False,False
+349,{1 3 4 5 7 9},6,29,35.0,False,False,28.6,True,True
+350,{2 3 4 5 7 9},6,30,51.8,True,False,38.5,True,True
+351,{1 2 3 4 5 7 9},7,31,38.5,False,False,26.4,True,False
+352,{6 7 9},3,22,31.35,False,True,50.4,False,False
+353,{1 6 7 9},4,23,32.45,False,True,50.4,False,False
+354,{2 6 7 9},4,24,33.55,False,True,50.4,False,False
+355,{1 2 6 7 9},5,25,50.82,True,True,50.4,True,True
+356,{3 6 7 9},4,25,48.51,True,True,50.4,False,False
+357,{1 3 6 7 9},5,26,35.75,False,True,35.0,True,True
+358,{2 3 6 7 9},5,27,39.6,False,True,34.3,True,True
+359,{1 2 3 6 7 9},6,28,41.25,False,True,31.5,True,False
+360,{4 6 7 9},4,26,35.75,False,True,35.0,True,True
+361,{1 4 6 7 9},5,27,36.85,False,True,35.0,True,False
+362,{2 4 6 7 9},5,28,37.95,False,True,27.0,True,False
+363,{1 2 4 6 7 9},6,29,40.7,False,True,26.0,True,False
+364,{3 4 6 7 9},5,29,42.9,False,True,35.0,True,False
+365,{1 3 4 6 7 9},6,30,61.6,True,True,35.0,True,False
+366,{2 3 4 6 7 9},6,31,46.2,False,True,24.0,True,False
+367,{1 2 3 4 6 7 9},7,32,47.85,False,True,23.0,True,False
+368,{5 6 7 9},4,27,39.6,False,True,39.9,False,False
+369,{1 5 6 7 9},5,28,40.7,False,True,39.9,True,True
+370,{2 5 6 7 9},5,29,41.8,False,True,39.9,True,True
+371,{1 2 5 6 7 9},6,30,62.37,True,True,39.9,True,False
+372,{3 5 6 7 9},5,30,60.06,True,True,37.1,True,True
+373,{1 3 5 6 7 9},6,31,44.0,False,True,28.0,True,False
+374,{2 3 5 6 7 9},6,32,47.85,False,True,23.0,True,False
+375,{1 2 3 5 6 7 9},7,33,49.5,False,True,22.0,True,False
+376,{4 5 6 7 9},5,31,46.2,False,True,28.0,True,False
+377,{1 4 5 6 7 9},6,32,47.3,False,True,28.0,True,False
+378,{2 4 5 6 7 9},6,33,48.4,False,True,22.0,True,False
+379,{1 2 4 5 6 7 9},7,34,51.15,False,True,21.0,True,False
+380,{3 4 5 6 7 9},6,34,51.15,False,True,28.0,True,False
+381,{1 3 4 5 6 7 9},7,35,73.15,True,True,28.0,True,False
+382,{2 3 4 5 6 7 9},7,36,54.45,False,True,19.0,True,False
+383,{1 2 3 4 5 6 7 9},8,37,56.1,False,True,18.0,True,False
+384,{8 9},2,17,25.5,False,False,73.15,False,False
+385,{1 8 9},3,18,26.5,False,False,73.15,False,False
+386,{2 8 9},3,19,27.5,False,False,73.15,False,False
+387,{1 2 8 9},4,20,42.0,True,False,73.15,False,False
+388,{3 8 9},3,20,39.9,True,False,73.15,False,False
+389,{1 3 8 9},4,21,29.5,False,False,60.06,False,False
+390,{2 3 8 9},4,22,33.0,False,False,50.05,False,False
+391,{1 2 3 8 9},5,23,34.5,False,False,50.05,False,False
+392,{4 8 9},3,21,29.5,False,False,60.06,False,False
+393,{1 4 8 9},4,22,30.5,False,False,60.06,False,False
+394,{2 4 8 9},4,23,31.5,False,False,46.97,False,False
+395,{1 2 4 8 9},5,24,34.0,False,False,44.0,False,False
+396,{3 4 8 9},4,24,36.0,False,False,60.06,False,False
+397,{1 3 4 8 9},5,25,51.8,True,False,60.06,False,False
+398,{2 3 4 8 9},5,26,39.0,False,False,41.8,False,False
+399,{1 2 3 4 8 9},6,27,40.5,False,False,40.7,False,False
+400,{5 8 9},3,22,30.5,False,False,61.6,False,False
+401,{1 5 8 9},4,23,31.5,False,False,61.6,False,False
+402,{2 5 8 9},4,24,32.5,False,False,61.6,False,False
+403,{1 2 5 8 9},5,25,49.0,True,False,61.6,False,False
+404,{3 5 8 9},4,25,46.9,True,False,58.52,False,False
+405,{1 3 5 8 9},5,26,34.5,False,False,48.51,False,False
+406,{2 3 5 8 9},5,27,38.0,False,False,37.95,True,True
+407,{1 2 3 5 8 9},6,28,39.5,False,False,36.85,True,False
+408,{4 5 8 9},4,26,39.0,False,False,48.51,False,False
+409,{1 4 5 8 9},5,27,40.0,False,False,48.51,False,False
+410,{2 4 5 8 9},5,28,41.0,False,False,36.85,True,True
+411,{1 2 4 5 8 9},6,29,43.5,False,False,35.75,True,False
+412,{3 4 5 8 9},5,29,43.5,False,False,48.51,False,False
+413,{1 3 4 5 8 9},6,30,62.3,True,False,48.51,True,True
+414,{2 3 4 5 8 9},6,31,46.5,False,False,33.55,True,False
+415,{1 2 3 4 5 8 9},7,32,48.0,False,False,32.45,True,False
+416,{6 8 9},3,23,34.65,False,True,50.4,False,False
+417,{1 6 8 9},4,24,35.75,False,True,38.0,False,False
+418,{2 6 8 9},4,25,51.59,True,True,50.4,True,True
+419,{1 2 6 8 9},5,26,39.6,False,True,35.0,True,False
+420,{3 6 8 9},4,26,37.95,False,True,37.1,True,True
+421,{1 3 6 8 9},5,27,39.05,False,True,32.5,True,False
+422,{2 3 6 8 9},5,28,42.9,False,True,34.3,True,False
+423,{1 2 3 6 8 9},6,29,44.55,False,True,30.5,True,False
+424,{4 6 8 9},4,27,39.05,False,True,37.1,True,True
+425,{1 4 6 8 9},5,28,40.15,False,True,35.0,True,False
+426,{2 4 6 8 9},5,29,41.25,False,True,35.0,True,False
+427,{1 2 4 6 8 9},6,30,61.6,True,True,35.0,True,False
+428,{3 4 6 8 9},5,30,64.68,True,True,37.1,True,False
+429,{1 3 4 6 8 9},6,31,47.3,False,True,24.0,True,False
+430,{2 3 4 6 8 9},6,32,49.5,False,True,23.0,True,False
+431,{1 2 3 4 6 8 9},7,33,51.15,False,True,22.0,True,False
+432,{5 6 8 9},4,28,46.2,False,True,39.9,True,True
+433,{1 5 6 8 9},5,29,47.3,False,True,30.5,True,False
+434,{2 5 6 8 9},5,30,67.76,True,True,39.9,True,False
+435,{1 2 5 6 8 9},6,31,51.15,False,True,28.0,True,False
+436,{3 5 6 8 9},5,31,49.5,False,True,30.1,True,False
+437,{1 3 5 6 8 9},6,32,50.6,False,True,23.0,True,False
+438,{2 3 5 6 8 9},6,33,54.45,False,True,22.0,True,False
+439,{1 2 3 5 6 8 9},7,34,56.1,False,True,21.0,True,False
+440,{4 5 6 8 9},5,32,52.8,False,True,30.1,True,False
+441,{1 4 5 6 8 9},6,33,53.9,False,True,28.0,True,False
+442,{2 4 5 6 8 9},6,34,55.0,False,True,28.0,True,False
+443,{1 2 4 5 6 8 9},7,35,80.85,True,True,28.0,True,False
+444,{3 4 5 6 8 9},6,35,80.85,True,True,30.1,True,False
+445,{1 3 4 5 6 8 9},7,36,58.85,False,True,19.0,True,False
+446,{2 3 4 5 6 8 9},7,37,61.05,False,True,18.0,True,False
+447,{1 2 3 4 5 6 8 9},8,38,62.7,False,True,17.0,True,False
+448,{7 8 9},3,24,36.0,False,False,61.6,False,False
+449,{1 7 8 9},4,25,51.8,True,False,61.6,False,False
+450,{2 7 8 9},4,26,38.0,False,False,50.05,False,False
+451,{1 2 7 8 9},5,27,40.5,False,False,50.05,False,False
+452,{3 7 8 9},4,27,39.0,False,False,50.05,False,False
+453,{1 3 7 8 9},5,28,40.0,False,False,50.05,False,False
+454,{2 3 7 8 9},5,29,43.5,False,False,50.05,False,False
+455,{1 2 3 7 8 9},6,30,63.0,True,False,50.05,True,True
+456,{4 7 8 9},4,28,40.0,False,False,46.97,False,False
+457,{1 4 7 8 9},5,29,41.0,False,False,37.4,True,True
+458,{2 4 7 8 9},5,30,58.8,True,False,46.97,True,True
+459,{1 2 4 7 8 9},6,31,44.5,False,False,32.45,True,False
+460,{3 4 7 8 9},5,31,46.5,False,False,34.1,True,True
+461,{1 3 4 7 8 9},6,32,47.5,False,False,31.35,True,False
+462,{2 3 4 7 8 9},6,33,49.5,False,False,30.25,True,False
+463,{1 2 3 4 7 8 9},7,34,51.0,False,False,29.15,True,False
+464,{5 7 8 9},4,29,41.0,False,False,45.43,False,False
+465,{1 5 7 8 9},5,30,58.8,True,False,45.43,True,True
+466,{2 5 7 8 9},5,31,43.0,False,False,30.8,True,True
+467,{1 2 5 7 8 9},6,32,45.5,False,False,30.8,True,False
+468,{3 5 7 8 9},5,32,44.0,False,False,30.8,True,True
+469,{1 3 5 7 8 9},6,33,45.0,False,False,30.8,True,False
+470,{2 3 5 7 8 9},6,34,48.5,False,False,30.8,True,False
+471,{1 2 3 5 7 8 9},7,35,70.0,True,False,30.8,True,False
+472,{4 5 7 8 9},5,33,49.5,False,False,30.8,True,True
+473,{1 4 5 7 8 9},6,34,50.5,False,False,25.85,True,False
+474,{2 4 5 7 8 9},6,35,72.1,True,False,30.8,True,False
+475,{1 2 4 5 7 8 9},7,36,54.0,False,False,20.9,True,False
+476,{3 4 5 7 8 9},6,36,54.0,False,False,22.55,True,False
+477,{1 3 4 5 7 8 9},7,37,55.0,False,False,19.8,True,False
+478,{2 3 4 5 7 8 9},7,38,57.0,False,False,18.7,True,False
+479,{1 2 3 4 5 7 8 9},8,39,58.5,False,False,17.6,True,False
+480,{6 7 8 9},4,30,69.3,True,True,45.5,True,True
+481,{1 6 7 8 9},5,31,50.6,False,True,31.5,True,False
+482,{2 6 7 8 9},5,32,51.7,False,True,34.3,True,False
+483,{1 2 6 7 8 9},6,33,54.45,False,True,28.0,True,False
+484,{3 6 7 8 9},5,33,52.8,False,True,34.3,True,False
+485,{1 3 6 7 8 9},6,34,53.9,False,True,25.5,True,False
+486,{2 3 6 7 8 9},6,35,80.85,True,True,34.3,True,False
+487,{1 2 3 6 7 8 9},7,36,59.4,False,True,23.5,True,False
+488,{4 6 7 8 9},5,34,53.9,False,True,31.5,True,False
+489,{1 4 6 7 8 9},6,35,77.0,True,True,31.5,True,False
+490,{2 4 6 7 8 9},6,36,56.1,False,True,21.0,True,False
+491,{1 2 4 6 7 8 9},7,37,58.85,False,True,21.0,True,False
+492,{3 4 6 7 8 9},6,37,61.05,False,True,21.0,True,False
+493,{1 3 4 6 7 8 9},7,38,62.15,False,True,21.0,True,False
+494,{2 3 4 6 7 8 9},7,39,64.35,False,True,21.0,True,False
+495,{1 2 3 4 6 7 8 9},8,40,92.4,True,True,21.0,True,False
+496,{5 6 7 8 9},5,35,80.85,True,True,35.0,True,False
+497,{1 5 6 7 8 9},6,36,58.85,False,True,24.5,True,False
+498,{2 5 6 7 8 9},6,37,59.95,False,True,21.5,True,False
+499,{1 2 5 6 7 8 9},7,38,62.7,False,True,20.5,True,False
+500,{3 5 6 7 8 9},6,38,61.05,False,True,21.0,True,False
+501,{1 3 5 6 7 8 9},7,39,62.15,False,True,16.0,True,False
+502,{2 3 5 6 7 8 9},7,40,92.4,True,True,21.0,True,False
+503,{1 2 3 5 6 7 8 9},8,41,67.65,False,True,14.0,True,False
+504,{4 5 6 7 8 9},6,39,64.35,False,True,24.5,True,False
+505,{1 4 5 6 7 8 9},7,40,91.63,True,True,24.5,True,False
+506,{2 4 5 6 7 8 9},7,41,66.55,False,True,14.0,True,False
+507,{1 2 4 5 6 7 8 9},8,42,69.3,False,True,14.0,True,False
+508,{3 4 5 6 7 8 9},7,42,69.3,False,True,14.5,True,False
+509,{1 3 4 5 6 7 8 9},8,43,70.4,False,True,14.0,True,False
+510,{2 3 4 5 6 7 8 9},8,44,72.6,False,True,14.0,True,False
+511,{1 2 3 4 5 6 7 8 9},9,45,103.95,True,True,14.0,True,False
+512,{10},1,10,14.0,True,False,103.95,False,False
+513,{1 10},2,11,11.0,False,False,92.4,False,False
+514,{2 10},2,12,12.0,False,False,91.63,False,False
+515,{1 2 10},3,13,14.5,False,False,80.85,False,False
+516,{3 10},2,13,13.0,False,False,91.63,False,False
+517,{1 3 10},3,14,14.0,False,False,80.85,False,False
+518,{2 3 10},3,15,24.5,True,False,91.63,False,False
+519,{1 2 3 10},4,16,19.0,False,False,80.85,False,False
+520,{4 10},2,14,14.0,False,False,92.4,False,False
+521,{1 4 10},3,15,21.0,True,False,92.4,False,False
+522,{2 4 10},3,16,16.0,False,False,80.85,False,False
+523,{1 2 4 10},4,17,18.5,False,False,80.85,False,False
+524,{3 4 10},3,17,20.5,False,False,80.85,False,False
+525,{1 3 4 10},4,18,21.5,False,False,80.85,False,False
+526,{2 3 4 10},4,19,23.5,False,False,80.85,False,False
+527,{1 2 3 4 10},5,20,35.0,True,False,80.85,False,False
+528,{5 10},2,15,21.0,True,False,92.4,False,False
+529,{1 5 10},3,16,16.0,False,False,80.85,False,False
+530,{2 5 10},3,17,17.0,False,False,77.0,False,False
+531,{1 2 5 10},4,18,19.5,False,False,69.3,False,False
+532,{3 5 10},3,18,18.0,False,False,77.0,False,False
+533,{1 3 5 10},4,19,19.0,False,False,69.3,False,False
+534,{2 3 5 10},4,20,31.5,True,False,77.0,False,False
+535,{1 2 3 5 10},5,21,24.0,False,False,69.3,False,False
+536,{4 5 10},3,19,23.5,False,False,80.85,False,False
+537,{1 4 5 10},4,20,34.3,True,False,80.85,False,False
+538,{2 4 5 10},4,21,25.5,False,False,69.3,False,False
+539,{1 2 4 5 10},5,22,28.0,False,False,69.3,False,False
+540,{3 4 5 10},4,22,28.0,False,False,69.3,False,False
+541,{1 3 4 5 10},5,23,29.0,False,False,69.3,False,False
+542,{2 3 4 5 10},5,24,31.0,False,False,69.3,False,False
+543,{1 2 3 4 5 10},6,25,45.5,True,False,69.3,False,False
+544,{6 10},2,16,17.6,False,True,72.1,False,False
+545,{1 6 10},3,17,18.7,False,True,72.1,False,False
+546,{2 6 10},3,18,19.8,False,True,62.3,False,False
+547,{1 2 6 10},4,19,22.55,False,True,54.0,False,False
+548,{3 6 10},3,19,20.9,False,True,72.1,False,False
+549,{1 3 6 10},4,20,30.8,True,True,72.1,False,False
+550,{2 3 6 10},4,21,25.85,False,True,58.8,False,False
+551,{1 2 3 6 10},5,22,27.5,False,True,49.5,False,False
+552,{4 6 10},3,20,30.8,True,True,70.0,False,False
+553,{1 4 6 10},4,21,23.1,False,True,49.0,False,False
+554,{2 4 6 10},4,22,24.2,False,True,58.8,False,False
+555,{1 2 4 6 10},5,23,26.95,False,True,46.9,False,False
+556,{3 4 6 10},4,23,29.15,False,True,58.8,False,False
+557,{1 3 4 6 10},5,24,30.25,False,True,43.0,False,False
+558,{2 3 4 6 10},5,25,45.43,True,True,58.8,False,False
+559,{1 2 3 4 6 10},6,26,34.1,False,True,41.0,False,False
+560,{5 6 10},3,21,29.15,False,True,63.0,False,False
+561,{1 5 6 10},4,22,30.25,False,True,58.8,False,False
+562,{2 5 6 10},4,23,31.35,False,True,51.8,False,False
+563,{1 2 5 6 10},5,24,34.1,False,True,46.5,False,False
+564,{3 5 6 10},4,24,32.45,False,True,58.8,False,False
+565,{1 3 5 6 10},5,25,46.97,True,True,58.8,False,False
+566,{2 3 5 6 10},5,26,37.4,False,True,51.8,False,False
+567,{1 2 3 5 6 10},6,27,39.05,False,True,40.0,False,False
+568,{4 5 6 10},4,25,50.05,True,True,63.0,False,False
+569,{1 4 5 6 10},5,26,36.85,False,True,43.5,False,False
+570,{2 4 5 6 10},5,27,37.95,False,True,51.8,False,False
+571,{1 2 4 5 6 10},6,28,40.7,False,True,39.9,True,True
+572,{3 4 5 6 10},5,28,40.7,False,True,51.8,False,False
+573,{1 3 4 5 6 10},6,29,41.8,False,True,38.0,True,True
+574,{2 3 4 5 6 10},6,30,61.6,True,True,51.8,True,True
+575,{1 2 3 4 5 6 10},7,31,45.65,False,True,36.0,True,False
+576,{7 10},2,17,17.0,False,False,80.85,False,False
+577,{1 7 10},3,18,18.0,False,False,80.85,False,False
+578,{2 7 10},3,19,19.0,False,False,80.85,False,False
+579,{1 2 7 10},4,20,30.1,True,False,80.85,False,False
+580,{3 7 10},3,20,28.0,True,False,80.85,False,False
+581,{1 3 7 10},4,21,21.0,False,False,67.76,False,False
+582,{2 3 7 10},4,22,24.5,False,False,53.9,False,False
+583,{1 2 3 7 10},5,23,26.0,False,False,52.8,False,False
+584,{4 7 10},3,21,21.0,False,False,67.76,False,False
+585,{1 4 7 10},4,22,22.0,False,False,67.76,False,False
+586,{2 4 7 10},4,23,23.0,False,False,50.6,False,False
+587,{1 2 4 7 10},5,24,25.5,False,False,49.5,False,False
+588,{3 4 7 10},4,24,27.5,False,False,67.76,False,False
+589,{1 3 4 7 10},5,25,39.9,True,False,67.76,False,False
+590,{2 3 4 7 10},5,26,30.5,False,False,47.3,False,False
+591,{1 2 3 4 7 10},6,27,32.0,False,False,46.2,False,False
+592,{5 7 10},3,22,22.0,False,False,64.68,False,False
+593,{1 5 7 10},4,23,23.0,False,False,64.68,False,False
+594,{2 5 7 10},4,24,24.0,False,False,64.68,False,False
+595,{1 2 5 7 10},5,25,37.1,True,False,64.68,False,False
+596,{3 5 7 10},4,25,35.0,True,False,61.6,False,False
+597,{1 3 5 7 10},5,26,26.0,False,False,51.59,False,False
+598,{2 3 5 7 10},5,27,29.5,False,False,40.15,False,False
+599,{1 2 3 5 7 10},6,28,31.0,False,False,39.05,False,False
+600,{4 5 7 10},4,26,30.5,False,False,51.59,False,False
+601,{1 4 5 7 10},5,27,31.5,False,False,51.59,False,False
+602,{2 4 5 7 10},5,28,32.5,False,False,39.9,False,False
+603,{1 2 4 5 7 10},6,29,35.0,False,False,39.9,False,False
+604,{3 4 5 7 10},5,29,35.0,False,False,51.59,False,False
+605,{1 3 4 5 7 10},6,30,50.4,True,False,51.59,False,False
+606,{2 3 4 5 7 10},6,31,38.0,False,False,35.75,True,True
+607,{1 2 3 4 5 7 10},7,32,39.5,False,False,34.65,True,False
+608,{6 7 10},3,23,32.45,False,True,62.3,False,False
+609,{1 6 7 10},4,24,33.55,False,True,46.9,False,False
+610,{2 6 7 10},4,25,48.51,True,True,62.3,False,False
+611,{1 2 6 7 10},5,26,37.4,False,True,46.9,False,False
+612,{3 6 7 10},4,26,35.75,False,True,49.0,False,False
+613,{1 3 6 7 10},5,27,36.85,False,True,41.0,False,False
+614,{2 3 6 7 10},5,28,40.7,False,True,40.0,True,True
+615,{1 2 3 6 7 10},6,29,42.35,False,True,39.0,True,False
+616,{4 6 7 10},4,27,36.85,False,True,49.0,False,False
+617,{1 4 6 7 10},5,28,37.95,False,True,46.9,False,False
+618,{2 4 6 7 10},5,29,39.05,False,True,46.9,False,False
+619,{1 2 4 6 7 10},6,30,58.52,True,True,46.9,True,True
+620,{3 4 6 7 10},5,30,61.6,True,True,49.0,True,True
+621,{1 3 4 6 7 10},6,31,45.1,False,True,32.5,True,False
+622,{2 3 4 6 7 10},6,32,47.3,False,True,31.5,True,False
+623,{1 2 3 4 6 7 10},7,33,48.95,False,True,30.5,True,False
+624,{5 6 7 10},4,28,40.7,False,True,51.8,False,False
+625,{1 5 6 7 10},5,29,41.8,False,True,39.9,True,True
+626,{2 5 6 7 10},5,30,60.06,True,True,51.8,True,True
+627,{1 2 5 6 7 10},6,31,45.65,False,True,39.9,True,False
+628,{3 5 6 7 10},5,31,44.0,False,True,42.0,True,True
+629,{1 3 5 6 7 10},6,32,45.1,False,True,31.5,True,False
+630,{2 3 5 6 7 10},6,33,48.95,False,True,30.5,True,False
+631,{1 2 3 5 6 7 10},7,34,50.6,False,True,29.5,True,False
+632,{4 5 6 7 10},5,32,47.3,False,True,42.0,True,True
+633,{1 4 5 6 7 10},6,33,48.4,False,True,39.9,True,False
+634,{2 4 5 6 7 10},6,34,49.5,False,True,39.9,True,False
+635,{1 2 4 5 6 7 10},7,35,73.15,True,True,39.9,True,False
+636,{3 4 5 6 7 10},6,35,73.15,True,True,42.0,True,False
+637,{1 3 4 5 6 7 10},7,36,53.35,False,True,27.5,True,False
+638,{2 3 4 5 6 7 10},7,37,55.55,False,True,26.5,True,False
+639,{1 2 3 4 5 6 7 10},8,38,57.2,False,True,25.5,True,False
+640,{8 10},2,18,18.0,False,False,73.15,False,False
+641,{1 8 10},3,19,19.0,False,False,60.06,False,False
+642,{2 8 10},3,20,28.0,True,False,73.15,False,False
+643,{1 2 8 10},4,21,22.5,False,False,60.06,False,False
+644,{3 8 10},3,21,21.0,False,False,62.37,False,False
+645,{1 3 8 10},4,22,22.0,False,False,48.4,False,False
+646,{2 3 8 10},4,23,25.5,False,False,50.05,False,False
+647,{1 2 3 8 10},5,24,27.0,False,False,46.2,False,False
+648,{4 8 10},3,22,22.0,False,False,62.37,False,False
+649,{1 4 8 10},4,23,23.0,False,False,60.06,False,False
+650,{2 4 8 10},4,24,24.0,False,False,60.06,False,False
+651,{1 2 4 8 10},5,25,37.1,True,False,60.06,False,False
+652,{3 4 8 10},4,25,39.9,True,False,62.37,False,False
+653,{1 3 4 8 10},5,26,29.5,False,False,44.66,False,False
+654,{2 3 4 8 10},5,27,31.5,False,False,40.7,False,False
+655,{1 2 3 4 8 10},6,28,33.0,False,False,39.6,False,False
+656,{5 8 10},3,23,23.0,False,False,61.6,False,False
+657,{1 5 8 10},4,24,24.0,False,False,48.51,False,False
+658,{2 5 8 10},4,25,35.0,True,False,61.6,False,False
+659,{1 2 5 8 10},5,26,27.5,False,False,48.51,False,False
+660,{3 5 8 10},4,26,26.0,False,False,50.82,False,False
+661,{1 3 5 8 10},5,27,27.0,False,False,37.95,False,False
+662,{2 3 5 8 10},5,28,30.5,False,False,36.85,False,False
+663,{1 2 3 5 8 10},6,29,32.0,False,False,35.75,False,False
+664,{4 5 8 10},4,27,31.5,False,False,50.82,False,False
+665,{1 4 5 8 10},5,28,32.5,False,False,48.51,False,False
+666,{2 4 5 8 10},5,29,33.5,False,False,48.51,False,False
+667,{1 2 4 5 8 10},6,30,50.4,True,False,48.51,True,True
+668,{3 4 5 8 10},5,30,50.4,True,False,50.82,False,False
+669,{1 3 4 5 8 10},6,31,37.0,False,False,33.55,True,True
+670,{2 3 4 5 8 10},6,32,39.0,False,False,32.45,True,True
+671,{1 2 3 4 5 8 10},7,33,40.5,False,False,31.35,True,False
+672,{6 8 10},3,24,26.4,False,True,51.8,False,False
+673,{1 6 8 10},4,25,38.5,True,True,51.8,False,False
+674,{2 6 8 10},4,26,28.6,False,True,41.3,False,False
+675,{1 2 6 8 10},5,27,31.35,False,True,41.3,False,False
+676,{3 6 8 10},4,27,29.7,False,True,41.3,False,False
+677,{1 3 6 8 10},5,28,30.8,False,True,41.3,False,False
+678,{2 3 6 8 10},5,29,34.65,False,True,41.3,False,False
+679,{1 2 3 6 8 10},6,30,50.82,True,True,41.3,True,True
+680,{4 6 8 10},4,28,30.8,False,True,35.0,False,False
+681,{1 4 6 8 10},5,29,31.9,False,True,28.5,True,True
+682,{2 4 6 8 10},5,30,46.2,True,True,35.0,True,True
+683,{1 2 4 6 8 10},6,31,35.75,False,True,24.0,True,False
+684,{3 4 6 8 10},5,31,37.95,False,True,25.5,True,True
+685,{1 3 4 6 8 10},6,32,39.05,False,True,23.0,True,False
+686,{2 3 4 6 8 10},6,33,41.25,False,True,22.0,True,False
+687,{1 2 3 4 6 8 10},7,34,42.9,False,True,21.0,True,False
+688,{5 6 8 10},4,29,37.95,False,True,41.3,False,False
+689,{1 5 6 8 10},5,30,54.67,True,True,41.3,True,True
+690,{2 5 6 8 10},5,31,40.15,False,True,28.0,True,True
+691,{1 2 5 6 8 10},6,32,42.9,False,True,28.0,True,False
+692,{3 5 6 8 10},5,32,41.25,False,True,28.0,True,True
+693,{1 3 5 6 8 10},6,33,42.35,False,True,28.0,True,False
+694,{2 3 5 6 8 10},6,34,46.2,False,True,28.0,True,False
+695,{1 2 3 5 6 8 10},7,35,66.99,True,True,28.0,True,False
+696,{4 5 6 8 10},5,33,44.55,False,True,28.0,True,True
+697,{1 4 5 6 8 10},6,34,45.65,False,True,23.5,True,False
+698,{2 4 5 6 8 10},6,35,65.45,True,True,28.0,True,False
+699,{1 2 4 5 6 8 10},7,36,49.5,False,True,19.0,True,False
+700,{3 4 5 6 8 10},6,36,49.5,False,True,20.5,True,False
+701,{1 3 4 5 6 8 10},7,37,50.6,False,True,18.0,True,False
+702,{2 3 4 5 6 8 10},7,38,52.8,False,True,17.0,True,False
+703,{1 2 3 4 5 6 8 10},8,39,54.45,False,True,16.0,True,False
+704,{7 8 10},3,25,45.5,True,False,62.37,False,False
+705,{1 7 8 10},4,26,33.5,False,False,50.82,False,False
+706,{2 7 8 10},4,27,34.5,False,False,50.05,False,False
+707,{1 2 7 8 10},5,28,37.0,False,False,39.6,False,False
+708,{3 7 8 10},4,28,35.5,False,False,50.05,False,False
+709,{1 3 7 8 10},5,29,36.5,False,False,39.27,False,False
+710,{2 3 7 8 10},5,30,56.0,True,False,50.05,True,True
+711,{1 2 3 7 8 10},6,31,41.5,False,False,39.27,True,False
+712,{4 7 8 10},4,29,36.5,False,False,50.82,False,False
+713,{1 4 7 8 10},5,30,52.5,True,False,50.82,True,True
+714,{2 4 7 8 10},5,31,38.5,False,False,39.27,False,False
+715,{1 2 4 7 8 10},6,32,41.0,False,False,39.27,True,False
+716,{3 4 7 8 10},5,32,43.0,False,False,39.27,True,True
+717,{1 3 4 7 8 10},6,33,44.0,False,False,39.27,True,False
+718,{2 3 4 7 8 10},6,34,46.0,False,False,39.27,True,False
+719,{1 2 3 4 7 8 10},7,35,66.5,True,False,39.27,True,False
+720,{5 7 8 10},4,30,52.5,True,False,46.2,True,True
+721,{1 5 7 8 10},5,31,38.5,False,False,34.65,True,False
+722,{2 5 7 8 10},5,32,39.5,False,False,30.8,True,False
+723,{1 2 5 7 8 10},6,33,42.0,False,False,28.05,True,False
+724,{3 5 7 8 10},5,33,40.5,False,False,30.8,True,False
+725,{1 3 5 7 8 10},6,34,41.5,False,False,23.1,True,False
+726,{2 3 5 7 8 10},6,35,63.0,True,False,30.8,True,False
+727,{1 2 3 5 7 8 10},7,36,46.5,False,False,23.1,True,False
+728,{4 5 7 8 10},5,34,46.0,False,False,34.65,True,False
+729,{1 4 5 7 8 10},6,35,65.8,True,False,34.65,True,False
+730,{2 4 5 7 8 10},6,36,48.0,False,False,23.1,True,False
+731,{1 2 4 5 7 8 10},7,37,50.5,False,False,23.1,True,False
+732,{3 4 5 7 8 10},6,37,50.5,False,False,23.1,True,False
+733,{1 3 4 5 7 8 10},7,38,51.5,False,False,23.1,True,False
+734,{2 3 4 5 7 8 10},7,39,53.5,False,False,23.1,True,False
+735,{1 2 3 4 5 7 8 10},8,40,77.0,True,False,23.1,True,False
+736,{6 7 8 10},4,31,45.65,False,True,34.3,True,True
+737,{1 6 7 8 10},5,32,46.75,False,True,34.3,True,False
+738,{2 6 7 8 10},5,33,47.85,False,True,28.0,True,False
+739,{1 2 6 7 8 10},6,34,50.6,False,True,27.0,True,False
+740,{3 6 7 8 10},5,34,48.95,False,True,34.3,True,False
+741,{1 3 6 7 8 10},6,35,70.07,True,True,34.3,True,False
+742,{2 3 6 7 8 10},6,36,53.9,False,True,23.5,True,False
+743,{1 2 3 6 7 8 10},7,37,55.55,False,True,22.5,True,False
+744,{4 6 7 8 10},5,35,70.07,True,True,32.2,True,False
+745,{1 4 6 7 8 10},6,36,51.15,False,True,21.5,True,False
+746,{2 4 6 7 8 10},6,37,52.25,False,True,21.0,True,False
+747,{1 2 4 6 7 8 10},7,38,55.0,False,True,17.0,True,False
+748,{3 4 6 7 8 10},6,38,57.2,False,True,21.0,True,False
+749,{1 3 4 6 7 8 10},7,39,58.3,False,True,16.0,True,False
+750,{2 3 4 6 7 8 10},7,40,84.7,True,True,21.0,True,False
+751,{1 2 3 4 6 7 8 10},8,41,62.15,False,True,14.0,True,False
+752,{5 6 7 8 10},5,36,53.9,False,True,25.2,True,False
+753,{1 5 6 7 8 10},6,37,55.0,False,True,22.5,True,False
+754,{2 5 6 7 8 10},6,38,56.1,False,True,20.5,True,False
+755,{1 2 5 6 7 8 10},7,39,58.85,False,True,19.5,True,False
+756,{3 5 6 7 8 10},6,39,57.2,False,True,21.0,True,False
+757,{1 3 5 6 7 8 10},7,40,81.62,True,True,21.0,True,False
+758,{2 3 5 6 7 8 10},7,41,62.15,False,True,14.0,True,False
+759,{1 2 3 5 6 7 8 10},8,42,63.8,False,True,13.0,True,False
+760,{4 5 6 7 8 10},6,40,84.7,True,True,25.2,True,False
+761,{1 4 5 6 7 8 10},7,41,61.6,False,True,16.5,True,False
+762,{2 4 5 6 7 8 10},7,42,62.7,False,True,14.0,True,False
+763,{1 2 4 5 6 7 8 10},8,43,65.45,False,True,12.0,True,False
+764,{3 4 5 6 7 8 10},7,43,65.45,False,True,14.0,True,False
+765,{1 3 4 5 6 7 8 10},8,44,66.55,False,True,11.0,True,False
+766,{2 3 4 5 6 7 8 10},8,45,96.25,True,True,14.0,True,False
+767,{1 2 3 4 5 6 7 8 10},9,46,70.4,False,True,9.0,True,False
+768,{9 10},2,19,28.5,False,False,80.85,False,False
+769,{1 9 10},3,20,41.3,True,False,80.85,False,False
+770,{2 9 10},3,21,30.5,False,False,69.3,False,False
+771,{1 2 9 10},4,22,33.0,False,False,69.3,False,False
+772,{3 9 10},3,22,31.5,False,False,69.3,False,False
+773,{1 3 9 10},4,23,32.5,False,False,69.3,False,False
+774,{2 3 9 10},4,24,36.0,False,False,69.3,False,False
+775,{1 2 3 9 10},5,25,52.5,True,False,69.3,False,False
+776,{4 9 10},3,23,32.5,False,False,66.22,False,False
+777,{1 4 9 10},4,24,33.5,False,False,51.15,False,False
+778,{2 4 9 10},4,25,48.3,True,False,66.22,False,False
+779,{1 2 4 9 10},5,26,37.0,False,False,46.2,False,False
+780,{3 4 9 10},4,26,39.0,False,False,47.85,False,False
+781,{1 3 4 9 10},5,27,40.0,False,False,45.1,False,False
+782,{2 3 4 9 10},5,28,42.0,False,False,44.0,False,False
+783,{1 2 3 4 9 10},6,29,43.5,False,False,42.9,True,True
+784,{5 9 10},3,24,33.5,False,False,69.3,False,False
+785,{1 5 9 10},4,25,48.3,True,False,69.3,False,False
+786,{2 5 9 10},4,26,35.5,False,False,54.67,False,False
+787,{1 2 5 9 10},5,27,38.0,False,False,54.67,False,False
+788,{3 5 9 10},4,27,36.5,False,False,54.67,False,False
+789,{1 3 5 9 10},5,28,37.5,False,False,54.67,False,False
+790,{2 3 5 9 10},5,29,41.0,False,False,54.67,False,False
+791,{1 2 3 5 9 10},6,30,59.5,True,False,54.67,True,True
+792,{4 5 9 10},4,28,42.0,False,False,54.67,False,False
+793,{1 4 5 9 10},5,29,43.0,False,False,42.9,True,True
+794,{2 4 5 9 10},5,30,61.6,True,False,54.67,True,True
+795,{1 2 4 5 9 10},6,31,46.5,False,False,37.95,True,False
+796,{3 4 5 9 10},5,31,46.5,False,False,39.6,True,True
+797,{1 3 4 5 9 10},6,32,47.5,False,False,36.85,True,False
+798,{2 3 4 5 9 10},6,33,49.5,False,False,35.75,True,False
+799,{1 2 3 4 5 9 10},7,34,51.0,False,False,34.65,True,False
+800,{6 9 10},3,25,53.13,True,True,63.0,False,False
+801,{1 6 9 10},4,26,39.05,False,True,49.0,False,False
+802,{2 6 9 10},4,27,40.15,False,True,51.8,False,False
+803,{1 2 6 9 10},5,28,42.9,False,True,40.5,True,True
+804,{3 6 9 10},4,28,41.25,False,True,51.8,False,False
+805,{1 3 6 9 10},5,29,42.35,False,True,38.5,True,True
+806,{2 3 6 9 10},5,30,64.68,True,True,51.8,True,True
+807,{1 2 3 6 9 10},6,31,47.85,False,True,38.5,True,False
+808,{4 6 9 10},4,29,42.35,False,True,49.0,False,False
+809,{1 4 6 9 10},5,30,60.83,True,True,49.0,True,True
+810,{2 4 6 9 10},5,31,44.55,False,True,38.5,True,True
+811,{1 2 4 6 9 10},6,32,47.3,False,True,38.5,True,False
+812,{3 4 6 9 10},5,32,49.5,False,True,38.5,True,True
+813,{1 3 4 6 9 10},6,33,50.6,False,True,38.5,True,False
+814,{2 3 4 6 9 10},6,34,52.8,False,True,38.5,True,False
+815,{1 2 3 4 6 9 10},7,35,76.23,True,True,38.5,True,False
+816,{5 6 9 10},4,30,69.3,True,True,52.5,True,True
+817,{1 5 6 9 10},5,31,50.6,False,True,42.0,True,False
+818,{2 5 6 9 10},5,32,51.7,False,True,38.5,True,False
+819,{1 2 5 6 9 10},6,33,54.45,False,True,33.0,True,False
+820,{3 5 6 9 10},5,33,52.8,False,True,38.5,True,False
+821,{1 3 5 6 9 10},6,34,53.9,False,True,31.5,True,False
+822,{2 3 5 6 9 10},6,35,80.85,True,True,38.5,True,False
+823,{1 2 3 5 6 9 10},7,36,59.4,False,True,31.5,True,False
+824,{4 5 6 9 10},5,34,56.1,False,True,42.0,True,False
+825,{1 4 5 6 9 10},6,35,80.08,True,True,42.0,True,False
+826,{2 4 5 6 9 10},6,36,58.3,False,True,31.5,True,False
+827,{1 2 4 5 6 9 10},7,37,61.05,False,True,31.5,True,False
+828,{3 4 5 6 9 10},6,37,61.05,False,True,31.5,True,False
+829,{1 3 4 5 6 9 10},7,38,62.15,False,True,31.5,True,False
+830,{2 3 4 5 6 9 10},7,39,64.35,False,True,31.5,True,False
+831,{1 2 3 4 5 6 9 10},8,40,92.4,True,True,31.5,True,False
+832,{7 9 10},3,26,35.5,False,False,51.59,False,False
+833,{1 7 9 10},4,27,36.5,False,False,50.05,False,False
+834,{2 7 9 10},4,28,37.5,False,False,39.6,False,False
+835,{1 2 7 9 10},5,29,40.0,False,False,38.5,True,True
+836,{3 7 9 10},4,29,38.5,False,False,50.05,False,False
+837,{1 3 7 9 10},5,30,55.3,True,False,50.05,True,True
+838,{2 3 7 9 10},5,31,43.0,False,False,39.27,True,True
+839,{1 2 3 7 9 10},6,32,44.5,False,False,34.65,True,False
+840,{4 7 9 10},4,30,55.3,True,False,51.59,True,True
+841,{1 4 7 9 10},5,31,40.5,False,False,35.2,True,False
+842,{2 4 7 9 10},5,32,41.5,False,False,39.27,True,False
+843,{1 2 4 7 9 10},6,33,44.0,False,False,30.25,True,False
+844,{3 4 7 9 10},5,33,46.0,False,False,39.27,True,False
+845,{1 3 4 7 9 10},6,34,47.0,False,False,29.15,True,False
+846,{2 3 4 7 9 10},6,35,68.6,True,False,39.27,True,False
+847,{1 2 3 4 7 9 10},7,36,50.5,False,False,26.95,True,False
+848,{5 7 9 10},4,31,40.5,False,False,35.42,True,True
+849,{1 5 7 9 10},5,32,41.5,False,False,30.8,True,False
+850,{2 5 7 9 10},5,33,42.5,False,False,28.05,True,False
+851,{1 2 5 7 9 10},6,34,45.0,False,False,26.95,True,False
+852,{3 5 7 9 10},5,34,43.5,False,False,30.8,True,False
+853,{1 3 5 7 9 10},6,35,62.3,True,False,30.8,True,False
+854,{2 3 5 7 9 10},6,36,48.0,False,False,23.1,True,False
+855,{1 2 3 5 7 9 10},7,37,49.5,False,False,19.8,True,False
+856,{4 5 7 9 10},5,35,68.6,True,False,35.42,True,False
+857,{1 4 5 7 9 10},6,36,50.0,False,False,23.65,True,False
+858,{2 4 5 7 9 10},6,37,51.0,False,False,23.1,True,False
+859,{1 2 4 5 7 9 10},7,38,53.5,False,False,18.7,True,False
+860,{3 4 5 7 9 10},6,38,53.5,False,False,23.1,True,False
+861,{1 3 4 5 7 9 10},7,39,54.5,False,False,17.6,True,False
+862,{2 3 4 5 7 9 10},7,40,79.1,True,False,23.1,True,False
+863,{1 2 3 4 5 7 9 10},8,41,58.0,False,False,15.4,True,False
+864,{6 7 9 10},4,32,52.8,False,True,36.4,True,True
+865,{1 6 7 9 10},5,33,53.9,False,True,36.4,True,False
+866,{2 6 7 9 10},5,34,55.0,False,True,36.4,True,False
+867,{1 2 6 7 9 10},6,35,80.85,True,True,36.4,True,False
+868,{3 6 7 9 10},5,35,78.54,True,True,36.4,True,False
+869,{1 3 6 7 9 10},6,36,57.2,False,True,23.5,True,False
+870,{2 3 6 7 9 10},6,37,61.05,False,True,22.5,True,False
+871,{1 2 3 6 7 9 10},7,38,62.7,False,True,21.5,True,False
+872,{4 6 7 9 10},5,36,57.2,False,True,22.0,True,False
+873,{1 4 6 7 9 10},6,37,58.3,False,True,21.0,True,False
+874,{2 4 6 7 9 10},6,38,59.4,False,True,17.0,True,False
+875,{1 2 4 6 7 9 10},7,39,62.15,False,True,16.0,True,False
+876,{3 4 6 7 9 10},6,39,64.35,False,True,21.0,True,False
+877,{1 3 4 6 7 9 10},7,40,91.63,True,True,21.0,True,False
+878,{2 3 4 6 7 9 10},7,41,67.65,False,True,14.0,True,False
+879,{1 2 3 4 6 7 9 10},8,42,69.3,False,True,13.0,True,False
+880,{5 6 7 9 10},5,37,61.05,False,True,25.9,True,False
+881,{1 5 6 7 9 10},6,38,62.15,False,True,25.9,True,False
+882,{2 5 6 7 9 10},6,39,63.25,False,True,25.9,True,False
+883,{1 2 5 6 7 9 10},7,40,92.4,True,True,25.9,True,False
+884,{3 5 6 7 9 10},6,40,90.09,True,True,23.1,True,False
+885,{1 3 5 6 7 9 10},7,41,65.45,False,True,14.0,True,False
+886,{2 3 5 6 7 9 10},7,42,69.3,False,True,13.0,True,False
+887,{1 2 3 5 6 7 9 10},8,43,70.95,False,True,12.0,True,False
+888,{4 5 6 7 9 10},6,41,67.65,False,True,17.0,True,False
+889,{1 4 5 6 7 9 10},7,42,68.75,False,True,15.5,True,False
+890,{2 4 5 6 7 9 10},7,43,69.85,False,True,12.0,True,False
+891,{1 2 4 5 6 7 9 10},8,44,72.6,False,True,11.0,True,False
+892,{3 4 5 6 7 9 10},7,44,72.6,False,True,14.0,True,False
+893,{1 3 4 5 6 7 9 10},8,45,103.18,True,True,14.0,True,False
+894,{2 3 4 5 6 7 9 10},8,46,75.9,False,True,9.0,True,False
+895,{1 2 3 4 5 6 7 9 10},9,47,77.55,False,True,8.0,True,False
+896,{8 9 10},3,27,40.5,False,False,57.75,False,False
+897,{1 8 9 10},4,28,41.5,False,False,57.75,False,False
+898,{2 8 9 10},4,29,42.5,False,False,57.75,False,False
+899,{1 2 8 9 10},5,30,63.0,True,False,57.75,True,True
+900,{3 8 9 10},4,30,60.9,True,False,57.75,True,True
+901,{1 3 8 9 10},5,31,44.5,False,False,44.66,False,False
+902,{2 3 8 9 10},5,32,48.0,False,False,37.4,True,False
+903,{1 2 3 8 9 10},6,33,49.5,False,False,36.3,True,False
+904,{4 8 9 10},4,31,44.5,False,False,44.66,False,False
+905,{1 4 8 9 10},5,32,45.5,False,False,44.66,True,True
+906,{2 4 8 9 10},5,33,46.5,False,False,34.1,True,True
+907,{1 2 4 8 9 10},6,34,49.0,False,False,33.0,True,False
+908,{3 4 8 9 10},5,34,51.0,False,False,44.66,True,False
+909,{1 3 4 8 9 10},6,35,72.8,True,False,44.66,True,False
+910,{2 3 4 8 9 10},6,36,54.0,False,False,30.8,True,False
+911,{1 2 3 4 8 9 10},7,37,55.5,False,False,29.7,True,False
+912,{5 8 9 10},4,32,45.5,False,False,46.2,False,False
+913,{1 5 8 9 10},5,33,46.5,False,False,46.2,True,True
+914,{2 5 8 9 10},5,34,47.5,False,False,46.2,True,True
+915,{1 2 5 8 9 10},6,35,70.0,True,False,46.2,True,False
+916,{3 5 8 9 10},5,35,67.9,True,False,43.12,True,False
+917,{1 3 5 8 9 10},6,36,49.5,False,False,33.11,True,False
+918,{2 3 5 8 9 10},6,37,53.0,False,False,26.95,True,False
+919,{1 2 3 5 8 9 10},7,38,54.5,False,False,25.85,True,False
+920,{4 5 8 9 10},5,36,54.0,False,False,33.11,True,True
+921,{1 4 5 8 9 10},6,37,55.0,False,False,33.11,True,False
+922,{2 4 5 8 9 10},6,38,56.0,False,False,25.85,True,False
+923,{1 2 4 5 8 9 10},7,39,58.5,False,False,24.75,True,False
+924,{3 4 5 8 9 10},6,39,58.5,False,False,33.11,True,False
+925,{1 3 4 5 8 9 10},7,40,83.3,True,False,33.11,True,False
+926,{2 3 4 5 8 9 10},7,41,61.5,False,False,22.55,True,False
+927,{1 2 3 4 5 8 9 10},8,42,63.0,False,False,21.45,True,False
+928,{6 8 9 10},4,33,51.15,False,True,36.4,True,True
+929,{1 6 8 9 10},5,34,52.25,False,True,28.0,True,False
+930,{2 6 8 9 10},5,35,74.69,True,True,36.4,True,False
+931,{1 2 6 8 9 10},6,36,56.1,False,True,25.0,True,False
+932,{3 6 8 9 10},5,36,54.45,False,True,25.0,True,False
+933,{1 3 6 8 9 10},6,37,55.55,False,True,22.5,True,False
+934,{2 3 6 8 9 10},6,38,59.4,False,True,21.5,True,False
+935,{1 2 3 6 8 9 10},7,39,61.05,False,True,20.5,True,False
+936,{4 6 8 9 10},5,37,55.55,False,True,23.1,True,False
+937,{1 4 6 8 9 10},6,38,56.65,False,True,21.0,True,False
+938,{2 4 6 8 9 10},6,39,57.75,False,True,21.0,True,False
+939,{1 2 4 6 8 9 10},7,40,84.7,True,True,21.0,True,False
+940,{3 4 6 8 9 10},6,40,87.78,True,True,23.1,True,False
+941,{1 3 4 6 8 9 10},7,41,63.8,False,True,14.0,True,False
+942,{2 3 4 6 8 9 10},7,42,66.0,False,True,13.0,True,False
+943,{1 2 3 4 6 8 9 10},8,43,67.65,False,True,12.0,True,False
+944,{5 6 8 9 10},5,38,62.7,False,True,25.9,True,False
+945,{1 5 6 8 9 10},6,39,63.8,False,True,20.5,True,False
+946,{2 5 6 8 9 10},6,40,90.86,True,True,25.9,True,False
+947,{1 2 5 6 8 9 10},7,41,67.65,False,True,17.5,True,False
+948,{3 5 6 8 9 10},6,41,66.0,False,True,16.1,True,False
+949,{1 3 5 6 8 9 10},7,42,67.1,False,True,13.0,True,False
+950,{2 3 5 6 8 9 10},7,43,70.95,False,True,12.0,True,False
+951,{1 2 3 5 6 8 9 10},8,44,72.6,False,True,11.0,True,False
+952,{4 5 6 8 9 10},6,42,69.3,False,True,16.1,True,False
+953,{1 4 5 6 8 9 10},7,43,70.4,False,True,14.5,True,False
+954,{2 4 5 6 8 9 10},7,44,71.5,False,True,14.0,True,False
+955,{1 2 4 5 6 8 9 10},8,45,103.95,True,True,14.0,True,False
+956,{3 4 5 6 8 9 10},7,45,103.95,True,True,16.1,True,False
+957,{1 3 4 5 6 8 9 10},8,46,75.35,False,True,9.0,True,False
+958,{2 3 4 5 6 8 9 10},8,47,77.55,False,True,8.0,True,False
+959,{1 2 3 4 5 6 8 9 10},9,48,79.2,False,True,7.0,True,False
+960,{7 8 9 10},4,34,51.0,False,False,46.2,True,True
+961,{1 7 8 9 10},5,35,72.8,True,False,46.2,True,False
+962,{2 7 8 9 10},5,36,53.0,False,False,34.65,True,False
+963,{1 2 7 8 9 10},6,37,55.5,False,False,34.65,True,False
+964,{3 7 8 9 10},5,37,54.0,False,False,34.65,True,False
+965,{1 3 7 8 9 10},6,38,55.0,False,False,34.65,True,False
+966,{2 3 7 8 9 10},6,39,58.5,False,False,34.65,True,False
+967,{1 2 3 7 8 9 10},7,40,84.0,True,False,34.65,True,False
+968,{4 7 8 9 10},5,38,55.0,False,False,31.57,True,False
+969,{1 4 7 8 9 10},6,39,56.0,False,False,26.4,True,False
+970,{2 4 7 8 9 10},6,40,79.8,True,False,31.57,True,False
+971,{1 2 4 7 8 9 10},7,41,59.5,False,False,21.45,True,False
+972,{3 4 7 8 9 10},6,41,61.5,False,False,23.1,True,False
+973,{1 3 4 7 8 9 10},7,42,62.5,False,False,20.35,True,False
+974,{2 3 4 7 8 9 10},7,43,64.5,False,False,19.25,True,False
+975,{1 2 3 4 7 8 9 10},8,44,66.0,False,False,18.15,True,False
+976,{5 7 8 9 10},5,39,56.0,False,False,30.03,True,False
+977,{1 5 7 8 9 10},6,40,79.8,True,False,30.03,True,False
+978,{2 5 7 8 9 10},6,41,58.0,False,False,19.25,True,False
+979,{1 2 5 7 8 9 10},7,42,60.5,False,False,18.15,True,False
+980,{3 5 7 8 9 10},6,42,59.0,False,False,15.95,True,False
+981,{1 3 5 7 8 9 10},7,43,60.0,False,False,15.4,True,False
+982,{2 3 5 7 8 9 10},7,44,63.5,False,False,15.4,True,False
+983,{1 2 3 5 7 8 9 10},8,45,91.0,True,False,15.4,True,False
+984,{4 5 7 8 9 10},6,43,64.5,False,False,16.5,True,False
+985,{1 4 5 7 8 9 10},7,44,65.5,False,False,14.85,True,False
+986,{2 4 5 7 8 9 10},7,45,93.1,True,False,15.4,True,False
+987,{1 2 4 5 7 8 9 10},8,46,69.0,False,False,9.9,True,False
+988,{3 4 5 7 8 9 10},7,46,69.0,False,False,11.55,True,False
+989,{1 3 4 5 7 8 9 10},8,47,70.0,False,False,8.8,True,False
+990,{2 3 4 5 7 8 9 10},8,48,72.0,False,False,7.7,True,False
+991,{1 2 3 4 5 7 8 9 10},9,49,73.5,False,False,6.6,True,False
+992,{6 7 8 9 10},5,40,92.4,True,True,31.5,True,False
+993,{1 6 7 8 9 10},6,41,67.1,False,True,21.0,True,False
+994,{2 6 7 8 9 10},6,42,68.2,False,True,20.3,True,False
+995,{1 2 6 7 8 9 10},7,43,70.95,False,True,18.0,True,False
+996,{3 6 7 8 9 10},6,43,69.3,False,True,20.3,True,False
+997,{1 3 6 7 8 9 10},7,44,70.4,False,True,15.5,True,False
+998,{2 3 6 7 8 9 10},7,45,103.95,True,True,20.3,True,False
+999,{1 2 3 6 7 8 9 10},8,46,75.9,False,True,13.5,True,False
+1000,{4 6 7 8 9 10},6,44,70.4,False,True,17.5,True,False
+1001,{1 4 6 7 8 9 10},7,45,100.1,True,True,17.5,True,False
+1002,{2 4 6 7 8 9 10},7,46,72.6,False,True,9.0,True,False
+1003,{1 2 4 6 7 8 9 10},8,47,75.35,False,True,8.0,True,False
+1004,{3 4 6 7 8 9 10},7,47,77.55,False,True,9.5,True,False
+1005,{1 3 4 6 7 8 9 10},8,48,78.65,False,True,7.0,True,False
+1006,{2 3 4 6 7 8 9 10},8,49,80.85,False,True,7.0,True,False
+1007,{1 2 3 4 6 7 8 9 10},9,50,115.5,True,True,7.0,True,False
+1008,{5 6 7 8 9 10},6,45,103.95,True,True,21.0,True,False
+1009,{1 5 6 7 8 9 10},7,46,75.35,False,True,13.5,True,False
+1010,{2 5 6 7 8 9 10},7,47,76.45,False,True,11.5,True,False
+1011,{1 2 5 6 7 8 9 10},8,48,79.2,False,True,10.5,True,False
+1012,{3 5 6 7 8 9 10},7,48,77.55,False,True,8.5,True,False
+1013,{1 3 5 6 7 8 9 10},8,49,78.65,False,True,6.0,True,False
+1014,{2 3 5 6 7 8 9 10},8,50,115.5,True,True,7.0,True,False
+1015,{1 2 3 5 6 7 8 9 10},9,51,84.15,False,True,4.0,True,False
+1016,{4 5 6 7 8 9 10},7,49,80.85,False,True,10.5,True,False
+1017,{1 4 5 6 7 8 9 10},8,50,114.73,True,True,10.5,True,False
+1018,{2 4 5 6 7 8 9 10},8,51,83.05,False,True,4.0,True,False
+1019,{1 2 4 5 6 7 8 9 10},9,52,85.8,False,True,3.0,True,False
+1020,{3 4 5 6 7 8 9 10},8,52,85.8,False,True,4.5,True,False
+1021,{1 3 4 5 6 7 8 9 10},9,53,86.9,False,True,2.0,True,False
+1022,{2 3 4 5 6 7 8 9 10},9,54,89.1,False,True,1.0,True,False
+1023,{1 2 3 4 5 6 7 8 9 10},10,55,127.05,True,True,0.0,True,False
