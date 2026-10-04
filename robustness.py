@@ -27,7 +27,7 @@ import numpy as np
 import pandas as pd
 
 from matrix import Matrices, build_lut200, build_matrices, payoff_block
-from pool import BATTLEFIELD_COLUMNS, is_holdout, load_pool, origin_family, origin_subfamily
+from pool import BATTLEFIELD_COLUMNS, is_holdout, is_opponent_only, load_pool, origin_family, origin_subfamily
 from scoring import NUM_BATTLEFIELDS, validate_allocation
 
 ROOT = Path(__file__).resolve().parent
@@ -398,8 +398,8 @@ def main() -> None:
     nash = nash_vector(pool, pd.read_csv(RESULTS / "rankings_nash.csv"))
     vectors = group_vectors(pool)
     holdout_vectors = group_vectors(pool, holdout=True)
-    if any(is_holdout(o) for o in shortlist["origin"]):
-        raise ValueError("held-out strategy in the shortlist")
+    if any(is_holdout(o) or is_opponent_only(o) for o in shortlist["origin"]):
+        raise ValueError("held-out or opponent-only strategy in the shortlist")
 
     # 1. Selection run over the whole shortlist.
     candidates = Candidates.from_pool(matrices, pool, list(shortlist["id"]))

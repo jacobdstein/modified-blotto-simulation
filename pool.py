@@ -62,6 +62,7 @@ RIDDLER_FILES = {
 }
 RIDDLER_SAMPLE = 300  # submissions sampled per round (with their repeats), seeded
 HOLDOUT_ROUND = 4  # Riddler round never used for building or selecting
+OPPONENT_ONLY_COUNTER_ROUNDS = (3,)  # final counterattack round: opponents, never candidates
 
 CONTESTED_MIN = 5  # a battlefield with at least this many troops counts as contested
 ADJUST_VERSIONS = ("all", "rule1", "rule2", "rule3")  # which bonus(es) the player noticed
@@ -275,6 +276,12 @@ def adjust_riddler(allocation: Allocation, version: str) -> Allocation | None:
     result[add - 1] += result[drop - 1]
     result[drop - 1] = 0
     return tuple(result)
+
+
+def is_opponent_only(origin: str) -> bool:
+    """True for counter strategies from the final test round: they appear in fields as
+    opponents but are never ranked, shortlisted, or picked."""
+    return origin in {f"counter:r{n}" for n in OPPONENT_ONLY_COUNTER_ROUNDS}
 
 
 def is_holdout(origin: str) -> bool:

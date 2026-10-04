@@ -230,3 +230,25 @@ def test_nash_excludes_holdout_and_is_unexploitable(mixed_pool):
     assert not nash["origin"].map(is_holdout).any()
     assert nash["probability"].sum() == pytest.approx(1)
     assert nash.attrs["exploitability"] <= 1e-9
+
+
+# --- Opponent-only rows (final counterattack round) -------------------------
+
+
+def test_opponent_only_rows_are_opponents_but_never_candidates():
+    from pool import is_opponent_only
+
+    assert is_opponent_only("counter:r3") and not is_opponent_only("counter:r2")
+    rows = [("hand:a", A, 1), ("hand:b", B, 1), ("hand:c", C, 1), ("counter:r3", [0] * 6 + [26, 26, 26, 22], 1)]
+    pool = make_pool(rows)
+    S200, W2 = matrices_for(pool)
+    rr = round_robin(pool, W2, S200)
+    assert "P00004" not in set(rr["id"])  # never ranked
+    assert family_weights(pool)[3] > 0  # but it is an opponent
+    assert "P00004" not in set(iterated_elimination(pool, W2, S200)["id"])
+    # It beats B (wins battlefields 7-9), so B's win rate is lower with it in the pool.
+    assert W2[3, 1] == 2
+    pool_without = make_pool(rows[:3])
+    S_without, W_without = matrices_for(pool_without)
+    without = round_robin(pool_without, W_without, S_without)
+    assert rr.set_index("id").loc["P00002", "win_rate"] < without.set_index("id").loc["P00002", "win_rate"]

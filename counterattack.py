@@ -24,7 +24,7 @@ import numpy as np
 import pandas as pd
 
 from matrix import build_lut200, payoff_block
-from pool import BATTLEFIELD_COLUMNS, DATA, counter_files, is_holdout, load_pool, random_uniform
+from pool import BATTLEFIELD_COLUMNS, DATA, OPPONENT_ONLY_COUNTER_ROUNDS, counter_files, is_holdout, load_pool, random_uniform
 from robustness import SCENARIO_SHARES, group_vectors, scenario_mix
 from scoring import NUM_BATTLEFIELDS, validate_allocation
 
@@ -171,6 +171,8 @@ def main() -> None:
     if robustness_meta["pool_hash"] != meta["pool_hash"]:
         raise ValueError("robustness results are for a different pool; re-run rankings.py and robustness.py first")
     round_number = len(counter_files()) + 1
+    if round_number > max(OPPONENT_ONLY_COUNTER_ROUNDS):
+        raise SystemExit(f"counterattack is complete: round {max(OPPONENT_ONLY_COUNTER_ROUNDS)} was the final, opponent-only round")
     allocations = pool[BATTLEFIELD_COLUMNS].to_numpy(dtype=np.int64)
 
     final = pd.read_csv(RESULTS / "robustness_final.csv", keep_default_na=False)

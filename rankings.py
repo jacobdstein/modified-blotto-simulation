@@ -18,7 +18,9 @@ Reads cache/pool.csv and the cached matrices; writes results/rankings_*.csv.
    program with scipy. robustness.py samples its "Nash" scenario fields from it.
 
 Held-out origins (pool.is_holdout) are excluded everywhere: they are neither opponents
-nor candidates. Tests check that changing their matrix entries changes nothing here.
+nor candidates. Opponent-only origins (pool.is_opponent_only, the final counterattack
+round) are opponents in the round-robin weights but are never candidates, and take no
+part in elimination. Tests check that changing their matrix entries changes nothing here.
 
 Run from the project root (after pool.py and matrix.py):
     .venv/bin/python rankings.py
@@ -33,7 +35,7 @@ import pandas as pd
 from scipy.optimize import linprog
 
 from matrix import build_matrices
-from pool import BATTLEFIELD_COLUMNS, is_holdout, load_pool, origin_family, origin_subfamily
+from pool import BATTLEFIELD_COLUMNS, is_holdout, is_opponent_only, load_pool, origin_family, origin_subfamily
 
 RESULTS = Path(__file__).resolve().parent / "results"
 SHORTLIST_TOP = 100  # from each of the two lists; the union is the shortlist
@@ -90,7 +92,7 @@ def weighted_rates(payoff: np.ndarray, weights: np.ndarray, rows: np.ndarray, co
 
 def round_robin(pool: pd.DataFrame, W2: np.ndarray, S200: np.ndarray) -> pd.DataFrame:
     """Win rates and mean score for every non-held-out strategy."""
-    candidates = np.flatnonzero(~pool["origin"].map(is_holdout).to_numpy())
+    candidates = np.flatnonzero(candidate_mask(pool))
     copies = pool["weight"].to_numpy(dtype=float)[candidates]
     family = family_weights(pool)
     raw = raw_weights(pool)
@@ -103,6 +105,12 @@ def round_robin(pool: pd.DataFrame, W2: np.ndarray, S200: np.ndarray) -> pd.Data
     table["rank"] = rank_order(table["win_rate"], table["mean_score"], table["id"])
     table["rank_raw"] = rank_order(table["win_rate_raw"], table["mean_score"], table["id"])
     return table.sort_values("rank").reset_index(drop=True)
+
+
+def candidate_mask(pool: pd.DataFrame) -> np.ndarray:
+    """Rows that may be ranked and picked: not held out, not opponent-only."""
+    origins = pool["origin"]
+    return (~origins.map(is_holdout) & ~origins.map(is_opponent_only)).to_numpy()
 
 
 def rank_order(win_rate: pd.Series, mean_score: pd.Series, ids: pd.Series) -> np.ndarray:
@@ -120,7 +128,7 @@ def rank_order(win_rate: pd.Series, mean_score: pd.Series, ids: pd.Series) -> np
 def iterated_elimination(pool: pd.DataFrame, W2: np.ndarray, S200: np.ndarray, keep: float = ELIMINATION_KEEP) -> pd.DataFrame:
     """One row per non-held-out strategy: its rank in each round (blank after it is
     eliminated), rounds survived, and its rank in the last round it played."""
-    alive = ~pool["origin"].map(is_holdout).to_numpy()
+    alive = candidate_mask(pool)
     ids = pool["id"].to_numpy()
     table = pd.DataFrame({"id": ids[alive], "origin": pool["origin"].to_numpy()[alive]}).set_index("id")
     table["rounds_survived"] = 0

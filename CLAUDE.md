@@ -125,6 +125,9 @@ the probability of finishing in the top 20% of a simulated field of applicants (
   leaders after round 1 (P01229 100% → 89.9%). Pattern: the newest round always leads,
   because no counters aimed at it exist yet; being robust to a counterattack aimed at
   you is the more informative test.
+- Final opponent-only round (2026-10-04, decided before round 3 ran). Because the newest
+  counters always lead untested, round 3 counters are opponents only, so the pick must
+  hold up against a counterattack aimed at it.
 - Flags before the Nash tiebreaker (2026-10-04). With Nash as the first tiebreaker and a
   1-point tie window, the rule picked P01353 (score 99.5%, Nash 20.1%) over P01229
   (score 100%, Nash 19.3%), although P01353 fails the points check and P01229 has no
@@ -161,9 +164,13 @@ the probability of finishing in the top 20% of a simulated field of applicants (
   nearest 3 above/below, plus 1-troop moves) and stop when nothing improves. 40 seeded
   starts per round: the best 10 distinct Riddler-family and 10 distinct AI strategies by
   round-robin rank, plus 20 random. Keep the 20 best distinct results as
-  data/counter/round_<N>.csv (origin counter:r<N>, parent = start id or empty). 2 rounds;
-  after each: pool.py, matrix.py, rankings.py, robustness.py. Counter strategies are
-  allowed as candidates for our own submission.
+  data/counter/round_<N>.csv (origin counter:r<N>, parent = start id or empty). After
+  each round: pool.py, matrix.py, rankings.py, robustness.py. Counter strategies from
+  rounds 1–2 are allowed as candidates for our own submission.
+- Round 3 is the final, opponent-only round (pool.OPPONENT_ONLY_COUNTER_ROUNDS): its
+  counters, built against the round-2 finalists, are opponents in every field (part of
+  the counter group) but are never ranked, shortlisted, or picked. So every eligible
+  candidate has faced a counterattack aimed at it. counterattack.py refuses a round 4.
 - Riddler data (approved): FiveThirtyEight `riddler-castles`, rounds 1–4 only (round 5
   has 13 castles). Same 10 castles / 100 soldiers, but no bonus rules and ties split
   points, so it models how people allocate, not which battlefields they'd target here.
@@ -204,8 +211,7 @@ the probability of finishing in the top 20% of a simulated field of applicants (
 - Done: scoring.py, lookup table, pool (step 1), matrices (step 2), rankings + Nash mix +
   shortlist (step 3), lookup-table analysis.
 - Done: robustness.py (step 4); counterattack.py (step 5) rounds 1–2.
-- Next: decide how to treat the newest round (see Decision log), the final pick, and
-  the writeup.
+- Next: counterattack round 3 (opponent-only), the final pick, and the writeup.
 - Optional if time allows: replicator dynamics; re-running the lookup-table price
   analysis with Riddler as the reference field. If time is short, cut optional analysis
   before cutting writeup time.
