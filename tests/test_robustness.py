@@ -16,6 +16,7 @@ from robustness import (
     groups_of,
     one_troop_neighbors,
     rank_fraction,
+    rank_table,
     run_scenario,
     scenario_mix,
     summarize,
@@ -302,3 +303,30 @@ def test_unique_allocations_keeps_first_and_lists_the_rest():
     assert list(unique["id"]) == ["P00001", "P00002"]
     assert unique.loc[0, "same_allocation_ids"] == "P00003 P00004"
     assert unique.loc[1, "same_allocation_ids"] == ""
+
+
+def ranking_frame(rows):
+    """rank_table input from (label, p_top20, flags, p_top20_nash) tuples."""
+    return pd.DataFrame(
+        [{"label": l, "p_top20": p, "flags": f, "p_top20_nash": n, "median_percentile": 0.1, "mean_score": 40.0}
+         for l, p, f, n in rows]
+    )
+
+
+def test_unflagged_wins_a_tie_before_nash_is_used():
+    table = rank_table(ranking_frame([
+        ("flagged", 0.995, "points<50%", 0.30),  # rounds to 1.00: tied, best Nash, but flagged
+        ("clean", 1.000, "", 0.19),
+        ("clean_low_nash", 1.000, "", 0.10),
+    ])).set_index("label")
+    assert table.loc["clean", "rank"] == 1
+    assert table.loc["clean_low_nash", "rank"] == 2
+    assert table.loc["flagged", "rank"] == 3
+
+
+def test_flags_only_matter_within_a_tie():
+    table = rank_table(ranking_frame([
+        ("flagged_but_higher", 0.99, "holdout_fail", 0.0),
+        ("clean_but_lower", 0.97, "", 0.5),
+    ])).set_index("label")
+    assert table.loc["flagged_but_higher", "rank"] == 1

@@ -295,8 +295,7 @@ def weighted_median(values: np.ndarray, weights: np.ndarray) -> float:
 def summarize(results: dict[str, dict[str, np.ndarray]], candidates: Candidates) -> pd.DataFrame:
     """Per candidate: P(top 20%) per scenario, pooled P(top 20%) by wins / points /
     draw 0 over the scored scenarios, pooled median percentile and mean score, flags, and
-    the rank: pooled P(top 20%) to the nearest percentage point, then the tiebreak
-    scenario's P(top 20%), then median percentile, then mean score."""
+    the rank (see rank_table)."""
     scored = {s: r for s, r in results.items() if s in POOLED_WEIGHTS}
     total_weight = sum(POOLED_WEIGHTS[s] for s in scored)
     table = pd.DataFrame({"label": candidates.labels})
@@ -332,9 +331,24 @@ def summarize(results: dict[str, dict[str, np.ndarray]], candidates: Candidates)
         )
         for row in table.itertuples()
     ]
+    return rank_table(table)
+
+
+def rank_table(table: pd.DataFrame) -> pd.DataFrame:
+    """Rank by: pooled P(top 20%) rounded to the nearest percentage point (equal = tied);
+    within a tie, unflagged before flagged, then the tiebreak scenario's P(top 20%), then
+    median percentile, then mean score. Re-run after adding flags."""
     tiebreak = table[f"p_top20_{TIEBREAK_SCENARIO}"] if f"p_top20_{TIEBREAK_SCENARIO}" in table else 0.0
-    keys = table.assign(_rounded=table["p_top20"].round(TIE_DECIMALS), _tiebreak=tiebreak)
-    order = keys.sort_values(["_rounded", "_tiebreak", "median_percentile", "mean_score"], ascending=[False, False, True, False]).index
+    keys = table.assign(
+        _rounded=table["p_top20"].round(TIE_DECIMALS),
+        _flagged=table["flags"].astype(str) != "",
+        _tiebreak=tiebreak,
+    )
+    order = keys.sort_values(
+        ["_rounded", "_flagged", "_tiebreak", "median_percentile", "mean_score"],
+        ascending=[False, True, False, True, False],
+    ).index
+    table = table.copy()
     table.loc[order, "rank"] = np.arange(1, len(table) + 1)
     table["rank"] = table["rank"].astype(int)
     return table.sort_values("rank").reset_index(drop=True)
@@ -436,6 +450,7 @@ def main() -> None:
         for row in final.itertuples()
     ]
     final["flags"] = ["; ".join(x for x in (a, b) if x) for a, b in zip(final["flags"], extra_flags)]
+    final = rank_table(final)  # hold-out and neighbor flags can change the order
 
     RESULTS.mkdir(exist_ok=True)
     selection.to_csv(RESULTS / "robustness_selection.csv", index=False)

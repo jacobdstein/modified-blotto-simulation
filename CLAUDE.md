@@ -74,9 +74,11 @@ the probability of finishing in the top 20% of a simulated field of applicants (
   the average rank), pooled over the four realistic scenarios with relative weights
   baseline 40, sophisticated-heavy 24, AI-heavy 19, naive-heavy 7. Lower naive weight
   because the challenge is optional, so low-effort applicants mostly skip it.
-- Ranking order: score rounded to the nearest percentage point (equal = tied), then the
-  Nash scenario's P(top 20%), then median percentile, then mean score. Nash is run and
-  reported for every candidate but is not in the score or the flags (see Decision log).
+- Ranking order: score rounded to the nearest percentage point (equal = tied); within a
+  tie, unflagged candidates before flagged ones, then the Nash scenario's P(top 20%),
+  then median percentile, then mean score. Nash is run and reported for every candidate
+  but is not in the score or the flags (see Decision log). Finalists are re-ranked after
+  the hold-out and neighbor flags are added.
 - Also report P(top 20%) per scenario; flag any candidate below 50% in any single
   realistic scenario.
 - Runs: selection = 2,000 contests per scenario for every shortlisted strategy (one
@@ -112,6 +114,11 @@ the probability of finishing in the top 20% of a simulated field of applicants (
   realistic scenarios, the Nash term decided 6 of the 10 finalist slots. Decision: remove
   Nash from the score and the flags, keep reporting it, and use it as an explicit
   tiebreaker between candidates with equal (rounded) scores.
+- Flags before the Nash tiebreaker (2026-10-04). With Nash as the first tiebreaker and a
+  1-point tie window, the rule picked P01353 (score 99.5%, Nash 20.1%) over P01229
+  (score 100%, Nash 19.3%), although P01353 fails the points check and P01229 has no
+  flags; the Nash gap (< 1 point) is about two standard errors. Decision: within a tie,
+  unflagged candidates rank first; keep the 1-point window.
 
 ## Field scenarios (share of the field, %)
 | Group (pool source)                        | Baseline | Naive-heavy | Sophisticated-heavy | AI-heavy |
