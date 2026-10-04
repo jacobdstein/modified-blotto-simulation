@@ -70,14 +70,19 @@ the probability of finishing in the top 20% of a simulated field of applicants (
 - Scenarios: baseline, naive-heavy, sophisticated-heavy, AI-heavy (group shares: see
   "Field scenarios"), and the Nash mix of the non-held-out pool. In every contest the
   group shares are randomized around the scenario's values (Dirichlet, concentration 20).
-- Primary: P(top 20%), ranked by wins (draw = 0.5; ties in total wins share the average
-  rank), pooled over scenarios with weights baseline 40, sophisticated-heavy 24,
-  AI-heavy 19, Nash 10, naive-heavy 7 (sum 100). Lower naive weight because the
-  challenge is optional, so low-effort applicants mostly skip it. Tiebreakers: median
-  percentile, then mean score. Also report P(top 20%) per scenario; flag any candidate
-  below 50% in any single scenario.
+- Primary (the score): P(top 20%), ranked by wins (draw = 0.5; ties in total wins share
+  the average rank), pooled over the four realistic scenarios with relative weights
+  baseline 40, sophisticated-heavy 24, AI-heavy 19, naive-heavy 7. Lower naive weight
+  because the challenge is optional, so low-effort applicants mostly skip it.
+- Ranking order: score rounded to the nearest percentage point (equal = tied), then the
+  Nash scenario's P(top 20%), then median percentile, then mean score. Nash is run and
+  reported for every candidate but is not in the score or the flags (see Decision log).
+- Also report P(top 20%) per scenario; flag any candidate below 50% in any single
+  realistic scenario.
 - Runs: selection = 2,000 contests per scenario for every shortlisted strategy (one
   seed); final = top 10 re-run with 10,000 contests per scenario on a fresh seed.
+  Candidates are distinct allocations: when the same allocation appears under several
+  ids (different origins), it is evaluated once and the other ids are listed.
 - Hold-out check: baseline scenario with the Riddler groups drawn only from round 4
   (raw r4 fills both Riddler-human slots, adjusted r4 the clumsy slot). Pass: P(top 20%)
   ≥ 50% and no more than 15 points below the finalist's baseline value.
@@ -85,7 +90,7 @@ the probability of finishing in the top 20% of a simulated field of applicants (
   check uses its own mapping (riddler:r4 → both Riddler-human groups, riddler_adj:*:r4 →
   the clumsy group; rounds 1–3 Riddler rows are not used in that check).
 - Reported checks; a candidate is flagged if any of these is below 50%: P(top 20%) in
-  any single scenario, pooled P(top 20%) when ranked by total points, pooled P(top 20%)
+  any single realistic scenario, pooled P(top 20%) when ranked by total points, pooled P(top 20%)
   with draws counted as 0. ±1 neighbors: every valid one-troop move (≤ 90); a neighbor is
   "close" if its pooled P(top 20%) is within 10 points of the candidate's (same fields);
   flag if fewer than half are close. A neighbor that beats the candidate is reported,
@@ -96,6 +101,17 @@ the probability of finishing in the top 20% of a simulated field of applicants (
   top 100 by elimination depth (rounds survived, then last-round rank), and the top 5 of
   every source family. Elimination depth in the last few rounds is noisy (a handful of
   strategies playing rock-paper-scissors), so it is one input, not a verdict.
+
+## Decision log
+- Nash scenario (2026-10-04). Added as a worst-case field (the equilibrium mix: no
+  strategy beats it on average), originally with 10% of the pooled weight and subject to
+  the 50% per-scenario flag. First full run: the best of all 177 distinct shortlisted
+  candidates reached the top 20% in only 22.5% of Nash contests, so the flag fired for
+  every candidate; Nash results were essentially uncorrelated with the four realistic
+  scenarios (correlation −0.09); and because the top candidates were at 99–100% in all
+  realistic scenarios, the Nash term decided 6 of the 10 finalist slots. Decision: remove
+  Nash from the score and the flags, keep reporting it, and use it as an explicit
+  tiebreaker between candidates with equal (rounded) scores.
 
 ## Field scenarios (share of the field, %)
 | Group (pool source)                        | Baseline | Naive-heavy | Sophisticated-heavy | AI-heavy |
@@ -111,7 +127,7 @@ the probability of finishing in the top 20% of a simulated field of applicants (
 | Counter (counter:*, from step 5)           | 7        | 0           | 15                  | 5        |
 - Baseline has 14% naive players: the challenge is optional, so low-effort applicants
   mostly skip it. Naive-heavy covers the case where they don't.
-- Fifth scenario: the Nash mix of the non-held-out pool.
+- Fifth scenario: the Nash mix of the non-held-out pool (reported and tiebreaker only).
 
 ## Field model
 - Reasoning levels come from the sources, by behavior: level 0 = naive rules (hand:*),

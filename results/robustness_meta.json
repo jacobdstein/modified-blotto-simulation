@@ -1,0 +1,91 @@
+{
+  "pool_hash": "67266e4bafd16b67802d0147035bfe96eaf1368f2f4e7a462fa9095010c0ab71",
+  "lut_hash": "eeb7f122bccccd9be02878ca14e709cea90b5547a0ba637d4f24ee62d53d6fb4",
+  "seed": 20261004,
+  "run_seeds": {
+    "selection": 1,
+    "final": 2,
+    "holdout": 3,
+    "neighbors": 4
+  },
+  "contests": {
+    "selection": 2000,
+    "final": 10000,
+    "holdout": 10000,
+    "neighbors": 2000
+  },
+  "pooled_weights": {
+    "baseline": 40,
+    "sophisticated_heavy": 24,
+    "ai_heavy": 19,
+    "naive_heavy": 7
+  },
+  "tiebreak_scenario": "nash",
+  "tie_decimals": 2,
+  "scenario_shares": {
+    "baseline": {
+      "naive_rules": 7,
+      "naive_blotto": 7,
+      "experienced_blotto": 20,
+      "clumsy": 15,
+      "ai_gemini": 10,
+      "ai_chatgpt": 18,
+      "ai_claude": 13,
+      "random": 3,
+      "counter": 7
+    },
+    "naive_heavy": {
+      "naive_rules": 30,
+      "naive_blotto": 20,
+      "experienced_blotto": 5,
+      "clumsy": 15,
+      "ai_gemini": 15,
+      "ai_chatgpt": 10,
+      "ai_claude": 5,
+      "random": 0,
+      "counter": 0
+    },
+    "sophisticated_heavy": {
+      "naive_rules": 5,
+      "naive_blotto": 0,
+      "experienced_blotto": 25,
+      "clumsy": 5,
+      "ai_gemini": 5,
+      "ai_chatgpt": 20,
+      "ai_claude": 25,
+      "random": 0,
+      "counter": 15
+    },
+    "ai_heavy": {
+      "naive_rules": 10,
+      "naive_blotto": 5,
+      "experienced_blotto": 10,
+      "clumsy": 5,
+      "ai_gemini": 20,
+      "ai_chatgpt": 25,
+      "ai_claude": 20,
+      "random": 0,
+      "counter": 5
+    }
+  },
+  "groups_available": [
+    "ai_chatgpt",
+    "ai_claude",
+    "ai_gemini",
+    "clumsy",
+    "experienced_blotto",
+    "naive_blotto",
+    "naive_rules",
+    "random"
+  ],
+  "groups_missing": [
+    "counter"
+  ],
+  "dirichlet_concentration": 20,
+  "field_size": [
+    100,
+    225
+  ],
+  "finalists": 10,
+  "seconds": 47.5
+}
