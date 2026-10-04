@@ -15,6 +15,10 @@ added at the end so existing IDs never shift):
                         each sampled submission after one bonus-aware swap, for four
                         kinds of player (see adjust_riddler); parent = the raw row
 7. random_uniform       uniformly random allocations, kept a small minority
+8. llm:<tool>:<index>:jitter   (see 4; created here so earlier IDs don't shift)
+9. counter:r<N>         strategies built by counterattack.py to beat the leaders
+                        (data/counter/round_<N>.csv); parent = the pool row the search
+                        started from, if any
 
 Exact duplicates are merged only within the same origin (weights add up), so per-source
 counts survive and the held-out Riddler round never merges into other rows.
@@ -70,12 +74,15 @@ Allocation = tuple[int, ...]
 
 @dataclass
 class Entry:
-    """A pool row before IDs are assigned. `parent` is an index into the entry list."""
+    """A pool row before IDs are assigned. `parent` is an index into the entry list;
+    `parent_id` is used instead when the parent is already known by its pool id
+    (counter strategies, whose parents come from an earlier build of the pool)."""
 
     origin: str
     allocation: Allocation
     weight: int = 1
     parent: int | None = None
+    parent_id: str = ""
     merged_into: int | None = field(default=None, repr=False)
 
 
@@ -367,7 +374,31 @@ def collect_entries(seed: int = SEED, data_dir: Path = DATA) -> tuple[list[Entry
                 troops = int(jitter_rng.integers(LLM_JITTER_TROOPS[0], LLM_JITTER_TROOPS[1] + 1))
                 variant = perturb(allocation, jitter_rng, troops)
             entries.append(Entry(f"{origin}:jitter", variant, parent=llm_index[origin]))
+
+    notes["counter_rounds"] = {}
+    for round_number, path in counter_files(data_dir):
+        allocations = load_counter_round(path)
+        notes["counter_rounds"][f"r{round_number}"] = len(allocations)
+        entries.extend(Entry(f"counter:r{round_number}", a, parent_id=parent) for a, parent in allocations)
     return entries, notes
+
+
+def counter_files(data_dir: Path = DATA) -> list[tuple[int, Path]]:
+    """(round number, path) for every data/counter/round_<N>.csv, in round order. Rounds
+    must be numbered 1, 2, ... with no gaps."""
+    paths = sorted((int(p.stem.split("_")[1]), p) for p in (data_dir / "counter").glob("round_*.csv"))
+    if [n for n, _ in paths] != list(range(1, len(paths) + 1)):
+        raise ValueError(f"counter rounds must be 1..N with no gaps, found {[n for n, _ in paths]}")
+    return paths
+
+
+def load_counter_round(path: Path) -> list[tuple[Allocation, str]]:
+    """(allocation, parent pool id or '') for each row of a counter round file."""
+    with open(path, newline="") as f:
+        return [
+            (validate_allocation([int(row[c]) for c in BATTLEFIELD_COLUMNS]), row["parent"])
+            for row in csv.DictReader(f)
+        ]
 
 
 def build_pool(seed: int = SEED, l1_threshold: int = L1_THRESHOLD, data_dir: Path = DATA) -> tuple[pd.DataFrame, dict]:
@@ -388,7 +419,7 @@ def build_pool(seed: int = SEED, l1_threshold: int = L1_THRESHOLD, data_dir: Pat
                 "origin": entry.origin,
                 **dict(zip(BATTLEFIELD_COLUMNS, entry.allocation)),
                 "weight": entry.weight,
-                "parent": ids[resolve(entries, entry.parent)] if entry.parent is not None else "",
+                "parent": entry.parent_id or (ids[resolve(entries, entry.parent)] if entry.parent is not None else ""),
             }
         )
     pool = pd.DataFrame(rows, columns=POOL_COLUMNS)

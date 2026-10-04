@@ -1,5 +1,5 @@
 {
-  "pool_hash": "67266e4bafd16b67802d0147035bfe96eaf1368f2f4e7a462fa9095010c0ab71",
+  "pool_hash": "51fc181919f8bc79061da6550c5dd154617c040340953c7fff2673e10524895f",
   "lut_hash": "eeb7f122bccccd9be02878ca14e709cea90b5547a0ba637d4f24ee62d53d6fb4",
   "seed": 20261004,
   "run_seeds": {
@@ -73,19 +73,18 @@
     "ai_claude",
     "ai_gemini",
     "clumsy",
+    "counter",
     "experienced_blotto",
     "naive_blotto",
     "naive_rules",
     "random"
   ],
-  "groups_missing": [
-    "counter"
-  ],
+  "groups_missing": [],
   "dirichlet_concentration": 20,
   "field_size": [
     100,
     225
   ],
   "finalists": 10,
-  "seconds": 48.2
+  "seconds": 47.6
 }

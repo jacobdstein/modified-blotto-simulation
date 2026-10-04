@@ -1,7 +1,7 @@
 {
-  "pool_hash": "67266e4bafd16b67802d0147035bfe96eaf1368f2f4e7a462fa9095010c0ab71",
+  "pool_hash": "51fc181919f8bc79061da6550c5dd154617c040340953c7fff2673e10524895f",
   "lut_hash": "eeb7f122bccccd9be02878ca14e709cea90b5547a0ba637d4f24ee62d53d6fb4",
-  "candidates": 3477,
+  "candidates": 3497,
   "excluded_holdout_origins": [
     "riddler:r4",
     "riddler_adj:all:r4",
@@ -12,8 +12,8 @@
   "shortlist_top": 100,
   "shortlist_per_family": 5,
   "elimination_keep": 0.5,
-  "shortlist_size": 199,
-  "nash_support": 183,
+  "shortlist_size": 195,
+  "nash_support": 167,
   "nash_value": -0.0,
-  "nash_exploitability": 1.363145707422575e-14
+  "nash_exploitability": 3.4317167163511186e-15
 }
