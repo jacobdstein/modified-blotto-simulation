@@ -1,0 +1,13 @@
+id,label,measure,before,after
+P01229,"Original leader P01229
+(Riddler round 2 entry)",pooled,1.0,0.8988666666666665
+P01229,"Original leader P01229
+(Riddler round 2 entry)",sophisticated,1.0,0.728
+P04443,"Round-1 leader P04443
+(counter strategy)",pooled,1.0,0.9903055555555556
+P04443,"Round-1 leader P04443
+(counter strategy)",sophisticated,1.0,0.969
+P04460,"Round-2 leader P04460
+(our submission)",pooled,0.9999611111111112,0.9957222222222222
+P04460,"Round-2 leader P04460
+(our submission)",sophisticated,1.0,0.987
