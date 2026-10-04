@@ -1,5 +1,5 @@
 {
-  "pool_hash": "51fc181919f8bc79061da6550c5dd154617c040340953c7fff2673e10524895f",
+  "pool_hash": "45af2ebfa300fbee37a59ca4b6df0a05241c04a7f52c99803ee272ac187c19d3",
   "lut_hash": "eeb7f122bccccd9be02878ca14e709cea90b5547a0ba637d4f24ee62d53d6fb4",
   "seed": 20261004,
   "run_seeds": {
@@ -86,5 +86,5 @@
     225
   ],
   "finalists": 10,
-  "seconds": 47.6
+  "seconds": 48.5
 }

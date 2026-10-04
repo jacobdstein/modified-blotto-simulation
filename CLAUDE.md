@@ -119,6 +119,12 @@ the probability of finishing in the top 20% of a simulated field of applicants (
   baseline field. After adding them, the previous pick P01229 fell from 100% to 89.9%
   pooled (72.8% in sophisticated-heavy, where counters are 15% of the field); every
   candidate still at ≥ 99% is a counter strategy.
+- Counterattack round 2 (2026-10-04). All 20 round-2 counters beat all 10 round-1
+  finalists; the new top 10 are all round-2 counters. But the round-1 finalists, now
+  targeted, barely dropped (P04443 100% → 99.0%, P04447 → 98.7%), unlike the original
+  leaders after round 1 (P01229 100% → 89.9%). Pattern: the newest round always leads,
+  because no counters aimed at it exist yet; being robust to a counterattack aimed at
+  you is the more informative test.
 - Flags before the Nash tiebreaker (2026-10-04). With Nash as the first tiebreaker and a
   1-point tie window, the rule picked P01353 (score 99.5%, Nash 20.1%) over P01229
   (score 100%, Nash 19.3%), although P01353 fails the points check and P01229 has no
@@ -197,8 +203,9 @@ the probability of finishing in the top 20% of a simulated field of applicants (
 ## Scope (deadline: submission closes Tuesday 2026-10-06 at midnight)
 - Done: scoring.py, lookup table, pool (step 1), matrices (step 2), rankings + Nash mix +
   shortlist (step 3), lookup-table analysis.
-- Done: robustness.py (step 4); counterattack.py (step 5) round 1.
-- Next: counterattack round 2, then the final pick and your writeup.
+- Done: robustness.py (step 4); counterattack.py (step 5) rounds 1–2.
+- Next: decide how to treat the newest round (see Decision log), the final pick, and
+  the writeup.
 - Optional if time allows: replicator dynamics; re-running the lookup-table price
   analysis with Riddler as the reference field. If time is short, cut optional analysis
   before cutting writeup time.
