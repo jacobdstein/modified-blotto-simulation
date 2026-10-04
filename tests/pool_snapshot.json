@@ -1,0 +1,6 @@
+{
+  "note": "Every pool row that existed when this snapshot was taken must keep its ID and allocation. New sources may only be appended. Update deliberately (and say why) if an existing source changes.",
+  "rows": 4438,
+  "prefix_hash": "67266e4bafd16b67802d0147035bfe96eaf1368f2f4e7a462fa9095010c0ab71",
+  "prefix_hash_note": "pool.pool_hash of the first `rows` rows"
+}

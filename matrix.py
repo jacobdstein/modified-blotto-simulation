@@ -4,7 +4,7 @@ Run from the project root (after pool.py):
     .venv/bin/python matrix.py
 Writes cache/matrix_<pool_hash>.npz, or reuses it if the pool and table are unchanged.
 
-Stage 1: the lookup table.
+Pipeline step 2, part 1: the lookup table.
 A player's score depends only on which battlefields they won. There are 2**10 = 1024
 possible won-sets, so we score each one once with scoring.py and store the results.
 
@@ -93,7 +93,7 @@ def lut_hash(lut: np.ndarray) -> str:
     return hashlib.sha256(lut.astype("<i8").tobytes()).hexdigest()
 
 
-# --- Stage 3: W and S for every pair ----------------------------------------
+# --- Part 2: W and S for every pair -----------------------------------------
 #
 # For strategies i (row) and j (column):
 #   S200[i, j] = 200 × i's total score when i plays j          (int32)

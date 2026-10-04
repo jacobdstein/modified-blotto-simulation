@@ -188,9 +188,21 @@ def test_parents_point_to_existing_rows(pool):
 
 
 def test_all_30_llm_strategies_present(pool):
-    llm = pool[pool["origin"].str.startswith("llm:")]
+    llm = pool[pool["origin"].str.startswith("llm:") & ~pool["origin"].str.endswith(":jitter")]
     assert len(llm) == 30
     assert set(llm["origin"].map(origin_family)) == {"llm:claude", "llm:chatgpt", "llm:gemini"}
+
+
+def test_llm_jitter_variants(pool):
+    by_id = pool.set_index("id")
+    jitter = pool[pool["origin"].str.endswith(":jitter")]
+    assert jitter["weight"].sum() == 30 * pool_module.LLM_JITTER_COPIES  # every variant accounted for
+    for _, row in jitter.iterrows():
+        parent = by_id.loc[row["parent"]]
+        assert row["origin"] == parent["origin"] + ":jitter"
+        moved = sum(abs(int(row[c]) - int(parent[c])) for c in BATTLEFIELD_COLUMNS)
+        assert 0 < moved <= 2 * pool_module.LLM_JITTER_TROOPS[1]  # never identical to the original
+    assert set(jitter["origin"].map(origin_family)) == {"llm:claude", "llm:chatgpt", "llm:gemini"}
 
 
 def test_holdout_covers_round_4_and_its_adjusted_versions(pool, meta):
@@ -216,7 +228,9 @@ def test_different_seed_changes_only_random_parts(pool):
 
     def fixed(df):  # rows that don't depend on the seed
         origin = df["origin"]
-        return df[(origin.str.startswith("hand:") & ~origin.str.endswith(":noisy")) | origin.str.startswith("llm:")]
+        hand_fixed = origin.str.startswith("hand:") & ~origin.str.endswith(":noisy")
+        llm_fixed = origin.str.startswith("llm:") & ~origin.str.endswith(":jitter")
+        return df[hand_fixed | llm_fixed]
 
     assert allocations(fixed(pool)) == allocations(fixed(other))
     assert pool_hash(pool) != pool_hash(other)
@@ -273,7 +287,8 @@ def test_origin_family_and_subfamily():
         "hand:even": ("hand", "hand:base"),
         "hand:even:noisy": ("hand", "hand:noisy"),
         "hand:even:round5": ("hand", "hand:round5"),
-        "llm:claude:3": ("llm:claude", "llm:claude"),
+        "llm:claude:3": ("llm:claude", "llm:claude:3"),
+        "llm:claude:3:jitter": ("llm:claude", "llm:claude:3"),
         "riddler:r2": ("riddler", "riddler:r2"),
         "riddler_adj:rule2:r1": ("riddler_adj", "riddler_adj:rule2"),
         "random_uniform": ("random_uniform", "random_uniform"),
@@ -356,3 +371,15 @@ def test_adjacent_count():
     assert adjacent_count(frozenset({1, 2, 3})) == 3
     assert adjacent_count(frozenset({1, 3, 5})) == 0
     assert adjacent_count(frozenset({1, 10})) == 0  # no wrap-around
+
+
+def test_existing_rows_keep_their_ids_and_allocations(pool):
+    # New sources (e.g. counterattack rows) may only be appended; rows that existed when
+    # tests/pool_snapshot.json was taken must be unchanged, IDs included.
+    import json
+    from pathlib import Path
+
+    snapshot = json.loads((Path(__file__).parent / "pool_snapshot.json").read_text())
+    assert len(pool) >= snapshot["rows"]
+    assert pool_hash(pool.iloc[: snapshot["rows"]]) == snapshot["prefix_hash"]
+    assert list(pool["id"].iloc[: snapshot["rows"]]) == [f"P{n:05d}" for n in range(1, snapshot["rows"] + 1)]

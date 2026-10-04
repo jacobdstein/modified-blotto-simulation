@@ -9,6 +9,7 @@ from pool import BATTLEFIELD_COLUMNS, POOL_COLUMNS, is_holdout, random_uniform
 from rankings import (
     family_weights,
     iterated_elimination,
+    nash_mix,
     rank_order,
     raw_weights,
     round_robin,
@@ -96,8 +97,20 @@ def test_weighted_rates_skip_your_own_row():
     # A/B/C: B beats A and C, C beats A. Equal weights; each faces the other two.
     pool = make_pool([("hand:a", A, 1), ("hand:b", B, 1), ("hand:c", C, 1)])
     _, W2 = matrices_for(pool)
-    rates = weighted_rates(W2, np.full(3, 1 / 3), np.arange(3)) / 2
+    rates = weighted_rates(W2, np.full(3, 1 / 3), np.arange(3), np.ones(3)) / 2
     assert rates.tolist() == pytest.approx([0.0, 1.0, 0.5])
+
+
+def test_weighted_rates_count_your_identical_copies_as_draws():
+    # A stands for 3 identical submissions, B for 1: A's opponents are 2 copies of A
+    # (draws) and B (A loses to B). Brute force: (0.5 + 0.5 + 0) / 3.
+    pool = make_pool([("hand:a", A, 3), ("hand:b", B, 1)])
+    S200, W2 = matrices_for(pool)
+    weights = np.array([0.75, 0.25])
+    rate_a = weighted_rates(W2, weights, np.array([0]), np.array([3.0]))[0] / 2
+    assert rate_a == pytest.approx(1 / 3)
+    rate_b = weighted_rates(W2, weights, np.array([1]), np.array([1.0]))[0] / 2
+    assert rate_b == pytest.approx(1.0)  # B beats all three copies of A
 
 
 def test_round_robin_columns_and_draw0(mixed_pool):
@@ -188,3 +201,32 @@ def test_shortlist_includes_best_of_every_family(mixed_pool):
         best = group.nsmallest(2, "rank")["id"]
         assert set(best) <= set(short["id"]), family
     assert len(short) <= 1 + 1 + 2 * rr["family"].nunique()
+
+
+# --- Nash mix ---------------------------------------------------------------
+
+
+def test_nash_of_a_cycle_is_uniform():
+    # X beats Y, Y beats Z, Z beats X (real allocations found earlier).
+    cycle = [[8, 6, 1, 14, 30, 8, 24, 4, 5, 0], [12, 13, 21, 8, 2, 1, 20, 13, 2, 8], [0, 2, 45, 5, 21, 11, 7, 0, 7, 2]]
+    pool = make_pool([("hand:x", cycle[0], 1), ("hand:y", cycle[1], 1), ("hand:z", cycle[2], 1)])
+    _, W2 = matrices_for(pool)
+    assert W2[0, 1] == 2 and W2[1, 2] == 2 and W2[2, 0] == 2
+    nash = nash_mix(pool, W2)
+    assert sorted(nash["probability"]) == pytest.approx([1 / 3] * 3)
+    assert nash.attrs["exploitability"] == pytest.approx(0, abs=1e-9)
+
+
+def test_nash_puts_all_weight_on_a_dominant_strategy():
+    pool = make_pool([("hand:a", A, 1), ("hand:b", B, 1), ("hand:c", C, 1)])  # B beats both
+    _, W2 = matrices_for(pool)
+    nash = nash_mix(pool, W2)
+    assert list(nash["id"]) == ["P00002"] and nash["probability"].iloc[0] == pytest.approx(1)
+
+
+def test_nash_excludes_holdout_and_is_unexploitable(mixed_pool):
+    _, W2 = matrices_for(mixed_pool)
+    nash = nash_mix(mixed_pool, W2)
+    assert not nash["origin"].map(is_holdout).any()
+    assert nash["probability"].sum() == pytest.approx(1)
+    assert nash.attrs["exploitability"] <= 1e-9

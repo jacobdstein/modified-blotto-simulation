@@ -1,4 +1,4 @@
-"""Stage 4: diagnostic rankings and the shortlist.
+"""Pipeline step 3: diagnostic rankings, the Nash mix, and the shortlist.
 
 Reads cache/pool.csv and the cached matrices; writes results/rankings_*.csv.
 
@@ -14,6 +14,8 @@ Reads cache/pool.csv and the cached matrices; writes results/rankings_*.csv.
    top SHORTLIST_TOP by elimination depth (rounds survived, then rank in the last round),
    plus the top SHORTLIST_PER_FAMILY of every source family, so strategies that might do
    best in other field scenarios (e.g. the best AI and hand-built ones) also get tested.
+4. Nash mix of the meta-game (payoff W, non-held-out pool), solved exactly as a linear
+   program with scipy. robustness.py samples its "Nash" scenario fields from it.
 
 Held-out origins (pool.is_holdout) are excluded everywhere: they are neither opponents
 nor candidates. Tests check that changing their matrix entries changes nothing here.
@@ -28,6 +30,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from scipy.optimize import linprog
 
 from matrix import build_matrices
 from pool import BATTLEFIELD_COLUMNS, is_holdout, load_pool, origin_family, origin_subfamily
@@ -72,25 +75,31 @@ def raw_weights(pool: pd.DataFrame) -> np.ndarray:
 # --- Win rates --------------------------------------------------------------
 
 
-def weighted_rates(payoff: np.ndarray, weights: np.ndarray, rows: np.ndarray) -> np.ndarray:
-    """For each row index in `rows`: the weighted mean of payoff[row, :], skipping the
-    row's own column (you never play yourself). payoff is any (N, N) array, e.g. W."""
+def weighted_rates(payoff: np.ndarray, weights: np.ndarray, rows: np.ndarray, copies: np.ndarray) -> np.ndarray:
+    """For each row index in `rows`: the weighted mean of payoff[row, :] over opponents.
+
+    A row with copies = k stands for k identical submissions and carries their combined
+    weight. A player never plays itself, so only 1/k of the row's own weight is removed;
+    the other k - 1 copies stay in as opponents, and payoff[row, row] is exactly the
+    result against an identical allocation (a 0-0 draw). payoff is any (N, N) array."""
+    own_weight = weights[rows] / copies
     totals = payoff[rows].astype(np.float64) @ weights
-    own = payoff[rows, rows].astype(np.float64) * weights[rows]
-    return (totals - own) / (1.0 - weights[rows])
+    own = payoff[rows, rows].astype(np.float64) * own_weight
+    return (totals - own) / (1.0 - own_weight)
 
 
 def round_robin(pool: pd.DataFrame, W2: np.ndarray, S200: np.ndarray) -> pd.DataFrame:
     """Win rates and mean score for every non-held-out strategy."""
     candidates = np.flatnonzero(~pool["origin"].map(is_holdout).to_numpy())
+    copies = pool["weight"].to_numpy(dtype=float)[candidates]
     family = family_weights(pool)
     raw = raw_weights(pool)
     table = pool.iloc[candidates][["id", "origin", *BATTLEFIELD_COLUMNS]].copy()
     table["family"] = table["origin"].map(origin_family)
-    table["win_rate"] = weighted_rates(W2, family, candidates) / 2
-    table["win_rate_raw"] = weighted_rates(W2, raw, candidates) / 2
-    table["win_rate_draw0"] = weighted_rates((W2 == 2).astype(np.int8), family, candidates)
-    table["mean_score"] = weighted_rates(S200, family, candidates) / 200
+    table["win_rate"] = weighted_rates(W2, family, candidates, copies) / 2
+    table["win_rate_raw"] = weighted_rates(W2, raw, candidates, copies) / 2
+    table["win_rate_draw0"] = weighted_rates((W2 == 2).astype(np.int8), family, candidates, copies)
+    table["mean_score"] = weighted_rates(S200, family, candidates, copies) / 200
     table["rank"] = rank_order(table["win_rate"], table["mean_score"], table["id"])
     table["rank_raw"] = rank_order(table["win_rate_raw"], table["mean_score"], table["id"])
     return table.sort_values("rank").reset_index(drop=True)
@@ -118,9 +127,10 @@ def iterated_elimination(pool: pd.DataFrame, W2: np.ndarray, S200: np.ndarray, k
     round_number = 0
     while alive.sum() >= 2:
         rows = np.flatnonzero(alive)
+        copies = pool["weight"].to_numpy(dtype=float)[rows]
         weights = family_weights(pool, include=alive)
-        win = weighted_rates(W2, weights, rows) / 2
-        score = weighted_rates(S200, weights, rows) / 200
+        win = weighted_rates(W2, weights, rows, copies) / 2
+        score = weighted_rates(S200, weights, rows, copies) / 200
         ranks = rank_order(pd.Series(win), pd.Series(score), pd.Series(ids[rows]))
         table.loc[ids[rows], f"rank_round_{round_number}"] = ranks
         table.loc[ids[rows], "last_rank"] = ranks
@@ -156,6 +166,39 @@ def shortlist(
     return chosen.join(depth, on="id").sort_values("rank").reset_index(drop=True)
 
 
+# --- Nash mix ---------------------------------------------------------------
+
+
+def nash_mix(pool: pd.DataFrame, W2: np.ndarray) -> pd.DataFrame:
+    """Equilibrium mix of the meta-game over non-held-out strategies.
+
+    The game is symmetric and constant-sum (W[i, j] + W[j, i] = 1), so with
+    A = W - 1/2 we find a probability vector x maximizing v subject to
+    (x^T A)_j >= v for every strategy j. Its value is 0: no single strategy in the pool
+    beats the mix on average. Returns id, origin, probability (support only) and the
+    exploitability (the best any strategy does against the mix, minus 1/2)."""
+    rows = np.flatnonzero(~pool["origin"].map(is_holdout).to_numpy())
+    A = W2[np.ix_(rows, rows)].astype(np.float64) / 2 - 0.5
+    n = len(rows)
+    cost = np.zeros(n + 1)
+    cost[-1] = -1.0  # maximize v
+    upper = np.hstack([-A.T, np.ones((n, 1))])  # v - (x^T A)_j <= 0
+    equality = np.hstack([np.ones((1, n)), np.zeros((1, 1))])
+    bounds = [(0, None)] * n + [(None, None)]
+    result = linprog(cost, A_ub=upper, b_ub=np.zeros(n), A_eq=equality, b_eq=[1.0], bounds=bounds, method="highs")
+    if not result.success:
+        raise RuntimeError(f"Nash LP failed: {result.message}")
+    x = np.clip(result.x[:n], 0, None)
+    x /= x.sum()
+    exploitability = float((A @ x).max())  # best strategy's payoff against the mix, minus 1/2
+    support = x > 1e-9
+    table = pool.iloc[rows[support]][["id", "origin", *BATTLEFIELD_COLUMNS]].copy()
+    table["probability"] = x[support]
+    table.attrs["exploitability"] = exploitability
+    table.attrs["value"] = float(result.x[-1])
+    return table.sort_values("probability", ascending=False).reset_index(drop=True)
+
+
 # --- Main -------------------------------------------------------------------
 
 
@@ -167,11 +210,13 @@ def main() -> None:
     rr = round_robin(pool, matrices.W2, matrices.S200)
     elimination = iterated_elimination(pool, matrices.W2, matrices.S200)
     short = shortlist(rr, elimination)
+    nash = nash_mix(pool, matrices.W2)
 
     RESULTS.mkdir(exist_ok=True)
     rr.to_csv(RESULTS / "rankings_round_robin.csv", index=False)
     elimination.to_csv(RESULTS / "rankings_elimination.csv", index=False)
     short.to_csv(RESULTS / "rankings_shortlist.csv", index=False)
+    nash.to_csv(RESULTS / "rankings_nash.csv", index=False)
     (RESULTS / "rankings_meta.json").write_text(
         json.dumps(
             {
@@ -183,6 +228,9 @@ def main() -> None:
                 "shortlist_per_family": SHORTLIST_PER_FAMILY,
                 "elimination_keep": ELIMINATION_KEEP,
                 "shortlist_size": len(short),
+                "nash_support": len(nash),
+                "nash_value": nash.attrs["value"],
+                "nash_exploitability": nash.attrs["exploitability"],
             },
             indent=2,
         )
@@ -196,6 +244,9 @@ def main() -> None:
     print(f"\nElimination: {elimination['rounds_survived'].max()} rounds; last survivor "
           f"{elimination.iloc[0]['id']} ({elimination.iloc[0]['origin']})")
     print(f"Shortlist: {len(short)} strategies; by origin family:\n", short["family"].value_counts().to_string())
+    print(f"\nNash mix: {len(nash)} strategies in support, value {nash.attrs['value']:.2e}, "
+          f"exploitability {nash.attrs['exploitability']:.2e}")
+    print(nash.head(8)[["id", "origin", *BATTLEFIELD_COLUMNS, "probability"]].to_string(index=False))
 
 
 if __name__ == "__main__":

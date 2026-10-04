@@ -1,8 +1,9 @@
 # Blotto Simulation
 
 ## Purpose
-Evaluate troop allocations for a modified Colonel Blotto challenge.
-Metrics: head-to-head win rate and mean total score.
+Choose one troop allocation for a modified Colonel Blotto challenge. Objective: maximize
+the probability of finishing in the top 20% of a simulated field of applicants (see
+"Objective and selection rule"). Per-match metrics: win credit first, score second.
 
 ## Scoring rules (source of truth — do not reinterpret)
 - 10 battlefields, values 1–10. Allocations: 10 non-negative ints summing to 100.
@@ -34,8 +35,11 @@ Metrics: head-to-head win rate and mean total score.
 - Rankings weighting (diagnostic only): each source family (hand, llm:claude,
   llm:chatgpt, llm:gemini, riddler, riddler_adj, random_uniform, counter) gets equal total
   weight; within a family each subfamily (pool.origin_subfamily, e.g. riddler:r2,
-  riddler_adj:rule1, hand:noisy) gets an equal share; within a subfamily, rows weigh by
-  duplicate count. Held-out origins are excluded. Also report raw pool weighting.
+  riddler_adj:rule1, hand:noisy, llm:claude:3 = one AI answer plus its variants) gets an
+  equal share; within a subfamily, rows weigh by duplicate count. Held-out origins are
+  excluded. Also report raw pool weighting.
+- A row with weight k stands for k identical submissions. A player never plays itself,
+  but its k − 1 identical copies are opponents and count as draws.
 - Iterated elimination: repeatedly cut the bottom 50% by win rate and re-rank among
   survivors; record every strategy's rank in every round.
 - Per-match metrics: win credit (W) first, mean score (S) second. Also compute rankings
@@ -49,15 +53,43 @@ Metrics: head-to-head win rate and mean total score.
   above the cutoff earns nothing extra.
 - Among candidates with near-equal P(top 20%), the final submission is a judgment call,
   including how clearly the choice can be justified.
-- Simulated contest: sample a field (size 100–225) from a scenario's weights (seeded), add
-  the candidate as one more player, compute every player's wins and points against the
-  rest, rank everyone, record the candidate's percentile. Repeat over many fields.
-- Scenarios: level-based field (most weight on level 0–2, with the level mix itself
-  randomized), naive-heavy, sophisticated-heavy, and the Nash mix.
-- Primary: P(top 20%), ranked by wins (draw = 0.5), pooled over all simulated fields and
-  scenarios. Tiebreakers: median percentile, then mean score.
-- Reported checks (flag a candidate that collapses): P(top 20%) when ranked by total
-  points, P(top 20%) with draw = 0, and how many ±1 neighbors stay close.
+- Simulated contest: sample a field (size 100–225, uniform) from a scenario's weights
+  (seeded, with replacement), add the candidate as one more player, compute every
+  player's wins and points against all the others, rank everyone, record the candidate's
+  rank. Repeat over many fields. The same sampled fields are used for every candidate.
+- Top 20%: with P = field size + 1 players and ties in the ranking measure sharing the
+  average rank, the candidate is in the top 20% if rank / P ≤ 0.20 (e.g. rank ≤ 30 of
+  150). "Percentile" in results means rank / P (smaller is better).
+- Within a group, rows are weighted as in rankings (equal per subfamily, then by
+  duplicate count), except AI groups: each AI answer = original + its jitter variants,
+  shared by the pool's weight column; the first-listed answer gets 3× the weight of each
+  other answer (25% of the tool's share).
+- Groups with no rows yet (counter, before counterattack exists) have their share spread
+  proportionally over the other groups before the Dirichlet step; groups with 0% share
+  stay at 0.
+- Scenarios: baseline, naive-heavy, sophisticated-heavy, AI-heavy (group shares: see
+  "Field scenarios"), and the Nash mix of the non-held-out pool. In every contest the
+  group shares are randomized around the scenario's values (Dirichlet, concentration 20).
+- Primary: P(top 20%), ranked by wins (draw = 0.5; ties in total wins share the average
+  rank), pooled over scenarios with weights baseline 40, sophisticated-heavy 24,
+  AI-heavy 19, Nash 10, naive-heavy 7 (sum 100). Lower naive weight because the
+  challenge is optional, so low-effort applicants mostly skip it. Tiebreakers: median
+  percentile, then mean score. Also report P(top 20%) per scenario; flag any candidate
+  below 50% in any single scenario.
+- Runs: selection = 2,000 contests per scenario for every shortlisted strategy (one
+  seed); final = top 10 re-run with 10,000 contests per scenario on a fresh seed.
+- Hold-out check: baseline scenario with the Riddler groups drawn only from round 4
+  (raw r4 fills both Riddler-human slots, adjusted r4 the clumsy slot). Pass: P(top 20%)
+  ≥ 50% and no more than 15 points below the finalist's baseline value.
+- Hold-out mapping: the normal group weighting always excludes round 4, so the hold-out
+  check uses its own mapping (riddler:r4 → both Riddler-human groups, riddler_adj:*:r4 →
+  the clumsy group; rounds 1–3 Riddler rows are not used in that check).
+- Reported checks; a candidate is flagged if any of these is below 50%: P(top 20%) in
+  any single scenario, pooled P(top 20%) when ranked by total points, pooled P(top 20%)
+  with draws counted as 0. ±1 neighbors: every valid one-troop move (≤ 90); a neighbor is
+  "close" if its pooled P(top 20%) is within 10 points of the candidate's (same fields);
+  flag if fewer than half are close. A neighbor that beats the candidate is reported,
+  not auto-selected.
 - rankings.py is diagnostic (builds the shortlist and explains it); robustness.py
   applies this rule and picks the submission.
 - Shortlist (rankings.py): union of the top 100 by family-weighted round-robin rank, the
@@ -65,12 +97,28 @@ Metrics: head-to-head win rate and mean total score.
   every source family. Elimination depth in the last few rounds is noisy (a handful of
   strategies playing rock-paper-scissors), so it is one input, not a verdict.
 
+## Field scenarios (share of the field, %)
+| Group (pool source)                        | Baseline | Naive-heavy | Sophisticated-heavy | AI-heavy |
+|--------------------------------------------|----------|-------------|---------------------|----------|
+| Naive rules (hand:*)                       | 7        | 30          | 5                   | 10       |
+| Naive Blotto humans (riddler:r1)           | 7        | 20          | 0                   | 5        |
+| Experienced Blotto humans (riddler:r2, r3) | 20       | 5           | 25                  | 10       |
+| Bonus-aware but clumsy (riddler_adj, r1–3) | 15       | 15          | 5                   | 5        |
+| AI: Gemini (llm:gemini, incl. jitter)      | 10       | 15          | 5                   | 20       |
+| AI: ChatGPT (llm:chatgpt, incl. jitter)    | 18       | 10          | 20                  | 25       |
+| AI: Claude (llm:claude, incl. jitter)      | 13       | 5           | 25                  | 20       |
+| Random (random_uniform)                    | 3        | 0           | 0                   | 0        |
+| Counter (counter:*, from step 5)           | 7        | 0           | 15                  | 5        |
+- Baseline has 14% naive players: the challenge is optional, so low-effort applicants
+  mostly skip it. Naive-heavy covers the case where they don't.
+- Fifth scenario: the Nash mix of the non-held-out pool.
+
 ## Field model
-- Build the pool in reasoning levels: level 0 = naive human-style allocations (round
-  numbers, value-proportional, runs, battlefield 6, base multiple of 5) plus
-  LLM-suggested allocations (origin "llm"); level 1 = best responses to level 0;
-  level 2 = best responses to level 1. Uniform random allocations are a small minority
-  or a separate scenario, never the bulk of a field.
+- Reasoning levels come from the sources, by behavior: level 0 = naive rules (hand:*),
+  first-time Blotto humans (riddler:r1), Gemini; level 0–1 = ChatGPT, bonus-aware but
+  clumsy (riddler_adj); level 1–2 = experienced Blotto humans (riddler:r2, r3), Claude;
+  level 2+ = counterattack strategies built to beat the current leaders. Uniform random
+  allocations are a small minority, never the bulk of a field.
 - Counterattack strategies belong in fields as a minority, not as the main target.
 - Riddler data (approved): FiveThirtyEight `riddler-castles`, rounds 1–4 only (round 5
   has 13 castles). Same 10 castles / 100 soldiers, but no bonus rules and ties split
@@ -82,56 +130,59 @@ Metrics: head-to-head win rate and mean total score.
 - Bonus-adjusted Riddler ("riddler_adj:<version>:r<N>", parent = raw row): a Riddler
   player who noticed the bonuses makes ONE swap — stop contesting one battlefield (≥5
   troops = contested) and move its troops, unchanged, to an uncontested one. The swap
-  must gain a bonus the plan lacked. Versions: all (any bonus; highest-scoring swap),
-  rule1 / rule2 / rule3 (only that bonus; smallest swap by value distance, ties → higher
+  must gain a bonus the plan lacked. Versions: all (any bonus, and the swap must raise
+  the score of winning the contested set; highest-scoring swap), rule1 / rule2 / rule3 (only that bonus; smallest swap by value distance, ties → higher
   score). No row if that player has nothing to fix.
 - Measured: the swap usually makes an entry weaker than its parent (median win-rate
   change −4 to −7 points; rule3 ≈ 0), likely because moved troops are sized for the old
   battlefield. Decision: keep as is, treat riddler_adj as "bonus-aware but clumsy"
   players with a modest field weight; strong opponents come from llm:claude,
   llm:chatgpt, and counterattack.
-- LLM strategies: I collect them from ChatGPT and Gemini (and a fresh claude.ai chat with
-  no project context), origin "llm:<tool>". Claude Code does not invent "LLM-style"
-  answers itself.
+- LLM strategies are collected by me from the chatbots (origin "llm:<tool>:<index>");
+  Claude Code does not invent "LLM-style" answers itself.
 - data/llm_strategies.csv: 10 each from Claude, ChatGPT, Gemini, one chat per tool. Each
   got the PDF, my answers to its clarifying questions, and the goal "top 25%", so they
   model AI-assisted applicants. Each tool's 10 are one correlated cluster: in fields,
   give each tool's first-listed strategy extra weight (Claude labeled #1 its top pick;
   ChatGPT/Gemini order may not be a ranking). Assign reasoning levels by behavior, not
   by tool (Gemini ≈ level 0, ChatGPT ≈ 0–1, Claude ≈ 1–2, which ran its own simulations).
-- Held-out check: Riddler round 4 and its adjusted versions are in the pool (listed in
+- Held-out data: Riddler round 4 and its adjusted versions are in the pool (listed in
   pool_meta.json holdout_origins) so the matrix covers them, but they are never used for
-  building or selecting. After the
-  shortlist is chosen, it must still reach top 20% against a field that includes it.
-- Re-test: choose the shortlist on one set of seeds, make the final comparison on fresh
-  seeds.
-- Field size per simulated contest: drawn uniformly from 100–225.
+  building or selecting — only in the hold-out check (see "Objective and selection rule").
+- AI-answer variation: each of the 30 AI strategies has 10 seeded variants moving 1–4
+  troops, never identical to the original (origin "llm:<tool>:<index>:jitter", parent =
+  original), so AI players in a field aren't all exact copies.
+- Pool IDs are stable: new sources are always appended in pool.py, and
+  tests/pool_snapshot.json pins every existing row's ID and allocation. Update the
+  snapshot only deliberately, when an existing source is intentionally changed.
 
 ## Scope (deadline: submission closes Tuesday 2026-10-06 at midnight)
-- Minimum version first: stages 1–3 (win rate, elimination), the simulated-contest
-  selection with ±1 neighborhoods and 2–3 scenarios, and 1–2 counterattack rounds.
-- Replicator dynamics and Nash are optional extras if time allows. If time is short,
-  cut optional analysis before cutting writeup time.
-- After stage 1, analyze the lookup table (points per troop cost of won-sets) to suggest
-  hand-built candidates.
+- Done: scoring.py, lookup table, pool (step 1), matrices (step 2), rankings + Nash mix +
+  shortlist (step 3), lookup-table analysis.
+- Next: robustness.py (step 4) with all five scenarios, ±1 neighborhoods and the
+  hold-out check; then 1–2 counterattack rounds (step 5), re-running steps 2–4.
+- Optional if time allows: replicator dynamics; re-running the lookup-table price
+  analysis with Riddler as the reference field. If time is short, cut optional analysis
+  before cutting writeup time.
 - Counterattack local search jumps to threshold values (0 or opponent count + 1) rather
   than only ±1 moves.
 
-## Pipeline (each stage reads only the previous stage's saved output)
+## Pipeline (each step reads only earlier steps' saved output; code docstrings use these numbers)
+0. scoring.py — reference scoring (foundation; not a pipeline step)
 1. pool.py — generate strategies → cache/pool.csv + cache/pool_meta.json
-2. matrix.py — lookup table + W, S for every pair → cache/matrix_<pool_hash>.npz
-3. rankings.py — round-robin win rate, iterated elimination, replicator dynamics,
-   Nash of the meta-game; diagnostic, produces the shortlist → results/rankings_*.csv
+2. matrix.py — lookup table + W, S for every pair → cache/matrix_<16 chars of pool_hash>.npz
+3. rankings.py — round-robin win rate, iterated elimination, Nash mix of the meta-game
+   (diagnostic) → results/rankings_*.csv, including the shortlist and rankings_nash.csv
 4. robustness.py — simulated contests over sampled fields, ±1-troop neighborhoods,
-   applies the selection rule → results/robustness_*.csv
+   hold-out check, applies the selection rule → results/robustness_*.csv
 5. counterattack.py — best-response loop against top strategies; appends to the pool,
-   then stages 2–3 re-run
+   then steps 2–4 re-run
 
 ## Layout
 - scoring.py — reference scoring and match functions (source of truth)
-- pool.py, matrix.py, rankings.py, robustness.py, counterattack.py — pipeline stages
+- pool.py, matrix.py, rankings.py, robustness.py, counterattack.py — pipeline steps 1–5
 - tests/ — pytest tests
-- analysis/ — exploratory scripts that write to results/ (e.g. lut_analysis.py); not pipeline stages
+- analysis/ — exploratory scripts that write to results/ (e.g. lut_analysis.py); not pipeline steps
 - examples/ — small standalone teaching scripts (e.g. abc_example.py); not part of the pipeline
 - data/ — committed input data (llm_strategies.csv; riddler/ rounds 1–4, downloaded
   from github.com/fivethirtyeight/data/tree/master/riddler-castles)
@@ -140,14 +191,15 @@ Metrics: head-to-head win rate and mean total score.
 
 ## Data formats
 - cache/pool.csv: id (str, stable, e.g. "P00042"), origin (str: "hand:<name>",
-  "hand:<name>:round5", "hand:<name>:noisy", "llm:<tool>:<index>", "riddler:r<N>",
+  "hand:<name>:round5", "hand:<name>:noisy", "llm:<tool>:<index>",
+  "llm:<tool>:<index>:jitter", "riddler:r<N>",
   "riddler_adj:<version>:r<N>", "random_uniform", later "counter:r<N>"), b1..b10 (int, sum 100), weight (int ≥1, number
   of merged duplicates), parent (id or empty). Rows sorted by id; row order = matrix
   index order.
 - cache/pool_meta.json: seed, generator settings, dedup threshold, pool_hash
   (sha256 of b1..b10 in row order).
-- cache/matrix_<first 16 chars of pool_hash>.npz (compressed; ~19 MB for 4,143 rows,
-  builds in ~5 s):
+- cache/matrix_<first 16 chars of pool_hash>.npz (compressed; ~20 MB and ~6 s to build
+  for ~4,400 rows):
   - ids (str[N]), pool_hash (full), lut_hash
   - S200 (int32[N,N]): S200[i,j] = 200 × i's total score when i plays j
   - W2 (int8[N,N]): 2 = i wins, 1 = draw (S200[i,j] == S200[j,i]), 0 = i loses; W = W2 / 2
@@ -169,8 +221,9 @@ Metrics: head-to-head win rate and mean total score.
 ## Commands
 - Setup: `uv venv && uv pip install pytest numpy pandas matplotlib scipy`
 - Tests: `.venv/bin/python -m pytest -v`
-- Run: `python pool.py && python matrix.py && python rankings.py` (then robustness.py,
-  counterattack.py as needed)
+- Run: `.venv/bin/python pool.py && .venv/bin/python matrix.py && .venv/bin/python rankings.py`
+  (then robustness.py, counterattack.py as needed). Plain `python` works only with the
+  venv activated.
 
 ## Working rules
 - Run tests after every change.

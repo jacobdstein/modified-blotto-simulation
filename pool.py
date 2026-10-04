@@ -1,10 +1,14 @@
-"""Stage 2: build the strategy pool.
+"""Pipeline step 1: build the strategy pool.
 
-Sources, in the order rows are created (which fixes the IDs):
+Sources, in the order rows are created (which fixes the IDs; new sources are always
+added at the end so existing IDs never shift):
 1. hand:<name>          naive, human-style allocations (level 0), built by rules
 2. hand:<name>:round5   the same, rounded to multiples of 5 (people like round numbers)
-3. hand:<name>:noisy    seeded random perturbations of 1 and 2; parent = the base row
+3. hand:<name>:noisy    seeded random perturbations of each base rule (1); parent = the base row
 4. llm:<tool>:<index>   strategies collected from chatbots (data/llm_strategies.csv)
+   llm:<tool>:<index>:jitter
+                        small seeded variants of each (people asking the same chatbot
+                        get varied answers); parent = the original
 5. riddler:r<N>         a seeded sample of FiveThirtyEight Riddler submissions
                         (data/riddler/), raw; Riddler had no bonus rules
 6. riddler_adj:<version>:r<N>
@@ -41,6 +45,8 @@ SEED = 20261004
 NOISY_COPIES = 5  # per hand-built base allocation
 NOISE_TROOPS = (2, 8)  # each noisy copy moves between 2 and 8 troops
 NUM_RANDOM = 200
+LLM_JITTER_COPIES = 10  # variants per AI strategy
+LLM_JITTER_TROOPS = (1, 4)  # each variant moves between 1 and 4 troops
 L1_THRESHOLD = 0  # near-duplicate merging; 0 = exact duplicates only
 PROTECTED_PREFIXES = ("hand:", "llm:", "counter:")  # never near-duplicate merged
 
@@ -203,7 +209,8 @@ def sample_submissions(allocations: list[Allocation], size: int, seed: int, roun
 # noticing some of them and making ONE swap: stop contesting one battlefield and move its
 # troops, unchanged, to a battlefield they weren't contesting. Every swap must gain a
 # bonus the original plan lacked.
-#   all    noticed every bonus: among swaps that gain any bonus, the highest-scoring one
+#   all    noticed every bonus: among swaps that gain any bonus and raise the score of
+#          winning the contested set, the highest-scoring one
 #   rule1  noticed only adjacency: the smallest swap that adds adjacent battlefields
 #   rule2  noticed only "base is a multiple of 5": the smallest swap that achieves it
 #   rule3  noticed only battlefield 6: the smallest swap that adds battlefield 6
@@ -327,7 +334,10 @@ def collect_entries(seed: int = SEED, data_dir: Path = DATA) -> tuple[list[Entry
             troops = int(rng.integers(NOISE_TROOPS[0], NOISE_TROOPS[1] + 1))
             entries.append(Entry(f"hand:{name}:noisy", perturb(allocation, rng, troops), parent=base_index[name]))
 
-    for origin, allocation in load_llm_strategies(data_dir / "llm_strategies.csv"):
+    llm = load_llm_strategies(data_dir / "llm_strategies.csv")
+    llm_index = {}
+    for origin, allocation in llm:
+        llm_index[origin] = len(entries)
         entries.append(Entry(origin, allocation))
 
     notes["riddler_submissions"] = {}
@@ -347,6 +357,16 @@ def collect_entries(seed: int = SEED, data_dir: Path = DATA) -> tuple[list[Entry
                     entries.append(Entry(f"riddler_adj:{version}:r{round_number}", adjusted, parent=parent))
 
     entries.extend(Entry("random_uniform", random_uniform(rng)) for _ in range(NUM_RANDOM))
+
+    # Added last so that adding a source never shifts the IDs of existing rows.
+    jitter_rng = np.random.default_rng([seed, 1])  # own stream: doesn't change other sources
+    for origin, allocation in llm:
+        for _ in range(LLM_JITTER_COPIES):
+            variant = allocation
+            while variant == allocation:  # moves can cancel out; redraw until it differs
+                troops = int(jitter_rng.integers(LLM_JITTER_TROOPS[0], LLM_JITTER_TROOPS[1] + 1))
+                variant = perturb(allocation, jitter_rng, troops)
+            entries.append(Entry(f"{origin}:jitter", variant, parent=llm_index[origin]))
     return entries, notes
 
 
@@ -378,6 +398,8 @@ def build_pool(seed: int = SEED, l1_threshold: int = L1_THRESHOLD, data_dir: Pat
             "noisy_copies": NOISY_COPIES,
             "noise_troops": list(NOISE_TROOPS),
             "num_random": NUM_RANDOM,
+            "llm_jitter_copies": LLM_JITTER_COPIES,
+            "llm_jitter_troops": list(LLM_JITTER_TROOPS),
             "riddler_sample_per_round": RIDDLER_SAMPLE,
             "contested_min": CONTESTED_MIN,
             "adjust_versions": list(ADJUST_VERSIONS),
@@ -419,10 +441,13 @@ def origin_subfamily(origin: str) -> str:
     """The group that shares a family's weight equally:
     'hand:even:noisy' → 'hand:noisy', 'hand:even' → 'hand:base',
     'riddler:r2' → 'riddler:r2', 'riddler_adj:rule2:r1' → 'riddler_adj:rule2',
-    'llm:claude:3' → 'llm:claude'."""
+    'llm:claude:3' and 'llm:claude:3:jitter' → 'llm:claude:3' (one AI answer plus its
+    variants)."""
     parts = origin.split(":")
     if parts[0] == "hand":
         return "hand:" + (parts[2] if len(parts) > 2 else "base")
+    if parts[0] == "llm":
+        return ":".join(parts[:3])
     return ":".join(parts[:2])
 
 
@@ -444,7 +469,8 @@ def load_pool(cache_dir: Path = CACHE) -> tuple[pd.DataFrame, dict]:
 def main() -> None:
     pool, meta = build_pool()
     save_pool(pool, meta)
-    summary = pool.assign(group=pool["origin"].map(origin_subfamily)).groupby("group").agg(
+    groups = pool["origin"].map(lambda o: origin_family(o) if o.startswith("llm:") else origin_subfamily(o))
+    summary = pool.assign(group=groups).groupby("group").agg(
         rows=("id", "size"), weight=("weight", "sum")
     )
     print(summary.to_string())
