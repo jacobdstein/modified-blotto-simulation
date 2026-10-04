@@ -31,14 +31,68 @@ Metrics: head-to-head win rate and mean total score.
   S is reported but not optimized unless stated.
 - Iterated elimination: repeatedly cut the bottom 50% by win rate and re-rank among
   survivors; record every strategy's rank in every round.
-- Primary metric: win rate. Secondary: mean score.
+- Per-match metrics: win credit (W) first, mean score (S) second. Also compute rankings
+  with draw = 0 to check sensitivity; W2 supports both.
+
+## Objective and selection rule (fixed before seeing results)
+- The challenge rewards finishing in roughly the top 25–30% of entries. Treat 25% as the
+  cutoff.
+  Our objective is to maximize the probability of finishing in the top 20% (a safety
+  margin), not to maximize expected win rate. Consistency beats peak results; finishing
+  above the cutoff earns nothing extra.
+- Among candidates with near-equal P(top 20%), the final submission is a judgment call,
+  including how clearly the choice can be justified.
+- Simulated contest: sample a field (size 100–225) from a scenario's weights (seeded), add
+  the candidate as one more player, compute every player's wins and points against the
+  rest, rank everyone, record the candidate's percentile. Repeat over many fields.
+- Scenarios: level-based field (most weight on level 0–2, with the level mix itself
+  randomized), naive-heavy, sophisticated-heavy, and the Nash mix.
+- Primary: P(top 20%), ranked by wins (draw = 0.5), pooled over all simulated fields and
+  scenarios. Tiebreakers: median percentile, then mean score.
+- Reported checks (flag a candidate that collapses): P(top 20%) when ranked by total
+  points, P(top 20%) with draw = 0, and how many ±1 neighbors stay close.
+- rankings.py is diagnostic (builds the shortlist and explains it); robustness.py
+  applies this rule and picks the submission.
+
+## Field model
+- Build the pool in reasoning levels: level 0 = naive human-style allocations (round
+  numbers, value-proportional, runs, battlefield 6, base multiple of 5) plus
+  LLM-suggested allocations (origin "llm"); level 1 = best responses to level 0;
+  level 2 = best responses to level 1. Uniform random allocations are a small minority
+  or a separate scenario, never the bulk of a field.
+- Counterattack strategies belong in fields as a minority, not as the main target.
+- Riddler data (approved): FiveThirtyEight `riddler-castles`, rounds 1–4 only (round 5
+  has 13 castles). Same 10 castles / 100 soldiers, but no bonus rules and ties split
+  points, so it models how people allocate, not which battlefields they'd target here.
+  Keep raw entries (origin "riddler:rN") separate from bonus-adjusted variants
+  ("riddler_adj:rN") so the effect of our adjustment is measurable. Drop rows that fail
+  validate_allocation and report how many.
+- LLM strategies: I collect them from ChatGPT and Gemini (and a fresh claude.ai chat with
+  no project context), origin "llm:<tool>". Claude Code does not invent "LLM-style"
+  answers itself.
+- Held-out check: Riddler round 4 is never used for building or selecting. After the
+  shortlist is chosen, it must still reach top 20% against a field that includes it.
+- Re-test: choose the shortlist on one set of seeds, make the final comparison on fresh
+  seeds.
+- Field size per simulated contest: drawn uniformly from 100–225.
+
+## Scope (deadline: submission closes Tuesday 2026-10-06 at midnight)
+- Minimum version first: stages 1–3 (win rate, elimination), the simulated-contest
+  selection with ±1 neighborhoods and 2–3 scenarios, and 1–2 counterattack rounds.
+- Replicator dynamics and Nash are optional extras if time allows. If time is short,
+  cut optional analysis before cutting writeup time.
+- After stage 1, analyze the lookup table (points per troop cost of won-sets) to suggest
+  hand-built candidates.
+- Counterattack local search jumps to threshold values (0 or opponent count + 1) rather
+  than only ±1 moves.
 
 ## Pipeline (each stage reads only the previous stage's saved output)
 1. pool.py — generate strategies → cache/pool.csv + cache/pool_meta.json
 2. matrix.py — lookup table + W, S for every pair → cache/matrix_<pool_hash>.npz
 3. rankings.py — round-robin win rate, iterated elimination, replicator dynamics,
-   Nash of the meta-game → results/rankings_*.csv
-4. robustness.py — weighted opponent fields, ±1-troop neighborhoods → results/robustness_*.csv
+   Nash of the meta-game; diagnostic, produces the shortlist → results/rankings_*.csv
+4. robustness.py — simulated contests over sampled fields, ±1-troop neighborhoods,
+   applies the selection rule → results/robustness_*.csv
 5. counterattack.py — best-response loop against top strategies; appends to the pool,
    then stages 2–3 re-run
 
