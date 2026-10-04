@@ -105,6 +105,12 @@ the probability of finishing in the top 20% of a simulated field of applicants (
   strategies playing rock-paper-scissors), so it is one input, not a verdict.
 
 ## Decision log
+- Final submission (2026-10-04): P04460 = [1, 5, 5, 3, 2, 5, 28, 6, 36, 9], the
+  selection-rule pick. Main alternative considered: P04463 = [3, 5, 7, 3, 21, 8, 3, 7,
+  35, 8] (P(top 20%) 99.3% vs 99.7%; ranked by points 99.5% vs 92.2%; better against
+  experienced humans, slightly weaker against AI answers). Chose P04460: strongest bet
+  if wins decide, strongest against AI-assisted answers (97%), no flags, survived a
+  counterattack aimed at it. Battlefield analysis: results/pick_analysis_*.csv.
 - Nash scenario (2026-10-04). Added as a worst-case field (the equilibrium mix: no
   strategy beats it on average), originally with 10% of the pooled weight and subject to
   the 50% per-scenario flag. First full run: the best of all 177 distinct shortlisted
@@ -216,8 +222,9 @@ the probability of finishing in the top 20% of a simulated field of applicants (
 - Done: scoring.py, lookup table, pool (step 1), matrices (step 2), rankings + Nash mix +
   shortlist (step 3), lookup-table analysis.
 - Done: robustness.py (step 4); counterattack.py (step 5) rounds 1–2.
-- Done: counterattack rounds 1–3 (round 3 opponent-only). Selection-rule pick: P04460.
-- Next: the final pick (my judgment among near-ties) and the writeup.
+- Done: counterattack rounds 1–3 (round 3 opponent-only). Final submission chosen:
+  P04460 [1, 5, 5, 3, 2, 5, 28, 6, 36, 9].
+- Next: the writeup (mine).
 - Optional if time allows: replicator dynamics; re-running the lookup-table price
   analysis with Riddler as the reference field. If time is short, cut optional analysis
   before cutting writeup time.
