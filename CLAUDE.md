@@ -46,6 +46,7 @@ Metrics: head-to-head win rate and mean total score.
 - scoring.py — reference scoring and match functions (source of truth)
 - pool.py, matrix.py, rankings.py, robustness.py, counterattack.py — pipeline stages
 - tests/ — pytest tests
+- examples/ — small standalone teaching scripts (e.g. abc_example.py); not part of the pipeline
 - results/ — saved outputs (CSV, committed)
 - cache/ — pool and matrices (gitignored, regenerable)
 
