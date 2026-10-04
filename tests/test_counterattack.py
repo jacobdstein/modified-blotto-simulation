@@ -127,9 +127,11 @@ def data_dir_with_counters(tmp_path, rounds):
 
 
 def test_pool_appends_counter_rounds_last(tmp_path):
-    plain, _ = build_pool()
+    (tmp_path / "none").mkdir()
+    (tmp_path / "some").mkdir()
+    plain, _ = build_pool(data_dir=data_dir_with_counters(tmp_path / "none", {}))  # same inputs, no counters
     rounds = {1: [([0, 6, 1, 11, 1, 14, 28, 2, 34, 3], "P01229"), ([10] * 10, "")], 2: [([9] * 9 + [19], "")]}
-    pool, meta = build_pool(data_dir=data_dir_with_counters(tmp_path, rounds))
+    pool, meta = build_pool(data_dir=data_dir_with_counters(tmp_path / "some", rounds))
     assert len(pool) == len(plain) + 3
     pd.testing.assert_frame_equal(pool.iloc[: len(plain)], plain)  # existing rows untouched
     tail = pool.iloc[len(plain):]
