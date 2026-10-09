@@ -62,7 +62,7 @@ def save(fig, name: str) -> None:
 
 
 def figure_battlefields() -> None:
-    table = pd.read_csv(RESULTS / f"pick_analysis_{PICK}_battlefields.csv")
+    table = pd.read_csv(RESULTS / "pick_analysis" / f"pick_analysis_{PICK}_battlefields.csv")
     fortresses = table["troops"] >= 20
     fig, ax = plt.subplots(figsize=(6.3, 2.6))
     colors = [BLUE if f else BLUE_LIGHT for f in fortresses]

@@ -13,7 +13,7 @@ weights; no Dirichlet randomization), and reports:
 Run from the project root:
     .venv/bin/python analysis/pick_analysis.py [pool_id ...]
 Defaults to the top of results/robustness_final.csv and the original leader P01229.
-Writes results/pick_analysis_<id>_{battlefields,groups,wonsets}.csv.
+Writes results/pick_analysis/pick_analysis_<id>_{battlefields,groups,wonsets}.csv.
 """
 
 import sys
@@ -31,6 +31,7 @@ from robustness import GROUPS, SCENARIO_SHARES, group_vectors, scenario_mix
 from scoring import BONUS_BATTLEFIELD, NUM_BATTLEFIELDS
 
 RESULTS = ROOT / "results"
+OUTPUT = RESULTS / "pick_analysis"
 DEFAULT_COMPARISON = "P01229"
 TOP_WONSETS = 15
 
@@ -131,6 +132,7 @@ def main() -> None:
     pool, _ = load_pool()
     lut = build_lut200()
     pd.set_option("display.width", 220)
+    OUTPUT.mkdir(parents=True, exist_ok=True)
     for pool_id in ids:
         tables = analyze(pool_id, pool, lut)
         allocation = pool.loc[pool["id"] == pool_id, BATTLEFIELD_COLUMNS].iloc[0].tolist()
@@ -140,7 +142,7 @@ def main() -> None:
         print("\n", tables["groups"].round(3).to_string(index=False))
         print("\nMost common won-sets:\n", tables["wonsets"].round(3).to_string(index=False))
         for name, table in tables.items():
-            table.to_csv(RESULTS / f"pick_analysis_{pool_id}_{name}.csv", index=False)
+            table.to_csv(OUTPUT / f"pick_analysis_{pool_id}_{name}.csv", index=False)
 
 
 if __name__ == "__main__":

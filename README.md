@@ -1,5 +1,7 @@
 # Modified Colonel Blotto Simulation
 
+[![tests](https://github.com/jacobdstein/modified-blotto-simulation/actions/workflows/tests.yml/badge.svg)](https://github.com/jacobdstein/modified-blotto-simulation/actions/workflows/tests.yml)
+
 A simulation for choosing one troop allocation in Maroon Capital's Fall 2026 challenge
 problem, a Colonel Blotto game with bonus scoring rules. Instead of searching for a
 strategy that beats everyone (none exists in Blotto), it estimates how often each
@@ -135,12 +137,12 @@ cache/              regenerable pool and matrices (not committed)
 
 ## Reproducing the results
 
-Requires Python 3 and [uv](https://github.com/astral-sh/uv) (or any virtual environment
-with the same packages).
+Requires Python 3.13. Package versions are pinned in `requirements.txt`. With
+[uv](https://github.com/astral-sh/uv):
 
 ```bash
 uv venv
-uv pip install numpy pandas matplotlib scipy pytest
+uv pip install -r requirements.txt
 
 .venv/bin/python pool.py
 .venv/bin/python matrix.py
@@ -167,7 +169,7 @@ Optional analysis:
 .venv/bin/python -m pytest
 ```
 
-181 tests. Among other things they check the scoring rules against hand-worked
+181 tests, run automatically on every push by GitHub Actions. Among other things they check the scoring rules against hand-worked
 examples, that the lookup table matches the scorer for all 1,024 won-sets, that the
 matchup matrices agree with direct scoring and satisfy their symmetry invariants, and that
 pool IDs stay stable as sources are added.
@@ -181,7 +183,7 @@ pool IDs stay stable as sources are added.
 | `results/robustness_neighbors.csv` | One-troop neighbors of each finalist |
 | `results/rankings_shortlist.csv` | The shortlist and why each strategy is on it |
 | `results/rankings_nash.csv` | Nash equilibrium of the pool |
-| `results/pick_analysis_*.csv` | Per-battlefield and per-opponent breakdowns |
+| `results/pick_analysis/` | Per-battlefield and per-opponent breakdowns |
 | `results/lut_*.csv` | Scores of every won-set |
 
 ## Credits

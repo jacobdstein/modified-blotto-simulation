@@ -5,7 +5,7 @@ import pytest
 
 from analysis.pick_analysis import field_weights, matchups
 from matrix import build_lut200
-from pool import load_pool, random_uniform
+from pool import build_pool, random_uniform
 from scoring import match
 
 
@@ -23,7 +23,7 @@ def test_matchups_agree_with_scoring_match():
 
 
 def test_field_weights_sum_to_one_and_match_group_shares():
-    pool, _ = load_pool()
+    pool, _ = build_pool()
     weights, groups, shares = field_weights(pool)
     assert weights.sum() == pytest.approx(1)
     assert sum(shares.values()) == pytest.approx(1)

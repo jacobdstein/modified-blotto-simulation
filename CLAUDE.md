@@ -109,7 +109,7 @@ the probability of finishing in the top 20% of a simulated field of applicants (
   35, 8] (P(top 20%) 99.3% vs 99.7%; ranked by points 99.5% vs 92.2%; better against
   experienced humans, slightly weaker against AI answers). Chose P04460: strongest bet
   if wins decide, strongest against AI-assisted answers (97%), no flags, survived a
-  counterattack aimed at it. Battlefield analysis: results/pick_analysis_*.csv.
+  counterattack aimed at it. Battlefield analysis: results/pick_analysis/.
 - Nash scenario (2026-10-04). Added as a worst-case field (the equilibrium mix: no
   strategy beats it on average), originally with 10% of the pooled weight and subject to
   the 50% per-scenario flag. First full run: the best of all 177 distinct shortlisted
@@ -282,7 +282,7 @@ the probability of finishing in the top 20% of a simulated field of applicants (
 - matrix.py must also agree with scoring.match() on a random sample of pairs every build.
 
 ## Commands
-- Setup: `uv venv && uv pip install pytest numpy pandas matplotlib scipy`
+- Setup: `uv venv && uv pip install -r requirements.txt` (pinned versions; Python 3.13)
 - Tests: `.venv/bin/python -m pytest -v`
 - Run: `.venv/bin/python pool.py && .venv/bin/python matrix.py && .venv/bin/python rankings.py`
   (then robustness.py, counterattack.py as needed). Plain `python` works only with the
