@@ -38,7 +38,7 @@ INK_SECONDARY = "#52514e"
 GRID = "#e4e3df"
 
 # Stage commits: the pool before counterattack, then after rounds 1, 2, 3.
-STAGES = {"before counterattack": "e047c0f", "after round 1": "f3eccee", "after round 2": "778aa3e", "after round 3": "1c93372"}
+STAGES = {"before counterattack": "08e0db5", "after round 1": "96205c2", "after round 2": "d26206a", "after round 3": "d936f5b"}
 LEADERS = [  # (pool id, label, stage where it led untargeted, stage after it was targeted)
     ("P01229", "Original leader P01229\n(Riddler round 2 entry)", "before counterattack", "after round 1"),
     ("P04443", "Round-1 leader P04443\n(counter strategy)", "after round 1", "after round 2"),
