@@ -47,8 +47,7 @@ the probability of finishing in the top 20% of a simulated field of applicants (
 
 ## Objective and selection rule (fixed before seeing results)
 - The challenge rewards finishing in roughly the top 25–30% of entries. Treat 25% as the
-  cutoff.
-  Our objective is to maximize the probability of finishing in the top 20% (a safety
+  cutoff. Our objective is to maximize the probability of finishing in the top 20% (a safety
   margin), not to maximize expected win rate. Consistency beats peak results; finishing
   above the cutoff earns nothing extra.
 - Among candidates with near-equal P(top 20%), the final submission is a judgment call,
@@ -224,10 +223,8 @@ the probability of finishing in the top 20% of a simulated field of applicants (
 - Done: robustness.py (step 4); counterattack.py (step 5) rounds 1–2.
 - Done: counterattack rounds 1–3 (round 3 opponent-only). Final submission chosen:
   P04460 [1, 5, 5, 3, 2, 5, 28, 6, 36, 9].
-- Next: the writeup (mine).
-- Optional if time allows: replicator dynamics; re-running the lookup-table price
-  analysis with Riddler as the reference field. If time is short, cut optional analysis
-  before cutting writeup time.
+- Not done (optional): replicator dynamics; re-running the lookup-table price analysis
+  with Riddler as the reference field.
 - Counterattack local search jumps to threshold values (0 or opponent count + 1) rather
   than only ±1 moves.
 

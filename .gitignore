@@ -222,3 +222,6 @@ __marimo__/
 
 # Regenerable pipeline cache (pool, matrices)
 cache/
+
+# Challenge statement (Maroon Capital; kept locally, not redistributed)
+MC 2026-7 Challenge Problem.pdf
